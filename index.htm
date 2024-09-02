@@ -1,0 +1,2481 @@
+﻿<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    
+    <link rel="icon" href="wp-content/themes/zimTheme/img/favicon/favicon.png">
+    <link rel="apple-touch-icon" sizes="57x57" href="wp-content/themes/zimTheme/img/favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="wp-content/themes/zimTheme/img/favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="wp-content/themes/zimTheme/img/favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="wp-content/themes/zimTheme/img/favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="wp-content/themes/zimTheme/img/favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="wp-content/themes/zimTheme/img/favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="wp-content/themes/zimTheme/img/favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="wp-content/themes/zimTheme/img/favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="wp-content/themes/zimTheme/img/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="wp-content/themes/zimTheme/img/favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="wp-content/themes/zimTheme/img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="wp-content/themes/zimTheme/img/favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="wp-content/themes/zimTheme/img/favicon/favicon-16x16.png">
+    <link rel="manifest" href="wp-content/themes/zimTheme/img/favicon/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="https://zim-group.com/wp-content/themes/zimTheme/img/favicon/ms-icon-144x144.png">
+
+    <meta name="theme-color" content="#ffffff">
+    <meta name="google-site-verification" content="9bbXw0u1DL9lFoZp7BhKxIRXT9yCL9-fayp0uSoaH4U">
+	
+	
+	<meta property="og:image" content="https://zim-group.com/wp-content/uploads/2021/10/zimog.jpg">
+    <meta property="og:image:secure_url" content="https://zim-group.com/wp-content/uploads/2021/10/zimog.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="628">
+	
+    <style>
+	
+	.logo__img, footer .logo{
+		width: 130px;
+	}
+	
+        .mapFrame {
+            height: 100%;
+            width: 100%;
+
+        }
+
+        .preloader__container {
+            position: absolute;
+            z-index: 1;
+            width: 100%;
+            min-height: 100%;
+            background-color: rgba(0, 0, 0, .7);
+            -ms-flex-pack: center;
+            -ms-flex-item-align: center;
+            -ms-flex-direction: column;
+            flex-direction: column
+        }
+
+        .preloader__box, .preloader__container {
+            display: -ms-flexbox;
+            display: flex;
+            justify-content: center;
+            align-self: center
+        }
+
+        .preloader__box {
+            width: 120px;
+            height: 120px;
+            -ms-flex-pack: center;
+            -ms-flex-item-align: center;
+            margin: 4rem 0
+        }
+
+        .preloader__box span:first-child {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            z-index: 5;
+            display: inline-block;
+            background: #2fab5b
+        }
+
+        .preloader__box span:first-child, .preloader__box span:not(:first-child) {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            box-sizing: border-box
+        }
+
+        .preloader__box span:not(:first-child) {
+            border: 2px solid #fff;
+            border-radius: 50%;
+            animation: a 1.5s ease-out infinite;
+            animation-delay: calc(.5s * var(--i))
+        }
+
+        @keyframes a {
+            0% {
+                width: 50px;
+                height: 50px;
+                border: 1px solid hsla(0, 0%, 100%, .7)
+            }
+            50% {
+                width: 76px;
+                height: 76px;
+                border: 1px solid hsla(0, 0%, 100%, .4)
+            }
+            to {
+                width: 106px;
+                height: 106px;
+                border: 1px solid hsla(0, 0%, 100%, .1)
+            }
+        }
+
+        .preloader__box span:nth-child(2) {
+            -webkit-animation-delay: .5s;
+            animation-delay: .5s;
+        }
+
+        .preloader__box span:nth-child(3) {
+            -webkit-animation-delay: 1s;
+            animation-delay: 1s;
+        }
+
+        .preloader__box span:nth-child(4) {
+            -webkit-animation-delay: 1.5s;
+            animation-delay: 1.5s;
+        }
+
+    </style>
+    
+	<!-- This site is optimized with the Yoast SEO plugin v15.2.1 - https://yoast.com/wordpress/plugins/seo/ -->
+	<title>Забудовник ZIM Group -Збудуємо ідеальне місто | zim-group.com</title>
+	<meta name="description" content="Забудовник ZIM Group -Думаємо спочаткупро тебе. ✅ більше 5000 щасливих сімей у наших ЖК❗ zim-group.com">
+	<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+	<link rel="canonical" href="index.htm">
+	<meta property="og:locale" content="uk_UA">
+	<meta property="og:type" content="website">
+	<meta property="og:title" content="Забудовник ZIM Group -Збудуємо ідеальне місто | zim-group.com">
+	<meta property="og:description" content="Забудовник ZIM Group -Думаємо спочаткупро тебе. ✅ більше 5000 щасливих сімей у наших ЖК❗ zim-group.com">
+	<meta property="og:url" content="https://zim-group.com/">
+	<meta property="og:site_name" content="zim-group.com">
+	<meta property="article:modified_time" content="2024-01-19T11:16:19+00:00">
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:label1" content="Written by">
+	<meta name="twitter:data1" content="zimGroupSiteAdmin">
+	<script type="application/ld+json" class="yoast-schema-graph">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://zim-group.com/#website","url":"https://zim-group.com/","name":"zim-group.com","description":"\u041f\u0440\u043e\u0441\u0442\u043e \u0449\u0435 \u043e\u0434\u0438\u043d \u0441\u0430\u0439\u0442 \u043d\u0430 WordPress","potentialAction":[{"@type":"SearchAction","target":"https://zim-group.com/?s={search_term_string}","query-input":"required name=search_term_string"}],"inLanguage":"uk"},{"@type":"WebPage","@id":"https://zim-group.com/#webpage","url":"https://zim-group.com/","name":"\u0417\u0430\u0431\u0443\u0434\u043e\u0432\u043d\u0438\u043a ZIM Group -\u0417\u0431\u0443\u0434\u0443\u0454\u043c\u043e \u0456\u0434\u0435\u0430\u043b\u044c\u043d\u0435 \u043c\u0456\u0441\u0442\u043e | zim-group.com","isPartOf":{"@id":"https://zim-group.com/#website"},"datePublished":"2020-03-14T10:08:03+00:00","dateModified":"2024-01-19T11:16:19+00:00","description":"\u0417\u0430\u0431\u0443\u0434\u043e\u0432\u043d\u0438\u043a ZIM Group -\u0414\u0443\u043c\u0430\u0454\u043c\u043e \u0441\u043f\u043e\u0447\u0430\u0442\u043a\u0443\u043f\u0440\u043e \u0442\u0435\u0431\u0435. \u2705 \u0431\u0456\u043b\u044c\u0448\u0435 5000 \u0449\u0430\u0441\u043b\u0438\u0432\u0438\u0445 \u0441\u0456\u043c\u0435\u0439 \u0443 \u043d\u0430\u0448\u0438\u0445 \u0416\u041a\u2757 zim-group.com","inLanguage":"uk","potentialAction":[{"@type":"ReadAction","target":["https://zim-group.com/"]}]}]}</script>
+	<!-- / Yoast SEO plugin. -->
+
+
+<link rel='dns-prefetch' href='//cdnjs.cloudflare.com'>
+<link rel='dns-prefetch' href='//s.w.org'>
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/13.0.0\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/13.0.0\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/zim-group.com\/wp-includes\/js\/wp-emoji-release.min.js?ver=5.5.15"}};
+			!function(e,a,t){var n,r,o,i=a.createElement("canvas"),p=i.getContext&&i.getContext("2d");function s(e,t){var a=String.fromCharCode;p.clearRect(0,0,i.width,i.height),p.fillText(a.apply(this,e),0,0);e=i.toDataURL();return p.clearRect(0,0,i.width,i.height),p.fillText(a.apply(this,t),0,0),e===i.toDataURL()}function c(e){var t=a.createElement("script");t.src=e,t.defer=t.type="text/javascript",a.getElementsByTagName("head")[0].appendChild(t)}for(o=Array("flag","emoji"),t.supports={everything:!0,everythingExceptFlag:!0},r=0;r<o.length;r++)t.supports[o[r]]=function(e){if(!p||!p.fillText)return!1;switch(p.textBaseline="top",p.font="600 32px Arial",e){case"flag":return s([127987,65039,8205,9895,65039],[127987,65039,8203,9895,65039])?!1:!s([55356,56826,55356,56819],[55356,56826,8203,55356,56819])&&!s([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]);case"emoji":return!s([55357,56424,8205,55356,57212],[55357,56424,8203,55356,57212])}return!1}(o[r]),t.supports.everything=t.supports.everything&&t.supports[o[r]],"flag"!==o[r]&&(t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&t.supports[o[r]]);t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&!t.supports.flag,t.DOMReady=!1,t.readyCallback=function(){t.DOMReady=!0},t.supports.everything||(n=function(){t.readyCallback()},a.addEventListener?(a.addEventListener("DOMContentLoaded",n,!1),e.addEventListener("load",n,!1)):(e.attachEvent("onload",n),a.attachEvent("onreadystatechange",function(){"complete"===a.readyState&&t.readyCallback()})),(n=t.source||{}).concatemoji?c(n.concatemoji):n.wpemoji&&n.twemoji&&(c(n.twemoji),c(n.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	<link rel='stylesheet' id='wp-block-library-css' href='wp-includes/css/dist/block-library/style.min.css?ver=5.5.15' type='text/css' media='all'>
+<link rel='stylesheet' id='wpm-main-css' href='wp-content/plugins/wp-multilang/assets/styles/main.min.css?ver=2.4.1' type='text/css' media='all'>
+<link rel='stylesheet' id='main-css' href='wp-content/themes/zimTheme/css/main.css?ver=3.5.0' type='text/css' media='all'>
+<link rel='stylesheet' id='animate-css' href='wp-content/themes/zimTheme/css/animate.css?ver=3.5.0' type='text/css' media='all'>
+<link rel='stylesheet' id='fancyCss-css' href='wp-content/themes/zimTheme/js/libs/fancybox/jquery.fancybox.min.css?ver=3.5.0' type='text/css' media='all'>
+<link rel='stylesheet' id='newStyles-css' href='wp-content/themes/zimTheme/css/newSTYLES.css?ver=3.5.0' type='text/css' media='all'>
+<link rel='stylesheet' id='alertCss-css' href='wp-content/themes/zimTheme/css/sweetalert2.min.css?ver=3.5.0' type='text/css' media='all'>
+<link rel='stylesheet' id='invite-css' href='wp-content/themes/zimTheme/css/invite.css?ver=3.5.0' type='text/css' media='all'>
+<link rel='stylesheet' id='preloader-css' href='wp-content/themes/zimTheme/css/preloader.css?ver=3.5.0' type='text/css' media='all'>
+<link rel='stylesheet' id='owlc-css' href='ajax/libs/OwlCarousel2/2.2.1/assets/owl.carousel.min.css?ver=3.5.0' type='text/css' media='all'>
+<link rel='stylesheet' id='owld-css' href='ajax/libs/OwlCarousel2/2.2.1/assets/owl.theme.default.min.css?ver=3.5.0' type='text/css' media='all'>
+<link rel='stylesheet' id='animationStyle-css' href='wp-content/themes/zimTheme/css/animationStyle.css?ver=3.5.0' type='text/css' media='all'>
+<script type='text/javascript' src='wp-includes/js/jquery/jquery.js?ver=1.12.4-wp' id='jquery-core-js'></script>
+<link rel="https://api.w.org/" href="wp-json/index.htm"><link rel="alternate" type="application/json" href="wp-json/wp/v2/pages/2"><link rel="alternate" hreflang="x-default" href="index.htm">
+<link rel="alternate" hreflang="uk" href="index.htm">
+    <script>(function (w, d, s, l, i) {
+            w[l] = w[l] || [];
+            w[l].push({
+                'gtm.start':
+                    new Date().getTime(), event: 'gtm.js'
+            });
+            var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : '';
+            j.async = true;
+            j.src =
+                'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+            f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-PRHQNJ7');</script>
+
+    <style>
+        .press-center__btn-wrap {
+            margin-top: 15px;
+        }
+    </style>
+
+</head>
+
+<body data-rsssl="1">
+<!-- Google Tag Manager (noscript) -->
+<noscript>
+    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PRHQNJ7" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+</noscript>
+<!-- End Google Tag Manager (noscript) -->
+<!-- startWrapper -->
+<!-- 			<style>
+    .winter-is-coming, .snow {
+        z-index: 112;
+        pointer-events: none;
+    }
+
+    .winter-is-coming {
+        overflow: hidden;
+        position: fixed;
+        top: 0;
+        height: 100%;
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .snow {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        -webkit-animation: falling linear infinite both;
+        animation: falling linear infinite both;
+        -webkit-transform: translate3D(0, -100%, 0);
+        -ms-transform: translate3D(0, -100%, 0);
+        transform: translate3D(0, -100%, 0);
+    }
+    .snow--near {
+        -webkit-animation-duration: 10s;
+        animation-duration: 10s;
+        background-image: url("https://paradise-avenue.com.ua/wp-content/uploads/2019/12/1.png");
+        background-size: contain;
+    }
+    .snow--near + .snow--alt {
+        -webkit-animation-delay: 5s;
+        animation-delay: 5s;
+    }
+    .snow--mid {
+        -webkit-animation-duration: 20s;
+        animation-duration: 20s;
+        background-image: url("https://paradise-avenue.com.ua/wp-content/uploads/2019/12/2.png");
+        background-size: contain;
+    }
+    .snow--mid + .snow--alt {
+        -webkit-animation-delay: 10s;
+        animation-delay: 10s;
+    }
+    .snow--far {
+        -webkit-animation-duration: 30s;
+        animation-duration: 30s;
+        background-image: url("https://paradise-avenue.com.ua/wp-content/uploads/2019/12/3.png");
+        background-size: contain;
+    }
+    .snow--far + .snow--alt {
+        -webkit-animation-delay: 15s;
+        animation-delay: 15s;
+    }
+
+    @-webkit-keyframes falling {
+        0% {
+            -webkit-transform: translate3D(-7.5%, -100%, 0);
+            transform: translate3D(-7.5%, -100%, 0);
+        }
+        100% {
+            -webkit-transform: translate3D(7.5%, 100%, 0);
+            transform: translate3D(7.5%, 100%, 0);
+        }
+    }
+
+    @keyframes falling {
+        0% {
+            -webkit-transform: translate3D(-7.5%, -100%, 0);
+            transform: translate3D(-7.5%, -100%, 0);
+        }
+        100% {
+            -webkit-transform: translate3D(7.5%, 100%, 0);
+            transform: translate3D(7.5%, 100%, 0);
+        }
+    }
+
+</style>
+<div class="winter-is-coming">
+
+    <div class="snow snow--near"></div>
+    <div class="snow snow--near snow--alt"></div>
+
+    <div class="snow snow--mid"></div>
+    <div class="snow snow--mid snow--alt"></div>
+
+    <div class="snow snow--far"></div>
+    <div class="snow snow--far snow--alt"></div>
+</div> -->
+<div class="wrapper">
+    <header>
+		
+
+        <div class="header__nav-bar">
+            <div class="header__logo-wrap logo">
+                <button class="logo__mobile-btn" data-toggle-menu="">
+                    <span class="icon icon-nav-bar-menu"></span>
+                    <span class="logo__mobile-btn-text">Меню</span>
+                </button>
+
+                <a class="logo__link logo__link--header" href="index.htm">
+                    <img class="logo__img" src="wp-content/themes/zimTheme/img/logo.svg" alt="">
+                </a>
+                <!--            <button class="logo__callback-block-btn">-->
+                <!--                <span class="icon icon-phone"></span>-->
+                <!--            </button                                >-->
+
+                
+
+
+            </div>
+
+            <nav class="nav-bar nav-bar--header">
+                                    <ul class="nav-bar__list">
+                                                    <li class="nav-bar__list-item">
+                                <a class="nav-bar__link" href="projects/index.htm">
+                                    Проекти                                </a>
+                            </li>
+                                                    <li class="nav-bar__list-item">
+                                <a class="nav-bar__link" href="about/index.htm">
+                                    Про компанію                                </a>
+                            </li>
+                                                    <li class="nav-bar__list-item">
+                                <a class="nav-bar__link" href="commercial/index.htm">
+                                    Комерційна нерухомість                                </a>
+                            </li>
+                                                    <li class="nav-bar__list-item">
+                                <a class="nav-bar__link" href="services/index.htm">
+                                    Послуги                                </a>
+                            </li>
+                                                    <li class="nav-bar__list-item">
+                                <a class="nav-bar__link" href="zaproshuyemo/index.htm">
+                                    Управління нерухомістю                                </a>
+                            </li>
+                                                    <li class="nav-bar__list-item">
+                                <a class="nav-bar__link" href="press-center/index.htm">
+                                    Прес-центр                                </a>
+                            </li>
+                                                    <li class="nav-bar__list-item">
+                                <a class="nav-bar__link" href="contacts/index.htm">
+                                    Контакти                                </a>
+                            </li>
+                                                    <li class="nav-bar__list-item">
+                                <a class="nav-bar__link" href="career/index.htm">
+                                    Кар’єра                                </a>
+                            </li>
+                                            </ul>
+                
+                
+                <div class="change-lang-block" style="display: none;">
+                    <label>
+                        <select name="">
+                            <option value="" selected="">UA</option>
+                            <option value="">RU</option>
+                        </select>
+                    </label>
+                </div>
+            </nav>
+
+            <div class="menu-mobile">
+                                    <ul class="nav-bar__list">
+                                                    <li class="nav-bar__list-item">
+                                <a class="nav-bar__link" href="projects/index.htm">
+                                    Проекти                                </a>
+                            </li>
+                                                    <li class="nav-bar__list-item">
+                                <a class="nav-bar__link" href="about/index.htm">
+                                    Про компанію                                </a>
+                            </li>
+                                                    <li class="nav-bar__list-item">
+                                <a class="nav-bar__link" href="commercial/index.htm">
+                                    Комерційна нерухомість                                </a>
+                            </li>
+                                                    <li class="nav-bar__list-item">
+                                <a class="nav-bar__link" href="services/index.htm">
+                                    Послуги                                </a>
+                            </li>
+                                                    <li class="nav-bar__list-item">
+                                <a class="nav-bar__link" href="zaproshuyemo/index.htm">
+                                    Управління нерухомістю                                </a>
+                            </li>
+                                                    <li class="nav-bar__list-item">
+                                <a class="nav-bar__link" href="press-center/index.htm">
+                                    Прес-центр                                </a>
+                            </li>
+                                                    <li class="nav-bar__list-item">
+                                <a class="nav-bar__link" href="contacts/index.htm">
+                                    Контакти                                </a>
+                            </li>
+                                                    <li class="nav-bar__list-item">
+                                <a class="nav-bar__link" href="career/index.htm">
+                                    Кар’єра                                </a>
+                            </li>
+                                            </ul>
+                                
+                <div class="change-lang-block" style="display: none;">
+                    <label>
+                        <select name="">
+                            <option value="" selected="">UA</option>
+                            <option value="">RU</option>
+                        </select>
+                    </label>
+                </div>
+
+                <div class="overlay"></div>
+            </div>
+        </div>
+    </header>
+
+<style>
+    @keyframes a {
+        0% {
+            width: 50px;
+            height: 50px;
+            border: 1px solid hsla(0, 0%, 100%, .7)
+        }
+        50% {
+            width: 76px;
+            height: 76px;
+            border: 1px solid hsla(0, 0%, 100%, .4)
+        }
+        to {
+            width: 106px;
+            height: 106px;
+            border: 1px solid hsla(0, 0%, 100%, .1)
+        }
+    }
+</style>
+<div class="preloader" style="position:fixed;z-index:1300;top:0;left:0;right:0;bottom:0;min-width:100px;min-height:100vh;">
+            <img class="preloader__img" src="wp-content/themes/zimTheme/imgMY/preloader-bg.jpg" alt="" style="display:block;width:100%;height:100%;object-fit:cover;position:absolute;top:0;left:0;z-index:-1">
+        <div class="preloader__container">
+        <div class="preloader__box">
+            <span></span>
+            <span style="--i:1"></span>
+            <span style="--i:2"></span>
+            <span style="--i:3"></span>
+        </div>
+    </div>
+</div>
+    <style>
+        .header {
+            padding-top: 50px;
+        }
+        body{
+            overflow-y: hidden;
+        }
+        main{
+            padding-top: 0;
+            top: 0;
+            left: 0;
+            width: 100%;
+        }
+
+    </style>
+    <div class="blockOverF">
+        <div class="blockAnimation">
+            <div class="blockMenuAnimation">
+                <div class="fleAnimCenter">
+                    <div class="insideBlockMenuAnimation">
+
+                        <div class="itemInsideBlockMenuAnimation">
+                            <a href="projects/index.htm">
+                                <img src="wp-content/themes/zimTheme/imgMY/animateScren1small-min.jpg" alt="Проекти">
+                                <span>Проекти</span>
+                            </a>
+                        </div>
+                        <div class="itemInsideBlockMenuAnimation">
+                            <a href="about/index.htm">
+                                <img src="wp-content/themes/zimTheme/imgMY/animateScren3small-min.jpg" alt="Про компанію">
+                                <span>Про компанію</span>
+                            </a>
+                        </div>
+                        <div class="itemInsideBlockMenuAnimation">
+                            <a href="commercial/index.htm">
+                                <img src="wp-content/themes/zimTheme/imgMY/animateScren4small-min.jpg" alt="Комерційна нерухомість">
+                                <span>Комерційна<br>нерухомість</span>
+                            </a>
+                        </div>
+                        <div class="itemInsideBlockMenuAnimation">
+                            <a href="services/index.htm">
+                                <img src="wp-content/themes/zimTheme/imgMY/animateScren5small-min.jpg" alt="Послуги">
+                                <span>Послуги</span>
+                            </a>
+                        </div>
+                        <div class="itemInsideBlockMenuAnimation">
+                            <a href="press-center/index.htm">
+                                <img src="wp-content/themes/zimTheme/imgMY/animateScren6small-min.jpg" alt="Прес-центр">
+                                <span>Прес-центр</span>
+                            </a>
+                        </div>
+                        <div class="itemInsideBlockMenuAnimation">
+                            <a href="contacts/index.htm">
+                                <img src="wp-content/themes/zimTheme/imgMY/animateScren7small-min.jpg" alt="Контакти">
+                                <span>Контакти</span>
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="blockHeaderAnimation">
+                <a href="index.htm"><img src="wp-content/uploads/2020/04/logowhite2.svg" alt="" class="LogoHeaderAnimation"></a>
+                <button class="menuButtonHeaderAnimation">Menu </button>
+            </div>
+            <div class="owl-carousel owlFeedAnimated owl-theme">
+                <div class="itemAnimation">
+                    <div class="insideblockImgScale">
+                        <img src="wp-content/themes/zimTheme/imgMY/animateScren1.jpg" alt="ZIM Group думаємо спочатку про тебе" class="imageBgAnimation">
+                    </div>
+                    <div class="blockHideShowImg"></div>
+                    <div class="blockBgTransparent"></div>
+                    <div class="blockBgImageShow" style="">
+                        <div class="insideblockImgScale">
+                            <img src="wp-content/themes/zimTheme/imgMY/animateScren1.jpg" alt="" class="imgForShiteCircle">
+                        </div>
+                    </div>
+                    <div class="containerForTextAnimation">
+                        <div class="blockTextAnimation">
+                            <p class="headerTextAnimation">ZIM Group<br>Думаємо спочатку<br>про тебе</p>
+                            <a href="about/index.htm" class="buttonAnimation">Про компанію</a>
+                        </div>
+                    </div>
+                    <div class="scrollButtonAnimate">
+                        <div class="insideScrollButton">
+                            <div class="itemSB"><span class="triangleAnim triangleAnimFirst"></span></div>
+                            <div class="itemSB">
+                                <div class="textAB"><span class="circleAB"></span><span class="textinAB">scroll</span></div>
+                            </div>
+                            <div class="itemSB"><span class="triangleAnim triangleAnimLast"></span></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="itemAnimation">
+                    <div class="insideblockImgScale">
+                        <img src="wp-content/themes/zimTheme/imgMY/animateScren2.jpg" alt="Оберіть квартиру своєї мрії" class="imageBgAnimation">
+                    </div>
+                    <div class="blockHideShowImg"></div>
+                    <div class="blockBgTransparent"></div>
+                    <div class="blockBgImageShow" style="">
+                        <div class="insideblockImgScale">
+                            <img src="wp-content/themes/zimTheme/imgMY/animateScren2.jpg" alt="" class="imgForShiteCircle">
+                        </div>
+                    </div>
+                    <div class="containerForTextAnimation">
+                        <div class="blockTextAnimation">
+                            <p class="headerTextAnimation">Оберіть квартиру<br>своєї мрії</p>
+                            <a href="projects/index.htm" class="buttonAnimation">Проекти </a>
+                        </div>
+                    </div>
+                    <div class="scrollButtonAnimate">
+                        <div class="insideScrollButton">
+                            <div class="itemSB"><span class="triangleAnim triangleAnimFirst"></span></div>
+                            <div class="itemSB">
+                                <div class="textAB"><span class="circleAB"></span><span class="textinAB">scroll</span></div>
+                            </div>
+                            <div class="itemSB"><span class="triangleAnim triangleAnimLast"></span></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="itemAnimation">
+                    <div class="insideblockImgScale">
+                        <img src="wp-content/themes/zimTheme/imgMY/animateScren3.jpg" alt="Про компанію" class="imageBgAnimation">
+                    </div>
+                    <div class="blockHideShowImg"></div>
+                    <div class="blockBgTransparent"></div>
+                    <div class="blockBgImageShow" style="">
+                        <div class="insideblockImgScale">
+                            <img src="wp-content/themes/zimTheme/imgMY/animateScren3.jpg" alt="" class="imgForShiteCircle">
+                        </div>
+                    </div>
+                    <div class="containerForTextAnimation">
+                        <div class="blockTextAnimation">
+                            <p class="headerTextAnimation">Про<br>компанію</p>
+                            <a href="about/index.htm" class="buttonAnimation">Детальніше</a>
+                        </div>
+                    </div>
+                    <div class="scrollButtonAnimate">
+                        <div class="insideScrollButton">
+                            <div class="itemSB"><span class="triangleAnim triangleAnimFirst"></span></div>
+                            <div class="itemSB">
+                                <div class="textAB"><span class="circleAB"></span><span class="textinAB">scroll</span></div>
+                            </div>
+                            <div class="itemSB"><span class="triangleAnim triangleAnimLast"></span></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="itemAnimation">
+                    <div class="insideblockImgScale">
+                        <img src="wp-content/themes/zimTheme/imgMY/animateScren4.jpg" alt="Офіс для будь-яких потреб бізнесу" class="imageBgAnimation">
+                    </div>
+                    <div class="blockHideShowImg"></div>
+                    <div class="blockBgTransparent"></div>
+                    <div class="blockBgImageShow" style="">
+                        <div class="insideblockImgScale">
+                            <img src="wp-content/themes/zimTheme/imgMY/animateScren4.jpg" alt="" class="imgForShiteCircle">
+                        </div>
+                    </div>
+                    <div class="containerForTextAnimation">
+                        <div class="blockTextAnimation">
+                            <p class="headerTextAnimation">Офіс для будь-яких<br>потреб бізнесу</p>
+                            <a href="commercial/index.htm" class="buttonAnimation">Проекти</a>
+                        </div>
+                    </div>
+                    <div class="scrollButtonAnimate">
+                        <div class="insideScrollButton">
+                            <div class="itemSB"><span class="triangleAnim triangleAnimFirst"></span></div>
+                            <div class="itemSB">
+                                <div class="textAB"><span class="circleAB"></span><span class="textinAB">scroll</span></div>
+                            </div>
+                            <div class="itemSB"><span class="triangleAnim triangleAnimLast"></span></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="itemAnimation">
+                    <div class="insideblockImgScale">
+                        <img src="wp-content/themes/zimTheme/imgMY/animateScren5.jpg" alt="Додаткові послуги для вашої зручності" class="imageBgAnimation">
+                    </div>
+                    <div class="blockHideShowImg"></div>
+                    <div class="blockBgTransparent"></div>
+                    <div class="blockBgImageShow" style="">
+                        <div class="insideblockImgScale">
+                            <img src="wp-content/themes/zimTheme/imgMY/animateScren5.jpg" alt="" class="imgForShiteCircle">
+                        </div>
+                    </div>
+                    <div class="containerForTextAnimation">
+                        <div class="blockTextAnimation">
+                            <p class="headerTextAnimation">Додаткові послуги<br>для вашої зручності</p>
+                            <a href="services/index.htm" class="buttonAnimation">Детальніше</a>
+                        </div>
+                    </div>
+                    <div class="scrollButtonAnimate">
+                        <div class="insideScrollButton">
+                            <div class="itemSB"><span class="triangleAnim triangleAnimFirst"></span></div>
+                            <div class="itemSB">
+                                <div class="textAB"><span class="circleAB"></span><span class="textinAB">scroll</span></div>
+                            </div>
+                            <div class="itemSB"><span class="triangleAnim triangleAnimLast"></span></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="itemAnimation">
+                    <div class="insideblockImgScale">
+                        <img src="wp-content/themes/zimTheme/imgMY/animateScren6.jpg" alt="Новини і події компанії" class="imageBgAnimation">
+                    </div>
+                    <div class="blockHideShowImg"></div>
+                    <div class="blockBgTransparent"></div>
+                    <div class="blockBgImageShow" style="">
+                        <div class="insideblockImgScale">
+                            <img src="wp-content/themes/zimTheme/imgMY/animateScren6.jpg" alt="" class="imgForShiteCircle">
+                        </div>
+                    </div>
+                    <div class="containerForTextAnimation">
+                        <div class="blockTextAnimation">
+                            <p class="headerTextAnimation">Новини<br>і події компанії</p>
+                            <a href="press-center/index.htm" class="buttonAnimation">Пресцентр</a>
+                        </div>
+                    </div>
+                    <div class="scrollButtonAnimate">
+                        <div class="insideScrollButton">
+                            <div class="itemSB"><span class="triangleAnim triangleAnimFirst"></span></div>
+                            <div class="itemSB">
+                                <div class="textAB"><span class="circleAB"></span><span class="textinAB">scroll</span></div>
+                            </div>
+                            <div class="itemSB"><span class="triangleAnim triangleAnimLast"></span></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="itemAnimation">
+                    <div class="insideblockImgScale">
+                        <img src="wp-content/themes/zimTheme/imgMY/animateScren7.jpg" alt="Контакти" class="imageBgAnimation">
+                    </div>
+                    <div class="blockHideShowImg"></div>
+                    <div class="blockBgTransparent"></div>
+                    <div class="blockBgImageShow" style="">
+                        <div class="insideblockImgScale">
+                            <img src="wp-content/themes/zimTheme/imgMY/animateScren7.jpg" alt="" class="imgForShiteCircle">
+                        </div>
+                    </div>
+                    <div class="containerForTextAnimation">
+                        <div class="blockTextAnimation">
+                            <p class="headerTextAnimation">Контакти</p>
+                            <a href="contacts/index.htm" class="buttonAnimation">Переглянути</a>
+                        </div>
+                    </div>
+                    <div class="scrollButtonAnimate">
+                        <div class="insideScrollButton">
+                            <div class="itemSB"><span class="triangleAnim triangleAnimFirst"></span></div>
+                            <div class="itemSB">
+                                <div class="textAB"><span class="circleAB"></span><span class="textinAB">scroll</span></div>
+                            </div>
+                            <div class="itemSB"><span class="triangleAnim triangleAnimLast"></span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="blockDotsSlider">
+            <div class="itemDotSlide acitveDotAnimate"></div>
+            <div class="itemDotSlide"></div>
+            <div class="itemDotSlide"></div>
+            <div class="itemDotSlide"></div>
+            <div class="itemDotSlide"></div>
+            <div class="itemDotSlide"></div>
+            <div class="itemDotSlide"></div>
+        </div>
+    </div>
+<main>
+    <style>
+        .blockNagr{
+            z-index: 2;
+            position: absolute;
+            right: 44px;
+            top: 30px;
+        }
+        .blockNagr a img{
+            width: 65px;
+        }
+        .closeRost{
+            position: absolute;
+            right: 0;
+            top: 0;
+            background-color: transparent;
+            outline: none;
+            width: 15px;
+            height: 15px;
+            border: none;
+        }
+        .closeRost img{
+            width: 15px;
+            height: 15px;
+        }
+        @media (max-width: 768px){
+            .blockNagr{
+                right: 15px;
+                top: auto;
+                bottom: 138px;
+            }
+        }
+    </style>
+    <div class="header">
+        <div class="header__inner header__inner--main">
+
+            <img class="header__slogan-img" src="wp-content/uploads/2020/05/spring1_new-min-890x550.jpg" alt="Zim group">
+            <div class="header__slogan">
+                    <span class="header__slogan-text">
+                        Забудовник                    </span>
+
+                <h1 class="header__slogan-title">
+                    ZIM Group                </h1>
+
+                <span class="header__slogan-subtitle">
+                        Збудуємо ідеальне місто                    </span>
+
+                <div class="header__slogan-btn-wrap">
+                    <a class="header__slogan-btn-about" href="about/index.htm">
+                            <span class="header__slogan-btn-about-text status-active">
+                                Про компанію                            </span>
+                    </a>
+
+                    <a class="header__slogan-btn-open-video openVideoLink" data-rel="media" href="https://www.youtube.com/watch?v=ZvsZm9JcosY&feature=youtu.be">
+                            <span class="header__slogan-btn-open-video-text">
+                                Переглянути відео                                <span class="icon icon-play"></span>
+                            </span>
+                        </a>
+                </div>
+
+                <div class="blockNagr">
+                    <a href="https://zim-group.com/press/11-go-grudnya-vidbudetsya-dovgoochikuvana-czeremoniya-nagorodzhennya-peremozhcziv-premiyi-international-property-awards/">
+                        <img src="wp-content/themes/zimTheme/img/award.png" alt="award">
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <section class="about about--on-main">
+        <ul class="about__list">
+            <li class="about__item">
+                <span class="about__item-label">460 000+</span>
+                <span class="about__item-text">Побудованих квадратних метрів</span>
+                <span class="icon icon-circle"></span>
+            </li>
+
+            <li class="about__item">
+                <span class="about__item-label">10 000+</span>
+                <span class="about__item-text">Щасливих сімей у наших ЖК</span>
+                <span class="icon icon-circle"></span>
+            </li>
+
+            <li class="about__item">
+                <span class="about__item-label">7</span>
+                <span class="about__item-text">Років на ринку нерухомості</span>
+                <span class="icon icon-circle"></span>
+            </li>
+        </ul>
+
+        <div class="about__line-wrap">
+            <span class="icon icon-circle"></span>
+        </div>
+
+        <div class="about__inner">
+            <h2 class="about__caption">
+                Про компанію            </h2>
+            <div class="about__content-wrap">
+                <p>ZIM Group здійснює свою діяльність з січня 2014 року як девелоперська компанія повного циклу в області проектування і будівництва.</p>
+<p>В центрі кожного проекту ZIM Group – мешканець. Врахування всіх його потреб, його очевидних та потаємних бажань є основоположним в розробці ідей  та головним  орієнтиром на всіх етапах будівництва.</p>
+<p>Об’єкти ZIM Group – це територія зручності,  комфорту та затишку.</p>
+            </div>
+        </div>
+    </section>
+
+        <section class="project-gallery project-gallery--bot" style="padding-top: 0;">
+        <div class="project-gallery__inner">
+            <h2 class="project-gallery__caption">
+                Озеленення і прибудинкова територія наших проектів            </h2>
+
+            <!-- Swiper -->
+            <div class="swiper-container project-gallery">
+                <div class="swiper-wrapper">
+                                                                        <div class="swiper-slide project-gallery__slide">
+                                <a class="project-gallery__slide-img-wrap " href="wp-content/uploads/2020/03/img_6557.jpg" data-fancybox="galeryView">
+                                    <img src="wp-content/uploads/2020/03/img_6557-220x220.jpg" alt="">
+                                </a>
+                            </div>
+                                                    <div class="swiper-slide project-gallery__slide">
+                                <a class="project-gallery__slide-img-wrap " href="wp-content/uploads/2020/03/img_6552.jpg" data-fancybox="galeryView">
+                                    <img src="wp-content/uploads/2020/03/img_6552-220x220.jpg" alt="">
+                                </a>
+                            </div>
+                                                    <div class="swiper-slide project-gallery__slide">
+                                <a class="project-gallery__slide-img-wrap " href="wp-content/uploads/2020/03/dsc_9322.jpg" data-fancybox="galeryView">
+                                    <img src="wp-content/uploads/2020/03/dsc_9322-220x220.jpg" alt="">
+                                </a>
+                            </div>
+                                                    <div class="swiper-slide project-gallery__slide">
+                                <a class="project-gallery__slide-img-wrap " href="wp-content/uploads/2020/03/dsc_9316.jpg" data-fancybox="galeryView">
+                                    <img src="wp-content/uploads/2020/03/dsc_9316-220x220.jpg" alt="">
+                                </a>
+                            </div>
+                                                    <div class="swiper-slide project-gallery__slide">
+                                <a class="project-gallery__slide-img-wrap " href="wp-content/uploads/2020/03/dsc_9309.jpg" data-fancybox="galeryView">
+                                    <img src="wp-content/uploads/2020/03/dsc_9309-220x220.jpg" alt="">
+                                </a>
+                            </div>
+                                                    <div class="swiper-slide project-gallery__slide">
+                                <a class="project-gallery__slide-img-wrap " href="wp-content/uploads/2020/03/dsc_9301.jpg" data-fancybox="galeryView">
+                                    <img src="wp-content/uploads/2020/03/dsc_9301-220x220.jpg" alt="">
+                                </a>
+                            </div>
+                                                    <div class="swiper-slide project-gallery__slide">
+                                <a class="project-gallery__slide-img-wrap " href="wp-content/uploads/2020/03/dsc_9300.jpg" data-fancybox="galeryView">
+                                    <img src="wp-content/uploads/2020/03/dsc_9300-220x220.jpg" alt="">
+                                </a>
+                            </div>
+                                                    <div class="swiper-slide project-gallery__slide">
+                                <a class="project-gallery__slide-img-wrap " href="wp-content/uploads/2020/03/dsc_9291.jpg" data-fancybox="galeryView">
+                                    <img src="wp-content/uploads/2020/03/dsc_9291-220x220.jpg" alt="">
+                                </a>
+                            </div>
+                                                    <div class="swiper-slide project-gallery__slide">
+                                <a class="project-gallery__slide-img-wrap " href="wp-content/uploads/2020/03/dsc_9289.jpg" data-fancybox="galeryView">
+                                    <img src="wp-content/uploads/2020/03/dsc_9289-220x220.jpg" alt="">
+                                </a>
+                            </div>
+                                                    <div class="swiper-slide project-gallery__slide">
+                                <a class="project-gallery__slide-img-wrap " href="wp-content/uploads/2020/03/dsc_9288.jpg" data-fancybox="galeryView">
+                                    <img src="wp-content/uploads/2020/03/dsc_9288-220x220.jpg" alt="">
+                                </a>
+                            </div>
+                                                    <div class="swiper-slide project-gallery__slide">
+                                <a class="project-gallery__slide-img-wrap " href="wp-content/uploads/2020/03/dsc_9286.jpg" data-fancybox="galeryView">
+                                    <img src="wp-content/uploads/2020/03/dsc_9286-220x220.jpg" alt="">
+                                </a>
+                            </div>
+                                                    <div class="swiper-slide project-gallery__slide">
+                                <a class="project-gallery__slide-img-wrap " href="wp-content/uploads/2020/03/dsc_8276.jpg" data-fancybox="galeryView">
+                                    <img src="wp-content/uploads/2020/03/dsc_8276-220x220.jpg" alt="">
+                                </a>
+                            </div>
+                                                    <div class="swiper-slide project-gallery__slide">
+                                <a class="project-gallery__slide-img-wrap " href="wp-content/uploads/2020/03/dsc_8241.jpg" data-fancybox="galeryView">
+                                    <img src="wp-content/uploads/2020/03/dsc_8241-220x220.jpg" alt="">
+                                </a>
+                            </div>
+                                                    <div class="swiper-slide project-gallery__slide">
+                                <a class="project-gallery__slide-img-wrap " href="wp-content/uploads/2020/03/dsc_8239.jpg" data-fancybox="galeryView">
+                                    <img src="wp-content/uploads/2020/03/dsc_8239-220x220.jpg" alt="">
+                                </a>
+                            </div>
+                                                    <div class="swiper-slide project-gallery__slide">
+                                <a class="project-gallery__slide-img-wrap " href="wp-content/uploads/2020/03/dsc_8086.jpg" data-fancybox="galeryView">
+                                    <img src="wp-content/uploads/2020/03/dsc_8086-220x220.jpg" alt="">
+                                </a>
+                            </div>
+                                                    <div class="swiper-slide project-gallery__slide">
+                                <a class="project-gallery__slide-img-wrap " href="wp-content/uploads/2020/03/dsc_8072.jpg" data-fancybox="galeryView">
+                                    <img src="wp-content/uploads/2020/03/dsc_8072-220x220.jpg" alt="">
+                                </a>
+                            </div>
+                                                    <div class="swiper-slide project-gallery__slide">
+                                <a class="project-gallery__slide-img-wrap " href="wp-content/uploads/2020/03/dsc_8050.jpg" data-fancybox="galeryView">
+                                    <img src="wp-content/uploads/2020/03/dsc_8050-220x220.jpg" alt="">
+                                </a>
+                            </div>
+                                                    <div class="swiper-slide project-gallery__slide">
+                                <a class="project-gallery__slide-img-wrap " href="wp-content/uploads/2020/03/dsc_8400-1.jpg" data-fancybox="galeryView">
+                                    <img src="wp-content/uploads/2020/03/dsc_8400-1-220x220.jpg" alt="">
+                                </a>
+                            </div>
+                                                    <div class="swiper-slide project-gallery__slide">
+                                <a class="project-gallery__slide-img-wrap " href="wp-content/uploads/2020/03/dsc_8167-1.jpg" data-fancybox="galeryView">
+                                    <img src="wp-content/uploads/2020/03/dsc_8167-1-220x220.jpg" alt="">
+                                </a>
+                            </div>
+                                                    <div class="swiper-slide project-gallery__slide">
+                                <a class="project-gallery__slide-img-wrap " href="wp-content/uploads/2020/03/dsc_8155-1.jpg" data-fancybox="galeryView">
+                                    <img src="wp-content/uploads/2020/03/dsc_8155-1-220x220.jpg" alt="">
+                                </a>
+                            </div>
+                                                    <div class="swiper-slide project-gallery__slide">
+                                <a class="project-gallery__slide-img-wrap " href="wp-content/uploads/2020/03/inst_post_20_06-1.jpg" data-fancybox="galeryView">
+                                    <img src="wp-content/uploads/2020/03/inst_post_20_06-1-220x220.jpg" alt="">
+                                </a>
+                            </div>
+                                                    <div class="swiper-slide project-gallery__slide">
+                                <a class="project-gallery__slide-img-wrap " href="wp-content/uploads/2020/03/dscf7649-1.jpg" data-fancybox="galeryView">
+                                    <img src="wp-content/uploads/2020/03/dscf7649-1-220x220.jpg" alt="">
+                                </a>
+                            </div>
+                                                    <div class="swiper-slide project-gallery__slide">
+                                <a class="project-gallery__slide-img-wrap " href="wp-content/uploads/2020/03/dscf7598-1.jpg" data-fancybox="galeryView">
+                                    <img src="wp-content/uploads/2020/03/dscf7598-1-220x220.jpg" alt="">
+                                </a>
+                            </div>
+                                                    <div class="swiper-slide project-gallery__slide">
+                                <a class="project-gallery__slide-img-wrap " href="wp-content/uploads/2020/03/dscf7626-1.jpg" data-fancybox="galeryView">
+                                    <img src="wp-content/uploads/2020/03/dscf7626-1-220x220.jpg" alt="">
+                                </a>
+                            </div>
+                                                    <div class="swiper-slide project-gallery__slide">
+                                <a class="project-gallery__slide-img-wrap " href="wp-content/uploads/2020/03/dscf7559_1623076551-1.jpg" data-fancybox="galeryView">
+                                    <img src="wp-content/uploads/2020/03/dscf7559_1623076551-1-220x220.jpg" alt="">
+                                </a>
+                            </div>
+                                                    <div class="swiper-slide project-gallery__slide">
+                                <a class="project-gallery__slide-img-wrap " href="wp-content/uploads/2020/03/dscf7556_1623076551-1.jpg" data-fancybox="galeryView">
+                                    <img src="wp-content/uploads/2020/03/dscf7556_1623076551-1-220x220.jpg" alt="">
+                                </a>
+                            </div>
+                                                    <div class="swiper-slide project-gallery__slide">
+                                <a class="project-gallery__slide-img-wrap " href="wp-content/uploads/2020/03/dscf7427_1623076551-1.jpg" data-fancybox="galeryView">
+                                    <img src="wp-content/uploads/2020/03/dscf7427_1623076551-1-220x220.jpg" alt="">
+                                </a>
+                            </div>
+                                                    <div class="swiper-slide project-gallery__slide">
+                                <a class="project-gallery__slide-img-wrap " href="wp-content/uploads/2020/03/dscf7649.jpg" data-fancybox="galeryView">
+                                    <img src="wp-content/uploads/2020/03/dscf7649-220x220.jpg" alt="">
+                                </a>
+                            </div>
+                                                    <div class="swiper-slide project-gallery__slide">
+                                <a class="project-gallery__slide-img-wrap " href="wp-content/uploads/2020/03/dsc_8167.jpg" data-fancybox="galeryView">
+                                    <img src="wp-content/uploads/2020/03/dsc_8167-220x220.jpg" alt="">
+                                </a>
+                            </div>
+                                                    <div class="swiper-slide project-gallery__slide">
+                                <a class="project-gallery__slide-img-wrap " href="wp-content/uploads/2020/03/dsc_8155.jpg" data-fancybox="galeryView">
+                                    <img src="wp-content/uploads/2020/03/dsc_8155-220x220.jpg" alt="">
+                                </a>
+                            </div>
+                                                    <div class="swiper-slide project-gallery__slide">
+                                <a class="project-gallery__slide-img-wrap " href="wp-content/uploads/2020/03/dscf7626.jpg" data-fancybox="galeryView">
+                                    <img src="wp-content/uploads/2020/03/dscf7626-220x220.jpg" alt="">
+                                </a>
+                            </div>
+                                                    <div class="swiper-slide project-gallery__slide">
+                                <a class="project-gallery__slide-img-wrap " href="wp-content/uploads/2020/03/dscf7598.jpg" data-fancybox="galeryView">
+                                    <img src="wp-content/uploads/2020/03/dscf7598-220x220.jpg" alt="">
+                                </a>
+                            </div>
+                                                    <div class="swiper-slide project-gallery__slide">
+                                <a class="project-gallery__slide-img-wrap " href="wp-content/uploads/2020/03/dscf7559_1623076551.jpg" data-fancybox="galeryView">
+                                    <img src="wp-content/uploads/2020/03/dscf7559_1623076551-220x220.jpg" alt="">
+                                </a>
+                            </div>
+                                                    <div class="swiper-slide project-gallery__slide">
+                                <a class="project-gallery__slide-img-wrap " href="wp-content/uploads/2020/03/dscf7556_1623076551.jpg" data-fancybox="galeryView">
+                                    <img src="wp-content/uploads/2020/03/dscf7556_1623076551-220x220.jpg" alt="">
+                                </a>
+                            </div>
+                                                    <div class="swiper-slide project-gallery__slide">
+                                <a class="project-gallery__slide-img-wrap " href="wp-content/uploads/2020/03/dscf7427_1623076551.jpg" data-fancybox="galeryView">
+                                    <img src="wp-content/uploads/2020/03/dscf7427_1623076551-220x220.jpg" alt="">
+                                </a>
+                            </div>
+                                                    <div class="swiper-slide project-gallery__slide">
+                                <a class="project-gallery__slide-img-wrap " href="wp-content/uploads/2020/03/dsc_8400.jpg" data-fancybox="galeryView">
+                                    <img src="wp-content/uploads/2020/03/dsc_8400-220x220.jpg" alt="">
+                                </a>
+                            </div>
+                                                    <div class="swiper-slide project-gallery__slide">
+                                <a class="project-gallery__slide-img-wrap " href="wp-content/uploads/2020/03/dscf7871.jpg" data-fancybox="galeryView">
+                                    <img src="wp-content/uploads/2020/03/dscf7871-220x220.jpg" alt="">
+                                </a>
+                            </div>
+                                                    <div class="swiper-slide project-gallery__slide">
+                                <a class="project-gallery__slide-img-wrap " href="wp-content/uploads/2020/03/dscf7774.jpg" data-fancybox="galeryView">
+                                    <img src="wp-content/uploads/2020/03/dscf7774-220x220.jpg" alt="">
+                                </a>
+                            </div>
+                                                    <div class="swiper-slide project-gallery__slide">
+                                <a class="project-gallery__slide-img-wrap " href="wp-content/uploads/2020/03/dscf7775.jpg" data-fancybox="galeryView">
+                                    <img src="wp-content/uploads/2020/03/dscf7775-220x220.jpg" alt="">
+                                </a>
+                            </div>
+                                                    <div class="swiper-slide project-gallery__slide">
+                                <a class="project-gallery__slide-img-wrap " href="wp-content/uploads/2020/03/dscf7776.jpg" data-fancybox="galeryView">
+                                    <img src="wp-content/uploads/2020/03/dscf7776-220x220.jpg" alt="">
+                                </a>
+                            </div>
+                                                    <div class="swiper-slide project-gallery__slide">
+                                <a class="project-gallery__slide-img-wrap " href="wp-content/uploads/2020/03/dscf7779.jpg" data-fancybox="galeryView">
+                                    <img src="wp-content/uploads/2020/03/dscf7779-220x220.jpg" alt="">
+                                </a>
+                            </div>
+                                                    <div class="swiper-slide project-gallery__slide">
+                                <a class="project-gallery__slide-img-wrap " href="wp-content/uploads/2020/03/dscf7780.jpg" data-fancybox="galeryView">
+                                    <img src="wp-content/uploads/2020/03/dscf7780-220x220.jpg" alt="">
+                                </a>
+                            </div>
+                                                    <div class="swiper-slide project-gallery__slide">
+                                <a class="project-gallery__slide-img-wrap " href="wp-content/uploads/2020/03/dscf7782.jpg" data-fancybox="galeryView">
+                                    <img src="wp-content/uploads/2020/03/dscf7782-220x220.jpg" alt="">
+                                </a>
+                            </div>
+                                                    <div class="swiper-slide project-gallery__slide">
+                                <a class="project-gallery__slide-img-wrap " href="wp-content/uploads/2020/03/dscf7786.jpg" data-fancybox="galeryView">
+                                    <img src="wp-content/uploads/2020/03/dscf7786-220x220.jpg" alt="">
+                                </a>
+                            </div>
+                                                    <div class="swiper-slide project-gallery__slide">
+                                <a class="project-gallery__slide-img-wrap " href="wp-content/uploads/2020/03/dscf7787.jpg" data-fancybox="galeryView">
+                                    <img src="wp-content/uploads/2020/03/dscf7787-220x220.jpg" alt="">
+                                </a>
+                            </div>
+                                                    <div class="swiper-slide project-gallery__slide">
+                                <a class="project-gallery__slide-img-wrap " href="wp-content/uploads/2020/03/dscf7789.jpg" data-fancybox="galeryView">
+                                    <img src="wp-content/uploads/2020/03/dscf7789-220x220.jpg" alt="">
+                                </a>
+                            </div>
+                                                    <div class="swiper-slide project-gallery__slide">
+                                <a class="project-gallery__slide-img-wrap " href="wp-content/uploads/2020/03/dscf7791.jpg" data-fancybox="galeryView">
+                                    <img src="wp-content/uploads/2020/03/dscf7791-220x220.jpg" alt="">
+                                </a>
+                            </div>
+                                                    <div class="swiper-slide project-gallery__slide">
+                                <a class="project-gallery__slide-img-wrap " href="wp-content/uploads/2020/03/dscf7794-scaled.jpg" data-fancybox="galeryView">
+                                    <img src="wp-content/uploads/2020/03/dscf7794-220x220.jpg" alt="">
+                                </a>
+                            </div>
+                                                    <div class="swiper-slide project-gallery__slide">
+                                <a class="project-gallery__slide-img-wrap " href="wp-content/uploads/2020/03/dscf7796.jpg" data-fancybox="galeryView">
+                                    <img src="wp-content/uploads/2020/03/dscf7796-220x220.jpg" alt="">
+                                </a>
+                            </div>
+                                                    <div class="swiper-slide project-gallery__slide">
+                                <a class="project-gallery__slide-img-wrap " href="wp-content/uploads/2020/03/dscf7798.jpg" data-fancybox="galeryView">
+                                    <img src="wp-content/uploads/2020/03/dscf7798-220x220.jpg" alt="">
+                                </a>
+                            </div>
+                                                    <div class="swiper-slide project-gallery__slide">
+                                <a class="project-gallery__slide-img-wrap " href="wp-content/uploads/2020/03/dscf7801.jpg" data-fancybox="galeryView">
+                                    <img src="wp-content/uploads/2020/03/dscf7801-220x220.jpg" alt="">
+                                </a>
+                            </div>
+                                                    <div class="swiper-slide project-gallery__slide">
+                                <a class="project-gallery__slide-img-wrap " href="wp-content/uploads/2020/03/dscf7804.jpg" data-fancybox="galeryView">
+                                    <img src="wp-content/uploads/2020/03/dscf7804-220x220.jpg" alt="">
+                                </a>
+                            </div>
+                                                    <div class="swiper-slide project-gallery__slide">
+                                <a class="project-gallery__slide-img-wrap " href="wp-content/uploads/2020/03/dscf7806.jpg" data-fancybox="galeryView">
+                                    <img src="wp-content/uploads/2020/03/dscf7806-220x220.jpg" alt="">
+                                </a>
+                            </div>
+                                                    <div class="swiper-slide project-gallery__slide">
+                                <a class="project-gallery__slide-img-wrap " href="wp-content/uploads/2020/03/dscf7811.jpg" data-fancybox="galeryView">
+                                    <img src="wp-content/uploads/2020/03/dscf7811-220x220.jpg" alt="">
+                                </a>
+                            </div>
+                                                    <div class="swiper-slide project-gallery__slide">
+                                <a class="project-gallery__slide-img-wrap " href="wp-content/uploads/2020/03/dscf7821.jpg" data-fancybox="galeryView">
+                                    <img src="wp-content/uploads/2020/03/dscf7821-220x220.jpg" alt="">
+                                </a>
+                            </div>
+                                                    <div class="swiper-slide project-gallery__slide">
+                                <a class="project-gallery__slide-img-wrap " href="wp-content/uploads/2020/03/dscf7822.jpg" data-fancybox="galeryView">
+                                    <img src="wp-content/uploads/2020/03/dscf7822-220x220.jpg" alt="">
+                                </a>
+                            </div>
+                                                    <div class="swiper-slide project-gallery__slide">
+                                <a class="project-gallery__slide-img-wrap " href="wp-content/uploads/2020/03/dscf7827.jpg" data-fancybox="galeryView">
+                                    <img src="wp-content/uploads/2020/03/dscf7827-220x220.jpg" alt="">
+                                </a>
+                            </div>
+                                                    <div class="swiper-slide project-gallery__slide">
+                                <a class="project-gallery__slide-img-wrap " href="wp-content/uploads/2020/03/dscf7831.jpg" data-fancybox="galeryView">
+                                    <img src="wp-content/uploads/2020/03/dscf7831-220x220.jpg" alt="">
+                                </a>
+                            </div>
+                                                    <div class="swiper-slide project-gallery__slide">
+                                <a class="project-gallery__slide-img-wrap " href="wp-content/uploads/2020/03/dscf7828.jpg" data-fancybox="galeryView">
+                                    <img src="wp-content/uploads/2020/03/dscf7828-220x220.jpg" alt="">
+                                </a>
+                            </div>
+                                                    <div class="swiper-slide project-gallery__slide">
+                                <a class="project-gallery__slide-img-wrap " href="wp-content/uploads/2020/03/dscf7835.jpg" data-fancybox="galeryView">
+                                    <img src="wp-content/uploads/2020/03/dscf7835-220x220.jpg" alt="">
+                                </a>
+                            </div>
+                                                    <div class="swiper-slide project-gallery__slide">
+                                <a class="project-gallery__slide-img-wrap " href="wp-content/uploads/2020/03/dscf7839.jpg" data-fancybox="galeryView">
+                                    <img src="wp-content/uploads/2020/03/dscf7839-220x220.jpg" alt="">
+                                </a>
+                            </div>
+                                                    <div class="swiper-slide project-gallery__slide">
+                                <a class="project-gallery__slide-img-wrap " href="wp-content/uploads/2020/03/dscf7842-copy.jpg" data-fancybox="galeryView">
+                                    <img src="wp-content/uploads/2020/03/dscf7842-copy-220x220.jpg" alt="">
+                                </a>
+                            </div>
+                                                    <div class="swiper-slide project-gallery__slide">
+                                <a class="project-gallery__slide-img-wrap " href="wp-content/uploads/2020/03/dscf7843.jpg" data-fancybox="galeryView">
+                                    <img src="wp-content/uploads/2020/03/dscf7843-220x220.jpg" alt="">
+                                </a>
+                            </div>
+                                                    <div class="swiper-slide project-gallery__slide">
+                                <a class="project-gallery__slide-img-wrap " href="wp-content/uploads/2020/03/dscf7847.jpg" data-fancybox="galeryView">
+                                    <img src="wp-content/uploads/2020/03/dscf7847-220x220.jpg" alt="">
+                                </a>
+                            </div>
+                                                    <div class="swiper-slide project-gallery__slide">
+                                <a class="project-gallery__slide-img-wrap " href="wp-content/uploads/2020/03/dscf7850.jpg" data-fancybox="galeryView">
+                                    <img src="wp-content/uploads/2020/03/dscf7850-220x220.jpg" alt="">
+                                </a>
+                            </div>
+                                                    <div class="swiper-slide project-gallery__slide">
+                                <a class="project-gallery__slide-img-wrap " href="wp-content/uploads/2020/03/dscf7851.jpg" data-fancybox="galeryView">
+                                    <img src="wp-content/uploads/2020/03/dscf7851-220x220.jpg" alt="">
+                                </a>
+                            </div>
+                                                    <div class="swiper-slide project-gallery__slide">
+                                <a class="project-gallery__slide-img-wrap " href="wp-content/uploads/2020/03/dscf7855.jpg" data-fancybox="galeryView">
+                                    <img src="wp-content/uploads/2020/03/dscf7855-220x220.jpg" alt="">
+                                </a>
+                            </div>
+                                                    <div class="swiper-slide project-gallery__slide">
+                                <a class="project-gallery__slide-img-wrap " href="wp-content/uploads/2020/03/dscf7856.jpg" data-fancybox="galeryView">
+                                    <img src="wp-content/uploads/2020/03/dscf7856-220x220.jpg" alt="">
+                                </a>
+                            </div>
+                                                    <div class="swiper-slide project-gallery__slide">
+                                <a class="project-gallery__slide-img-wrap " href="wp-content/uploads/2020/03/dscf7857.jpg" data-fancybox="galeryView">
+                                    <img src="wp-content/uploads/2020/03/dscf7857-220x220.jpg" alt="">
+                                </a>
+                            </div>
+                                                    <div class="swiper-slide project-gallery__slide">
+                                <a class="project-gallery__slide-img-wrap " href="wp-content/uploads/2020/03/dscf7860.jpg" data-fancybox="galeryView">
+                                    <img src="wp-content/uploads/2020/03/dscf7860-220x220.jpg" alt="">
+                                </a>
+                            </div>
+                                                    <div class="swiper-slide project-gallery__slide">
+                                <a class="project-gallery__slide-img-wrap " href="wp-content/uploads/2020/03/dscf7861.jpg" data-fancybox="galeryView">
+                                    <img src="wp-content/uploads/2020/03/dscf7861-220x220.jpg" alt="">
+                                </a>
+                            </div>
+                                                    <div class="swiper-slide project-gallery__slide">
+                                <a class="project-gallery__slide-img-wrap " href="wp-content/uploads/2020/03/dscf7863.jpg" data-fancybox="galeryView">
+                                    <img src="wp-content/uploads/2020/03/dscf7863-220x220.jpg" alt="">
+                                </a>
+                            </div>
+                                                    <div class="swiper-slide project-gallery__slide">
+                                <a class="project-gallery__slide-img-wrap " href="wp-content/uploads/2020/03/dscf7865.jpg" data-fancybox="galeryView">
+                                    <img src="wp-content/uploads/2020/03/dscf7865-220x220.jpg" alt="">
+                                </a>
+                            </div>
+                                                    <div class="swiper-slide project-gallery__slide">
+                                <a class="project-gallery__slide-img-wrap " href="wp-content/uploads/2020/03/dscf7867.jpg" data-fancybox="galeryView">
+                                    <img src="wp-content/uploads/2020/03/dscf7867-220x220.jpg" alt="">
+                                </a>
+                            </div>
+                                                            </div>
+                <!-- Add Arrows -->
+                <div class="swiper-button-next">
+                    <svg width="14" height="24">
+                        <path fill="#4A4D56" d="M13.1887 13.1881L2.86905 23.5074C2.2126 24.1642 1.14827 24.1642 0.49214 23.5074C-0.164047 22.8512 -0.164047 21.787 0.49214 21.1308L9.62341 11.9998L0.492405 2.86914C-0.163781 2.21269 -0.163781 1.14853 0.492405 0.492339C1.14859 -0.164113 2.21286 -0.164113 2.86932 0.492339L13.1889 10.8118C13.517 11.14 13.6809 11.5698 13.6809 11.9998C13.6809 12.43 13.5167 12.86 13.1887 13.1881Z"></path>
+                    </svg>
+                </div>
+                <div class="swiper-button-prev">
+                    <svg width="14" height="24">
+                        <path d="M0.491997 10.8119L10.8116 0.492579C11.4681 -0.164194 12.5324 -0.164194 13.1885 0.492579C13.8447 1.14876 13.8447 2.21304 13.1885 2.86917L4.05726 12.0002L13.1883 21.1309C13.8444 21.7873 13.8444 22.8515 13.1883 23.5077C12.5321 24.1641 11.4678 24.1641 10.8113 23.5077L0.491732 13.1882C0.163638 12.86 -0.000223218 12.4302 -0.000223255 12.0002C-0.000223293 11.57 0.163956 11.14 0.491997 10.8119Z" fill="#4A4D56"></path>
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+
+    <section class="residential-block">
+        <img class="residential-block__inner-bg" src="wp-content/uploads/2020/03/section-residential-bg.png" alt="Житлова нерухомість">
+        <div class="residential-block__inner">
+            <h2 class="residential-block__caption">
+                Житлова нерухомість            </h2>
+            <ul class="residential-block__list">
+
+                                    <li class="residential-block__item">
+                        <a href="projects/hvoya/index.htm" class="residential-block__link">
+                            <div class="residential-block__card">
+                                <div class="residential-block__preview">
+                                    <div class="residential-block__img-wrap">
+                                        <img src="wp-content/uploads/2020/03/3_new-180x180.jpg" alt="ЖК Hvoya">
+                                    </div>
+
+                                    <span class="residential-block__date status-active">
+                                                У продажу                                                <span style="background-color: #81d742"></span>
+                                            </span>
+                                </div>
+
+                                <h3 class="residential-block__card-caption">
+                                    ЖК Hvoya                                </h3>
+
+                                <div class="residential-block__date-wrap">
+                                            <span class="residential-block__address">
+                                                Академмістечко                                            </span>
+                                                                            <span class="residential-block__price">від <strong>60 500</strong> грн/м2</span>
+                                                                    </div>
+                            </div>
+                        </a>
+                    </li>
+                                    <li class="residential-block__item">
+                        <a href="projects/paradise-avenue/index.htm" class="residential-block__link">
+                            <div class="residential-block__card">
+                                <div class="residential-block__preview">
+                                    <div class="residential-block__img-wrap">
+                                        <img src="wp-content/uploads/2020/03/bgmainpage-180x180.jpg" alt="ЖК Paradise Avenue">
+                                    </div>
+
+                                    <span class="residential-block__date status-active">
+                                                у продажу                                                <span style="background-color: #81d742"></span>
+                                            </span>
+                                </div>
+
+                                <h3 class="residential-block__card-caption">
+                                    ЖК Paradise Avenue                                </h3>
+
+                                <div class="residential-block__date-wrap">
+                                            <span class="residential-block__address">
+                                                Теремки                                            </span>
+                                                                            <span class="residential-block__price">від <strong>29000</strong> грн/м2</span>
+                                                                    </div>
+                            </div>
+                        </a>
+                    </li>
+                                    <li class="residential-block__item">
+                        <a href="projects/forest-park/index.htm" class="residential-block__link">
+                            <div class="residential-block__card">
+                                <div class="residential-block__preview">
+                                    <div class="residential-block__img-wrap">
+                                        <img src="wp-content/uploads/2020/03/7-min-1-180x180.jpg" alt="ЖК Forest Park">
+                                    </div>
+
+                                    <span class="residential-block__date status-active">
+                                                у продажу                                                <span style="background-color: #81d742"></span>
+                                            </span>
+                                </div>
+
+                                <h3 class="residential-block__card-caption">
+                                    ЖК Forest Park                                </h3>
+
+                                <div class="residential-block__date-wrap">
+                                            <span class="residential-block__address">
+                                                Героїв Дніпра                                            </span>
+                                                                            <span class="residential-block__price">від <strong>34 000</strong> грн/м2</span>
+                                                                    </div>
+                            </div>
+                        </a>
+                    </li>
+                                    <li class="residential-block__item">
+                        <a href="projects/parkland/index.htm" class="residential-block__link">
+                            <div class="residential-block__card">
+                                <div class="residential-block__preview">
+                                    <div class="residential-block__img-wrap">
+                                        <img src="wp-content/uploads/2020/03/spa_-5-1-180x180.jpg" alt="ЖК Parkland">
+                                    </div>
+
+                                    <span class="residential-block__date status-active">
+                                                продано                                                <span style="background-color: #dd3333"></span>
+                                            </span>
+                                </div>
+
+                                <h3 class="residential-block__card-caption">
+                                    ЖК Parkland                                </h3>
+
+                                <div class="residential-block__date-wrap">
+                                            <span class="residential-block__address">
+                                                Васильківська                                            </span>
+                                                                    </div>
+                            </div>
+                        </a>
+                    </li>
+                                    <li class="residential-block__item">
+                        <a href="projects/sunlife/index.htm" class="residential-block__link">
+                            <div class="residential-block__card">
+                                <div class="residential-block__preview">
+                                    <div class="residential-block__img-wrap">
+                                        <img src="wp-content/uploads/2020/03/3538-180x180.jpg" alt="ЖК Sunlife">
+                                    </div>
+
+                                    <span class="residential-block__date status-active">
+                                                продано                                                <span style="background-color: #dd3333"></span>
+                                            </span>
+                                </div>
+
+                                <h3 class="residential-block__card-caption">
+                                    ЖК Sunlife                                </h3>
+
+                                <div class="residential-block__date-wrap">
+                                            <span class="residential-block__address">
+                                                Виставковий центр                                            </span>
+                                                                    </div>
+                            </div>
+                        </a>
+                    </li>
+                                    <li class="residential-block__item">
+                        <a href="projects/uamayfair-parkruzhk-parkland/index.htm" class="residential-block__link">
+                            <div class="residential-block__card">
+                                <div class="residential-block__preview">
+                                    <div class="residential-block__img-wrap">
+                                        <img src="wp-content/uploads/2020/03/0-02-05-e67c1c21da3d2f72afa968decf643a80ffa5e172b076661993ea5fd478466083_fd9e2f35-180x180.jpg" alt="Апарт-готель Times">
+                                    </div>
+
+                                    <span class="residential-block__date status-active">
+                                                скоро                                                <span style="background-color: #eeee22"></span>
+                                            </span>
+                                </div>
+
+                                <h3 class="residential-block__card-caption">
+                                    Апарт-готель Times                                </h3>
+
+                                <div class="residential-block__date-wrap">
+                                            <span class="residential-block__address">
+                                                Вокзальна, вул. Симона Петлюри                                            </span>
+                                                                    </div>
+                            </div>
+                        </a>
+                    </li>
+                                    <li class="residential-block__item">
+                        <a href="projects/klubnyj-2/index.htm" class="residential-block__link">
+                            <div class="residential-block__card">
+                                <div class="residential-block__preview">
+                                    <div class="residential-block__img-wrap">
+                                        <img src="wp-content/uploads/2020/03/1_black-obrizana-180x180.jpg" alt="ЖК Клубний">
+                                    </div>
+
+                                    <span class="residential-block__date status-active">
+                                                продано                                                <span style="background-color: #dd3333"></span>
+                                            </span>
+                                </div>
+
+                                <h3 class="residential-block__card-caption">
+                                    ЖК Клубний                                </h3>
+
+                                <div class="residential-block__date-wrap">
+                                            <span class="residential-block__address">
+                                                Васильківська                                            </span>
+                                                                    </div>
+                            </div>
+                        </a>
+                    </li>
+                                    <li class="residential-block__item">
+                        <a href="projects/zhk-kolibri/index.htm" class="residential-block__link">
+                            <div class="residential-block__card">
+                                <div class="residential-block__preview">
+                                    <div class="residential-block__img-wrap">
+                                        <img src="wp-content/uploads/2020/03/gallery_05-180x180.jpg" alt="ЖК Kolibri">
+                                    </div>
+
+                                    <span class="residential-block__date status-active">
+                                                скоро                                                <span style="background-color: #eeee22"></span>
+                                            </span>
+                                </div>
+
+                                <h3 class="residential-block__card-caption">
+                                    ЖК Kolibri                                </h3>
+
+                                <div class="residential-block__date-wrap">
+                                            <span class="residential-block__address">
+                                                Іподром                                            </span>
+                                                                    </div>
+                            </div>
+                        </a>
+                    </li>
+                                    <li class="residential-block__item">
+                        <a href="projects/skyland/index.htm" class="residential-block__link">
+                            <div class="residential-block__card">
+                                <div class="residential-block__preview">
+                                    <div class="residential-block__img-wrap">
+                                        <img src="wp-content/uploads/2020/03/4618-180x180.jpg" alt="ЖК Skyland">
+                                    </div>
+
+                                    <span class="residential-block__date status-active">
+                                                продано                                                <span style="background-color: #dd3333"></span>
+                                            </span>
+                                </div>
+
+                                <h3 class="residential-block__card-caption">
+                                    ЖК Skyland                                </h3>
+
+                                <div class="residential-block__date-wrap">
+                                            <span class="residential-block__address">
+                                                Васильківська                                            </span>
+                                                                    </div>
+                            </div>
+                        </a>
+                    </li>
+                                    <li class="residential-block__item">
+                        <a href="projects/skyland2/index.htm" class="residential-block__link">
+                            <div class="residential-block__card">
+                                <div class="residential-block__preview">
+                                    <div class="residential-block__img-wrap">
+                                        <img src="wp-content/uploads/2020/03/dscf7811-1-1105x520-1-1-180x180.jpg" alt="ЖК Skyland II">
+                                    </div>
+
+                                    <span class="residential-block__date status-active">
+                                                продано                                                <span style="background-color: #dd3333"></span>
+                                            </span>
+                                </div>
+
+                                <h3 class="residential-block__card-caption">
+                                    ЖК Skyland II                                </h3>
+
+                                <div class="residential-block__date-wrap">
+                                            <span class="residential-block__address">
+                                                Васильківська                                            </span>
+                                                                    </div>
+                            </div>
+                        </a>
+                    </li>
+                
+            </ul>
+            <h2 class="residential-block__caption">
+                Бізнес центри            </h2>
+            <ul class="residential-block__list">
+
+                                    <li class="residential-block__item">
+                        <a href="projects/biznes-czentr-na-sumskij/index.htm" class="residential-block__link">
+                            <div class="residential-block__card">
+                                <div class="residential-block__preview">
+                                    <div class="residential-block__img-wrap">
+                                        <img src="wp-content/uploads/2020/03/r04_f-180x180.jpg" alt="БЦ Bionic">
+                                    </div>
+
+                                    <span class="residential-block__date status-active">
+                                                скоро                                                <span style="background-color: #eeee22"></span>
+                                            </span>
+                                </div>
+
+                                <h3 class="residential-block__card-caption">
+                                    БЦ Bionic                                </h3>
+
+                                <div class="residential-block__date-wrap">
+                                            <span class="residential-block__address">
+                                                Васильківська                                            </span>
+                                                                    </div>
+                            </div>
+                        </a>
+                    </li>
+                                    <li class="residential-block__item">
+                        <a href="projects/biznes-czentr-na-bogatyrskij/index.htm" class="residential-block__link">
+                            <div class="residential-block__card">
+                                <div class="residential-block__preview">
+                                    <div class="residential-block__img-wrap">
+                                        <img src="wp-content/uploads/2020/03/6-180x180.jpg" alt="БЦ Zimer">
+                                    </div>
+
+                                    <span class="residential-block__date status-active">
+                                                скоро                                                <span style="background-color: #eeee22"></span>
+                                            </span>
+                                </div>
+
+                                <h3 class="residential-block__card-caption">
+                                    БЦ Zimer                                </h3>
+
+                                <div class="residential-block__date-wrap">
+                                            <span class="residential-block__address">
+                                                Оболонь                                            </span>
+                                                                    </div>
+                            </div>
+                        </a>
+                    </li>
+                
+            </ul>
+        </div>
+    </section>
+    <section class="commercial-block">
+
+        <img class="commercial-block__inner-bg" src="wp-content/uploads/2020/03/commercial-block-bg.jpg" alt="">
+        <div class="commercial-block__inner">
+            <div class="commercial-block__content-wrap">
+                <h2 class="commercial-block__caption">
+                    Комерційна нерухомість                </h2>
+
+                <p class="commercial-block__content">
+                    Комерційна нерухомість для будь-яких потреб. Широкий вибір приміщень різної площі, наявність комунікацій та вигідні умови придбання.                </p>
+
+                <ul class="commercial-block__list">
+                    <li class="commercial-block__item">
+                        <div class="commercial-block__img-wrap">
+                            <img class="commercial-block__img" src="wp-content/uploads/2020/03/ex1.jpg" alt="Для ресторанів">
+                        </div>
+                        <span class="commercial-block__item-text">
+                            Для ресторанів                        </span>
+                    </li>
+                    <li class="commercial-block__item">
+                        <div class="commercial-block__img-wrap">
+                            <img class="commercial-block__img" src="wp-content/uploads/2020/03/ex2.jpg" alt="Для офісів">
+                        </div>
+                        <span class="commercial-block__item-text">
+                            Для офісів                        </span>
+                    </li>
+                    <li class="commercial-block__item">
+                        <div class="commercial-block__img-wrap">
+                            <img class="commercial-block__img" src="wp-content/uploads/2020/03/ex3.jpg" alt="Для будь-яких ідей">
+                        </div>
+                        <span class="commercial-block__item-text">
+                            Для будь-яких ідей                        </span>
+                    </li>
+                </ul>
+
+                <p class="commercial-block__text">
+                    Обирайте приміщення для свого бізнесу від забудовника Zim Group                </p>
+
+                <div class="commercial-block__btn-wrap">
+                    <a class="commercial-block__btn-show" href="commercial/index.htm">
+                        Переглянути                    </a>
+                    <a class="commercial-block__btn-callback" href="contacts/index.htm">
+                        Зв’язатись з менеджером                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="partners">
+    <div class="partners__inner">
+        <h2 class="partners__caption">
+            Партнери        </h2>
+        <!-- Swiper -->
+                <div class="swiper-container main">
+            <div class="swiper-wrapper">
+                                    <div class="swiper-slide partners__slide">
+                        <div class="partners__slide-img-wrap">
+                            <img width="184" height="95" class="partners__slide-img" src="wp-content/uploads/2020/03/kovalska.png" alt="Лідер у сфері виробництва бетону">
+                        </div>
+                        <span class="partners__slide-text">Лідер у сфері виробництва бетону</span>
+                    </div>
+                                    <div class="swiper-slide partners__slide">
+                        <div class="partners__slide-img-wrap">
+                            <img width="184" height="95" class="partners__slide-img" src="wp-content/uploads/2020/03/grandbeton.png" alt="Лідер у сфері виробництва бетону">
+                        </div>
+                        <span class="partners__slide-text">Лідер у сфері виробництва бетону</span>
+                    </div>
+                                    <div class="swiper-slide partners__slide">
+                        <div class="partners__slide-img-wrap">
+                            <img width="184" height="95" class="partners__slide-img" src="wp-content/uploads/2020/03/kaskadbeton.png" alt="Лідер у сфері виробництва бетону">
+                        </div>
+                        <span class="partners__slide-text">Лідер у сфері виробництва бетону</span>
+                    </div>
+                                    <div class="swiper-slide partners__slide">
+                        <div class="partners__slide-img-wrap">
+                            <img width="184" height="95" class="partners__slide-img" src="wp-content/uploads/2020/03/metinvest.png" alt="Лідер у сфері виробництва і постачання металопрокату">
+                        </div>
+                        <span class="partners__slide-text">Лідер у сфері виробництва і постачання металопрокату</span>
+                    </div>
+                                    <div class="swiper-slide partners__slide">
+                        <div class="partners__slide-img-wrap">
+                            <img width="184" height="95" class="partners__slide-img" src="wp-content/uploads/2020/03/ab-metal-group.png" alt="Лідер у сфері постачання металопрокату">
+                        </div>
+                        <span class="partners__slide-text">Лідер у сфері постачання металопрокату</span>
+                    </div>
+                                    <div class="swiper-slide partners__slide">
+                        <div class="partners__slide-img-wrap">
+                            <img width="184" height="95" class="partners__slide-img" src="wp-content/uploads/2020/03/aeroc.png" alt="Лідер у сфері виробництва газоблоку">
+                        </div>
+                        <span class="partners__slide-text">Лідер у сфері виробництва газоблоку</span>
+                    </div>
+                                    <div class="swiper-slide partners__slide">
+                        <div class="partners__slide-img-wrap">
+                            <img width="184" height="95" class="partners__slide-img" src="wp-content/uploads/2020/03/stonelight.png" alt="Лідер у сфері виробництва газоблоку">
+                        </div>
+                        <span class="partners__slide-text">Лідер у сфері виробництва газоблоку</span>
+                    </div>
+                                    <div class="swiper-slide partners__slide">
+                        <div class="partners__slide-img-wrap">
+                            <img width="184" height="95" class="partners__slide-img" src="wp-content/uploads/2020/03/siltek.png" alt="Лідер у сфері виробництва сухих будівельних сумішей">
+                        </div>
+                        <span class="partners__slide-text">Лідер у сфері виробництва сухих будівельних сумішей</span>
+                    </div>
+                                    <div class="swiper-slide partners__slide">
+                        <div class="partners__slide-img-wrap">
+                            <img width="184" height="95" class="partners__slide-img" src="wp-content/uploads/2020/03/baumit-1.png" alt="Лідер у сфері виробництва сухих будівельних сумішей">
+                        </div>
+                        <span class="partners__slide-text">Лідер у сфері виробництва сухих будівельних сумішей</span>
+                    </div>
+                                    <div class="swiper-slide partners__slide">
+                        <div class="partners__slide-img-wrap">
+                            <img width="184" height="95" class="partners__slide-img" src="wp-content/uploads/2020/03/krumix.png" alt="Лідер у сфері виробництва сухих будівельних сумішей">
+                        </div>
+                        <span class="partners__slide-text">Лідер у сфері виробництва сухих будівельних сумішей</span>
+                    </div>
+                                    <div class="swiper-slide partners__slide">
+                        <div class="partners__slide-img-wrap">
+                            <img width="184" height="95" class="partners__slide-img" src="wp-content/uploads/2020/03/mapei.png" alt="Лідер у сфері виробництва сухих будівельних сумішей">
+                        </div>
+                        <span class="partners__slide-text">Лідер у сфері виробництва сухих будівельних сумішей</span>
+                    </div>
+                                    <div class="swiper-slide partners__slide">
+                        <div class="partners__slide-img-wrap">
+                            <img width="184" height="95" class="partners__slide-img" src="wp-content/uploads/2020/03/buildcraft.png" alt="Лідер у сфері виробництва сухих будівельних сумішей">
+                        </div>
+                        <span class="partners__slide-text">Лідер у сфері виробництва сухих будівельних сумішей</span>
+                    </div>
+                                    <div class="swiper-slide partners__slide">
+                        <div class="partners__slide-img-wrap">
+                            <img width="184" height="95" class="partners__slide-img" src="wp-content/uploads/2020/03/caparol-1.png" alt="Лідер у сфері виробництва сухих будівельних сумішей">
+                        </div>
+                        <span class="partners__slide-text">Лідер у сфері виробництва сухих будівельних сумішей</span>
+                    </div>
+                                    <div class="swiper-slide partners__slide">
+                        <div class="partners__slide-img-wrap">
+                            <img width="184" height="95" class="partners__slide-img" src="wp-content/uploads/2020/03/zzcm.png" alt="Лідер у сфері електричного обладнання і кабелів">
+                        </div>
+                        <span class="partners__slide-text">Лідер у сфері електричного обладнання і кабелів</span>
+                    </div>
+                                    <div class="swiper-slide partners__slide">
+                        <div class="partners__slide-img-wrap">
+                            <img width="184" height="95" class="partners__slide-img" src="wp-content/uploads/2020/03/ukrcable.png" alt="Лідер у сфері електричного обладнання і кабелів">
+                        </div>
+                        <span class="partners__slide-text">Лідер у сфері електричного обладнання і кабелів</span>
+                    </div>
+                                    <div class="swiper-slide partners__slide">
+                        <div class="partners__slide-img-wrap">
+                            <img width="184" height="95" class="partners__slide-img" src="wp-content/uploads/2020/03/interelektro.png" alt="Лідер у сфері електричного обладнання і кабелів">
+                        </div>
+                        <span class="partners__slide-text">Лідер у сфері електричного обладнання і кабелів</span>
+                    </div>
+                                    <div class="swiper-slide partners__slide">
+                        <div class="partners__slide-img-wrap">
+                            <img width="184" height="95" class="partners__slide-img" src="wp-content/uploads/2020/03/iek.png" alt="Лідер у сфері електричного обладнання і автоматики">
+                        </div>
+                        <span class="partners__slide-text">Лідер у сфері електричного обладнання і автоматики</span>
+                    </div>
+                                    <div class="swiper-slide partners__slide">
+                        <div class="partners__slide-img-wrap">
+                            <img width="184" height="95" class="partners__slide-img" src="wp-content/uploads/2020/03/chnt.png" alt="Лідер у сфері електричного обладнання і автоматики">
+                        </div>
+                        <span class="partners__slide-text">Лідер у сфері електричного обладнання і автоматики</span>
+                    </div>
+                                    <div class="swiper-slide partners__slide">
+                        <div class="partners__slide-img-wrap">
+                            <img width="184" height="95" class="partners__slide-img" src="wp-content/uploads/2020/03/schneider-electric.png" alt="Лідер у сфері електричного обладнання і автоматики">
+                        </div>
+                        <span class="partners__slide-text">Лідер у сфері електричного обладнання і автоматики</span>
+                    </div>
+                                    <div class="swiper-slide partners__slide">
+                        <div class="partners__slide-img-wrap">
+                            <img width="184" height="95" class="partners__slide-img" src="wp-content/uploads/2020/03/eaton.png" alt="Лідер у сфері електричного обладнання і автоматики">
+                        </div>
+                        <span class="partners__slide-text">Лідер у сфері електричного обладнання і автоматики</span>
+                    </div>
+                                    <div class="swiper-slide partners__slide">
+                        <div class="partners__slide-img-wrap">
+                            <img width="184" height="95" class="partners__slide-img" src="wp-content/uploads/2020/03/kan-1.png" alt="Лідер у сфері труб і сантехніки">
+                        </div>
+                        <span class="partners__slide-text">Лідер у сфері труб і сантехніки</span>
+                    </div>
+                                    <div class="swiper-slide partners__slide">
+                        <div class="partners__slide-img-wrap">
+                            <img width="184" height="95" class="partners__slide-img" src="wp-content/uploads/2020/03/rehau.png" alt="Лідер у сфері труб і сантехніки">
+                        </div>
+                        <span class="partners__slide-text">Лідер у сфері труб і сантехніки</span>
+                    </div>
+                                    <div class="swiper-slide partners__slide">
+                        <div class="partners__slide-img-wrap">
+                            <img width="184" height="95" class="partners__slide-img" src="wp-content/uploads/2020/03/danfoss.png" alt="Лідер у сфері сантехніки і запорної арматури">
+                        </div>
+                        <span class="partners__slide-text">Лідер у сфері сантехніки і запорної арматури</span>
+                    </div>
+                                    <div class="swiper-slide partners__slide">
+                        <div class="partners__slide-img-wrap">
+                            <img width="184" height="95" class="partners__slide-img" src="wp-content/uploads/2020/03/fadocompany-1.png" alt="Лідер у сфері сантехніки і запорної арматури">
+                        </div>
+                        <span class="partners__slide-text">Лідер у сфері сантехніки і запорної арматури</span>
+                    </div>
+                                    <div class="swiper-slide partners__slide">
+                        <div class="partners__slide-img-wrap">
+                            <img width="184" height="95" class="partners__slide-img" src="wp-content/uploads/2020/03/honeywell.png" alt="Лідер у сфері сантехніки і запорної арматури">
+                        </div>
+                        <span class="partners__slide-text">Лідер у сфері сантехніки і запорної арматури</span>
+                    </div>
+                                    <div class="swiper-slide partners__slide">
+                        <div class="partners__slide-img-wrap">
+                            <img width="184" height="95" class="partners__slide-img" src="wp-content/uploads/2020/03/tece-1.png" alt="Лідер у сфері сантехніки і запорної арматури">
+                        </div>
+                        <span class="partners__slide-text">Лідер у сфері сантехніки і запорної арматури</span>
+                    </div>
+                                    <div class="swiper-slide partners__slide">
+                        <div class="partners__slide-img-wrap">
+                            <img width="184" height="95" class="partners__slide-img" src="wp-content/uploads/2020/03/herz-1.png" alt="Лідер у сфері сантехніки і запорної арматури">
+                        </div>
+                        <span class="partners__slide-text">Лідер у сфері сантехніки і запорної арматури</span>
+                    </div>
+                                    <div class="swiper-slide partners__slide">
+                        <div class="partners__slide-img-wrap">
+                            <img width="184" height="95" class="partners__slide-img" src="wp-content/uploads/2020/03/purmo-1.png" alt="Лідер у сфері сантехніки і радіаторів">
+                        </div>
+                        <span class="partners__slide-text">Лідер у сфері сантехніки і радіаторів</span>
+                    </div>
+                                    <div class="swiper-slide partners__slide">
+                        <div class="partners__slide-img-wrap">
+                            <img width="184" height="95" class="partners__slide-img" src="wp-content/uploads/2020/03/vaillant.png" alt="Лідер у сфері котлів">
+                        </div>
+                        <span class="partners__slide-text">Лідер у сфері котлів</span>
+                    </div>
+                                    <div class="swiper-slide partners__slide">
+                        <div class="partners__slide-img-wrap">
+                            <img width="184" height="95" class="partners__slide-img" src="wp-content/uploads/2020/03/bosch-1.png" alt="Лідер у сфері котельного обладнання">
+                        </div>
+                        <span class="partners__slide-text">Лідер у сфері котельного обладнання</span>
+                    </div>
+                                    <div class="swiper-slide partners__slide">
+                        <div class="partners__slide-img-wrap">
+                            <img width="184" height="95" class="partners__slide-img" src="wp-content/uploads/2020/03/kleeman.png" alt="Лідер у сфері виробництва ліфтів">
+                        </div>
+                        <span class="partners__slide-text">Лідер у сфері виробництва ліфтів</span>
+                    </div>
+                                    <div class="swiper-slide partners__slide">
+                        <div class="partners__slide-img-wrap">
+                            <img width="184" height="95" class="partners__slide-img" src="wp-content/uploads/2020/03/evasad.png" alt="Регіональний лідер у сфері озелення і ландшафтного дизайну">
+                        </div>
+                        <span class="partners__slide-text">Регіональний лідер у сфері озелення і ландшафтного дизайну</span>
+                    </div>
+                                    <div class="swiper-slide partners__slide">
+                        <div class="partners__slide-img-wrap">
+                            <img width="184" height="95" class="partners__slide-img" src="wp-content/uploads/2020/03/caparol-1.png" alt="Лідер у сфері виготовлення матеріалів для будівництва фасадів">
+                        </div>
+                        <span class="partners__slide-text">Лідер у сфері виготовлення матеріалів для будівництва фасадів</span>
+                    </div>
+                                    <div class="swiper-slide partners__slide">
+                        <div class="partners__slide-img-wrap">
+                            <img width="184" height="95" class="partners__slide-img" src="wp-content/uploads/2020/03/izovat.png" alt="Лідер у сфері виробництва мінеральної вати">
+                        </div>
+                        <span class="partners__slide-text">Лідер у сфері виробництва мінеральної вати</span>
+                    </div>
+                                    <div class="swiper-slide partners__slide">
+                        <div class="partners__slide-img-wrap">
+                            <img width="184" height="95" class="partners__slide-img" src="wp-content/uploads/2020/03/termpek.png" alt="Лідер у сфері виробництва пінополестеролу">
+                        </div>
+                        <span class="partners__slide-text">Лідер у сфері виробництва пінополестеролу</span>
+                    </div>
+                                    <div class="swiper-slide partners__slide">
+                        <div class="partners__slide-img-wrap">
+                            <img width="184" height="95" class="partners__slide-img" src="wp-content/uploads/2020/03/vikbud.png" alt="Лідер у сфері виробництва пінополестеролу">
+                        </div>
+                        <span class="partners__slide-text">Лідер у сфері виробництва пінополестеролу</span>
+                    </div>
+                                    <div class="swiper-slide partners__slide">
+                        <div class="partners__slide-img-wrap">
+                            <img width="184" height="95" class="partners__slide-img" src="wp-content/uploads/2020/03/wkret-met.png" alt="Лідер у сфері виробництва систем кріплень">
+                        </div>
+                        <span class="partners__slide-text">Лідер у сфері виробництва систем кріплень</span>
+                    </div>
+                                    <div class="swiper-slide partners__slide">
+                        <div class="partners__slide-img-wrap">
+                            <img width="184" height="95" class="partners__slide-img" src="wp-content/uploads/2020/03/hilti.png" alt="Лідер у сфері виробництва систем кріплень">
+                        </div>
+                        <span class="partners__slide-text">Лідер у сфері виробництва систем кріплень</span>
+                    </div>
+                                    <div class="swiper-slide partners__slide">
+                        <div class="partners__slide-img-wrap">
+                            <img width="184" height="95" class="partners__slide-img" src="wp-content/uploads/2020/03/rehau2.png" alt="Лідер у сфері виробництва вікон">
+                        </div>
+                        <span class="partners__slide-text">Лідер у сфері виробництва вікон</span>
+                    </div>
+                                    <div class="swiper-slide partners__slide">
+                        <div class="partners__slide-img-wrap">
+                            <img width="184" height="95" class="partners__slide-img" src="wp-content/uploads/2020/03/wds.png" alt="Лідер у сфері виробництва вікон">
+                        </div>
+                        <span class="partners__slide-text">Лідер у сфері виробництва вікон</span>
+                    </div>
+                                    <div class="swiper-slide partners__slide">
+                        <div class="partners__slide-img-wrap">
+                            <img width="184" height="95" class="partners__slide-img" src="wp-content/uploads/2020/03/reynaers-aluminium.png" alt="Лідер у сфері виробництва вікон">
+                        </div>
+                        <span class="partners__slide-text">Лідер у сфері виробництва вікон</span>
+                    </div>
+                                    <div class="swiper-slide partners__slide">
+                        <div class="partners__slide-img-wrap">
+                            <img width="184" height="95" class="partners__slide-img" src="wp-content/uploads/2020/03/hilti.png" alt="Лідер у сфері виробництва систем вентильованих фасадів">
+                        </div>
+                        <span class="partners__slide-text">Лідер у сфері виробництва систем вентильованих фасадів</span>
+                    </div>
+                                    <div class="swiper-slide partners__slide">
+                        <div class="partners__slide-img-wrap">
+                            <img width="184" height="95" class="partners__slide-img" src="wp-content/uploads/2020/03/fundermax-1.png" alt="Лідер у сфері виробництва HPL панелей">
+                        </div>
+                        <span class="partners__slide-text">Лідер у сфері виробництва HPL панелей</span>
+                    </div>
+                                    <div class="swiper-slide partners__slide">
+                        <div class="partners__slide-img-wrap">
+                            <img width="184" height="95" class="partners__slide-img" src="wp-content/uploads/2020/03/gentas-1.png" alt="Лідер у сфері виробництва HPL панелей">
+                        </div>
+                        <span class="partners__slide-text">Лідер у сфері виробництва HPL панелей</span>
+                    </div>
+                                    <div class="swiper-slide partners__slide">
+                        <div class="partners__slide-img-wrap">
+                            <img width="184" height="95" class="partners__slide-img" src="wp-content/uploads/2020/03/atem-1.png" alt="Лідер у сфері виробництва плитки і керамограніту">
+                        </div>
+                        <span class="partners__slide-text">Лідер у сфері виробництва плитки і керамограніту</span>
+                    </div>
+                                    <div class="swiper-slide partners__slide">
+                        <div class="partners__slide-img-wrap">
+                            <img width="184" height="95" class="partners__slide-img" src="wp-content/uploads/2020/03/golden_tile-1.png" alt="Лідер у сфері виробництва плитки і керамограніту">
+                        </div>
+                        <span class="partners__slide-text">Лідер у сфері виробництва плитки і керамограніту</span>
+                    </div>
+                                    <div class="swiper-slide partners__slide">
+                        <div class="partners__slide-img-wrap">
+                            <img width="184" height="95" class="partners__slide-img" src="wp-content/uploads/2020/03/agromat.png" alt="Лідер у сфері виробництва плитки і керамограніту">
+                        </div>
+                        <span class="partners__slide-text">Лідер у сфері виробництва плитки і керамограніту</span>
+                    </div>
+                                    <div class="swiper-slide partners__slide">
+                        <div class="partners__slide-img-wrap">
+                            <img width="184" height="95" class="partners__slide-img" src="wp-content/uploads/2020/03/leo.png" alt="Лідер у сфері виробництва плитки і керамограніту">
+                        </div>
+                        <span class="partners__slide-text">Лідер у сфері виробництва плитки і керамограніту</span>
+                    </div>
+                                    <div class="swiper-slide partners__slide">
+                        <div class="partners__slide-img-wrap">
+                            <img width="184" height="95" class="partners__slide-img" src="wp-content/uploads/2020/03/ukrinstal.png" alt="Лідер у сфері сантехніки і комплектуючих">
+                        </div>
+                        <span class="partners__slide-text">Лідер у сфері сантехніки і комплектуючих</span>
+                    </div>
+                                    <div class="swiper-slide partners__slide">
+                        <div class="partners__slide-img-wrap">
+                            <img width="184" height="95" class="partners__slide-img" src="wp-content/uploads/2020/03/grohe-1.png" alt="Лідер у сфері виробництва сантехніки і комплектуючих">
+                        </div>
+                        <span class="partners__slide-text">Лідер у сфері виробництва сантехніки і комплектуючих</span>
+                    </div>
+                                    <div class="swiper-slide partners__slide">
+                        <div class="partners__slide-img-wrap">
+                            <img width="184" height="95" class="partners__slide-img" src="wp-content/uploads/2020/03/hansgrohe.png" alt="Лідер у сфері виробництва сантехніки і комплектуючих">
+                        </div>
+                        <span class="partners__slide-text">Лідер у сфері виробництва сантехніки і комплектуючих</span>
+                    </div>
+                                    <div class="swiper-slide partners__slide">
+                        <div class="partners__slide-img-wrap">
+                            <img width="184" height="95" class="partners__slide-img" src="wp-content/uploads/2020/03/artiz.png" alt="Лідер у сфері виробництва дверей">
+                        </div>
+                        <span class="partners__slide-text">Лідер у сфері виробництва дверей</span>
+                    </div>
+                                    <div class="swiper-slide partners__slide">
+                        <div class="partners__slide-img-wrap">
+                            <img width="184" height="95" class="partners__slide-img" src="wp-content/uploads/2020/03/sagan-1.png" alt="Лідер у сфері виробництва дверей">
+                        </div>
+                        <span class="partners__slide-text">Лідер у сфері виробництва дверей</span>
+                    </div>
+                                    <div class="swiper-slide partners__slide">
+                        <div class="partners__slide-img-wrap">
+                            <img width="184" height="95" class="partners__slide-img" src="wp-content/uploads/2020/03/caparol-1.png" alt="Лідер у сфері оздоблювальних матеріалів">
+                        </div>
+                        <span class="partners__slide-text">Лідер у сфері оздоблювальних матеріалів</span>
+                    </div>
+                            </div>
+            <!-- Add Arrows -->
+            <div class="swiper-button-next">
+                <svg width="14" height="24">
+                    <path fill="#4A4D56" d="M13.1887 13.1881L2.86905 23.5074C2.2126 24.1642 1.14827 24.1642 0.49214 23.5074C-0.164047 22.8512 -0.164047 21.787 0.49214 21.1308L9.62341 11.9998L0.492405 2.86914C-0.163781 2.21269 -0.163781 1.14853 0.492405 0.492339C1.14859 -0.164113 2.21286 -0.164113 2.86932 0.492339L13.1889 10.8118C13.517 11.14 13.6809 11.5698 13.6809 11.9998C13.6809 12.43 13.5167 12.86 13.1887 13.1881Z"></path>
+                </svg>
+            </div>
+            <div class="swiper-button-prev">
+                <svg width="14" height="24">
+                    <path d="M0.491997 10.8119L10.8116 0.492579C11.4681 -0.164194 12.5324 -0.164194 13.1885 0.492579C13.8447 1.14876 13.8447 2.21304 13.1885 2.86917L4.05726 12.0002L13.1883 21.1309C13.8444 21.7873 13.8444 22.8515 13.1883 23.5077C12.5321 24.1641 11.4678 24.1641 10.8113 23.5077L0.491732 13.1882C0.163638 12.86 -0.000223218 12.4302 -0.000223255 12.0002C-0.000223293 11.57 0.163956 11.14 0.491997 10.8119Z" fill="#4A4D56"></path>
+                </svg>
+            </div>
+        </div>
+            </div>
+</section>
+    
+    <section class="press-center press-center--in-main">
+
+        <img class="press-center__inner-bg" src="wp-content/uploads/2020/03/press-center-bg.jpg" alt="">
+        <div class="press-center__inner">
+            <h2 class="press-center__caption">
+                Прес-центр            </h2>
+            <ul class="press-center__list">
+                                    <li class="press-center__item">
+                        <div class="press-center__article">
+                            <div class="press-center__preview">
+                                <div class="press-center__img-wrap">
+                                    <img src="wp-content/uploads/2024/05/zg_dk_1200x628-180x180.jpg" alt="Вітаємо з Днем Києва!">
+                                </div>
+                                <span class="press-center__date status-active">
+									26.05.2024								</span>
+                            </div>
+                            <h3 class="press-center__article-caption">Вітаємо з Днем Києва!</h3>
+                            <p class="press-center__article-text">
+                                                            </p>
+                            <a class="press-center__article-link" href="press/vitayemo-z-dnem-kyyeva/index.htm">Переглянути</a>
+                        </div>
+                    </li>
+                                    <li class="press-center__item">
+                        <div class="press-center__article">
+                            <div class="press-center__preview">
+                                <div class="press-center__img-wrap">
+                                    <img src="wp-content/uploads/2024/05/zg_01v_1200x628-180x180.jpg" alt="Щиро вітаємо з радісним святом Великодня!">
+                                </div>
+                                <span class="press-center__date status-active">
+									05.05.2024								</span>
+                            </div>
+                            <h3 class="press-center__article-caption">Щиро вітаємо з радісним святом Великодня!</h3>
+                            <p class="press-center__article-text">
+                                                            </p>
+                            <a class="press-center__article-link" href="press/shhyro-vitayemo-z-radisnym-svyatom-velykodnya/index.htm">Переглянути</a>
+                        </div>
+                    </li>
+                                    <li class="press-center__item">
+                        <div class="press-center__article">
+                            <div class="press-center__preview">
+                                <div class="press-center__img-wrap">
+                                    <img src="wp-content/uploads/2024/03/hv_all_1200x628-180x180.jpg" alt="Лімітована пропозиція квартир за особливою ціною у HVOYA">
+                                </div>
+                                <span class="press-center__date status-active">
+									06.03.2024								</span>
+                            </div>
+                            <h3 class="press-center__article-caption">Лімітована пропозиція квартир за особливою ціною у HVOYA</h3>
+                            <p class="press-center__article-text">
+                                                            </p>
+                            <a class="press-center__article-link" href="press/limitovana-propozycziya-kvartyr-za-osoblyvoyu-czinoyu-u-hvoya/index.htm">Переглянути</a>
+                        </div>
+                    </li>
+                
+            </ul>
+            <div class="press-center__btn-wrap">
+                <a href="press-center/index.htm" class="press-center__btn">
+                    Всі новини                </a>
+            </div>
+        </div>
+    </section>
+	<section class="contacts">
+    <div class="contacts__inner">
+        <h2 class="contacts__caption">
+            Контакти        </h2>
+
+        <ul class="contacts__list">
+            <li class="contacts__item">
+                <span class="contacts__item-label"></span>
+                <span class="contacts__item-content"></span>
+            </li>
+            <li class="contacts__item">
+                <span class="contacts__item-label"></span>
+                <span class="contacts__item-content"></span>
+            </li>
+            <li class="contacts__item">
+                <span class="contacts__item-label"></span>
+                <span class="contacts__item-content"></span>
+            </li>
+            <li class="contacts__item">
+                <span class="contacts__item-label"></span>
+                <span class="contacts__item-content"></span>
+            </li>
+        </ul>
+
+        <div class="contacts__container">
+            <div class="contacts__form">
+<!--                <form action="" data-form id="contactsBlockForm">-->
+                <form action="" id="contactsBlockForm">
+                    <div class="contacts__form-label-wrap">
+                        <label class="contacts__form-label">
+                            <span class="contacts__form-label-text">Номер телефону*</span>
+                            <input class="contacts__form-input telInput" required="" placeholder="+38(___) ___-__-__" type="text" name="contFormName" id="contFormName">
+                        </label>
+
+                        <div class="validation-block"></div>
+                    </div>
+
+                    <div class="contacts__form-label-wrap">
+                        <label class="contacts__form-label">
+                            <span class="contacts__form-label-text">Повiдомлення</span>
+                            <textarea class="contacts__form-textarea" name="contFormText" id="contFormText" required=""></textarea>
+                        </label>
+                    </div>
+
+                    <button class="contacts__form-btn" type="submit"><span class="textButtonForm">Надіслати</span></button>
+                </form>
+
+                <p class="privacy-policy">Натискаючи кнопку “Надіслати” ви даєте згоду на обробку персональних даних згідно з нашою                    <a class="privacy-policy__link" href="polityka-konfidenczijnosti/index.htm">політикою конфіденційності</a>
+                </p>
+            </div>
+            <div class="contacts__map">
+                <div class="contacts__map-inner">
+                    <div class="mapFrame">
+                        <div id="map" style="width:100%; height:100%; frameborder:0; border:0;">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section></main>
+<style>
+    .blockRorstAbsolute{
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+    }
+    .blockTimeFixed{
+        height: 135px;
+        width: 300px;
+        position: fixed;
+        bottom: 190px;
+        right: 40px;
+        z-index: 5;
+        background-color: rgba(0,0,0,0.5);
+        border: 2px solid #fff;
+        border-radius: 15px;
+    }
+    .insideBlockTimerFixed img{
+        position: absolute;
+        left: 0;
+        top: 0;
+    }
+    .insideBlockTimerFixed img {
+        position: absolute;
+        left: 23px;
+        top: -29px;
+    }
+    .blockWithNumbers {
+        height: 135px;
+        padding-right: 20px;
+        border-radius: 15px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-left: 115px;
+        color: #fff;
+    }
+    div#clock {
+        display: flex;
+        position: relative;
+        top: -12px;
+    }
+    .itemTimeClock {
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        margin-right: 10px;
+        width: 47px;
+        height: 47px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-image: url("wp-content/uploads/2020/12/bgctime.png");
+        background-size: cover;
+        background-repeat: no-repeat;
+        font-family: Montserrat,Helvetica,sans-serif;
+        font-size: 22px;
+		    font-weight: 700;
+    }
+    .itemTimeClock:last-child {
+        margin-right: 0;
+    }
+    .textItemTimeClock {
+        font-size: 12px;
+        position: absolute;
+        font-family: gilLight;
+        bottom: -22px;
+		    font-weight: 100;
+		 font-family: Montserrat,Helvetica,sans-serif;
+    }
+    .closeTime {
+        background: none;
+        border: none;
+        position: absolute;
+        top: 3px;
+        right: 8px;
+        /*filter: brightness(0) invert(1);*/
+        z-index: 3;
+    }
+    .blockTimeFixed{
+        display: none
+    }
+    .blockTimeFixed a{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        z-index: 2;
+        top: 0;
+        left: 0;
+    }
+    .blockRostrochkaMainPage{
+        display: none;
+    }
+	.closeTime{
+		    cursor: pointer;
+	}
+    button.closeTime {
+        position: absolute;
+        background: none;
+        top: 5px;
+        right: 4px;
+        border: none;
+        background-color: #fff;
+        border-radius: 100px;
+        padding: 5px;
+        z-index: 3;
+    }
+</style>
+<!-- <div class="blockTimeFixed">-->
+   <!-- <button class="closeTime"><img src="https://paradise-avenue.com.ua/wp-content/themes/paradiceTheme/img/closeIcon.svg" alt="close"></button>-->
+   <!-- <a href="https://zim-group.com/press/grafik-roboty-u-svyatkovi-dni/"></a>-->
+   <!-- <div class="insideBlockTimerFixed">-->
+     <!--   <img src="https://zim-group.com/wp-content/uploads/2021/12/zg_gr_300x150.jpg" alt="" style="position: initial; border-radius: 10px">-->
+<!--        <div class="blockWithNumbers">-->
+<!--            <div id="clock"></div>-->
+<!--        </div>-->
+    <!--</div>-->
+<!--</div> -->
+<footer class="footer" style="position: relative">
+    <a href="https://www.flatshow.org/" target="_blank" style="position: absolute;bottom: 0;right: 0;"><img src="wp-content/themes/zimTheme/img/flatshow.svg" alt="" style="width: 30px;"></a>
+    <div class="footer__inner">
+        <nav class="nav-bar nav-bar--footer">
+            <div class="logo-wrap">
+                <a href="index.htm">
+                    <img class="logo" alt="" src="wp-content/themes/zimTheme/img/footer/logo-footer.svg">
+                </a>
+            </div>
+
+                            <ul class="nav-bar__list">
+                                            <li class="nav-bar__list-item">
+                            <a class="nav-bar__link" href="projects/index.htm">
+                                Проекти                            </a>
+                        </li>
+                                            <li class="nav-bar__list-item">
+                            <a class="nav-bar__link" href="about/index.htm">
+                                Про компанію                            </a>
+                        </li>
+                                            <li class="nav-bar__list-item">
+                            <a class="nav-bar__link" href="commercial/index.htm">
+                                Комерційна нерухомість                            </a>
+                        </li>
+                                            <li class="nav-bar__list-item">
+                            <a class="nav-bar__link" href="services/index.htm">
+                                Послуги                            </a>
+                        </li>
+                                            <li class="nav-bar__list-item">
+                            <a class="nav-bar__link" href="zaproshuyemo/index.htm">
+                                Управління нерухомістю                            </a>
+                        </li>
+                                            <li class="nav-bar__list-item">
+                            <a class="nav-bar__link" href="press-center/index.htm">
+                                Прес-центр                            </a>
+                        </li>
+                                            <li class="nav-bar__list-item">
+                            <a class="nav-bar__link" href="contacts/index.htm">
+                                Контакти                            </a>
+                        </li>
+                                            <li class="nav-bar__list-item">
+                            <a class="nav-bar__link" href="career/index.htm">
+                                Кар’єра                            </a>
+                        </li>
+                                    </ul>
+            
+
+            <ul class="contacts__list">
+                <li class="contacts__item">
+                    <span class="contacts__label">Адреса офісу</span>
+                    <span class="contacts__content">
+                            <span class="icon icon-marker"></span>
+                            м. Київ, вул. Сумська<br>будинок 3                        </span>
+                </li>
+<!--                <li class="contacts__item">-->
+<!--                    <span class="contacts__label">--><!--</span>-->
+<!--                    <span class="contacts__content">-->
+<!--                            <span class="icon icon-letter"></span>-->
+<!--                            --><!--                        </span>-->
+<!--                </li>-->
+                <li class="contacts__item">
+                    <span class="contacts__label">Відділ маркетингу</span>
+                    <span class="contacts__content">
+                            <span class="icon icon-letter"></span>
+                            marketing@zim-capital.com                        </span>
+                </li>
+            </ul>
+
+            <div class="contact-block">
+                
+                <a class="contact-block__btn" data-modal-target="#modal-callback">Замовити дзвінок</a>
+
+                <div class="social-block">
+                    <a class="facebook icon icon-facebook" href="https://www.facebook.com/zimgroupkiev/?ref=bookmarks"></a>
+                    <a class="instagram icon icon-instagram" href="https://www.instagram.com/zim_group/"></a>
+                </div>
+            </div>
+        </nav>
+    </div>
+</footer>
+
+<!--Temporary COMMENT / TODO delete after refactoring-->
+<!--    <button data-modal-target="#modal">Open Modal</button>-->
+<!--    <div class="modal" id="modal">-->
+<!--        <div class="modal-header">-->
+<!--            <div class="title">Example Modal</div>-->
+<!--            <button data-close-button class="close-button">&times;</button>-->
+<!--        </div>-->
+<!--        <div class="modal-body">-->
+<!--            Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse quod alias ut illo doloremque eum ipsum obcaecati distinctio debitis reiciendis quae quia soluta totam doloribus quos nesciunt necessitatibus, consectetur quisquam accusamus ex, dolorum, dicta vel? Nostrum voluptatem totam, molestiae rem at ad autem dolor ex aperiam. Amet assumenda eos architecto, dolor placeat deserunt voluptatibus tenetur sint officiis perferendis atque! Voluptatem maxime eius eum dolorem dolor exercitationem quis iusto totam! Repudiandae nobis nesciunt sequi iure! Eligendi, eius libero. Ex, repellat sapiente!-->
+<!--        </div>-->
+<!--    </div>-->
+<!--/END Temporary COMMENT / TODO delete after refactoring-->
+
+<div id="overlay"></div>
+</div>
+<!-- endWrapper -->
+
+
+<div id="thanksModal" class="modal-wrap" style="display: none">
+    <div class="modal modal-success" id="success">
+        <button data-close-button="" class="modal__btn-close">
+            <span class="icon icon-close"></span>
+        </button>
+        <div class="modal__head">
+            <span class="icon icon-success"></span>
+            <div class="modal__title">
+                Заявка успішно надіслана            </div>
+
+            <div class="modal__content">
+                Зовсім скоро з вами зв’яжеться наш менеджер            </div>
+        </div>
+        <div class="modal__body">
+            <div data-close-button="" class="modal__body-btn-close closeThanksModal">
+                Закрити            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal-wrap" id="modalCallBack">
+    <div class="modal modal-callback" id="modal-callback">
+        <button data-close-button="" class="modal__btn-close">
+            <span class="icon icon-close"></span>
+        </button>
+        <div class="modal__head">
+            <h3 class="modal__title">
+                Введіть номер телефону            </h3>
+
+            <span class="modal__content">
+                    І наш менеджер зателефонує вам протягом 5 хвилин                </span>
+        </div>
+
+        <div class="modal__body">
+            <form class="modal__body-form" action="" id="formCallBack">
+                <div class="contacts__form-label-wrap">
+                    <label class="contacts__form-label">
+                        <span class="contacts__form-label-text">Номер телефону</span>
+                        <input class="contacts__form-input telInput" required="" placeholder="+38(___) ___-__-__" type="text" name="formCallBackName" id="formCallBackName">
+                    </label>
+
+                    <div class="validation-block"></div>
+                </div>
+
+                <button data-modal-callback-send="" data-modal-target="#success" class="modal__body-btn-close" type="submit">
+                    Надіслати
+                </button>
+            </form>
+            <p class="privacy-policy">Натискаючи кнопку “Надіслати” ви даєте згоду на обробку персональних даних згідно з нашою                <a class="privacy-policy__link" href="polityka-konfidenczijnosti/index.htm">політикою конфіденційності</a>
+            </p>
+        </div>
+    </div>
+</div>
+
+
+<script type='text/javascript' src='wp-content/themes/zimTheme/js/wow.min.js?ver=20150315' id='wow-js'></script>
+<script type='text/javascript' src='wp-content/themes/zimTheme/js/scripts.min.js?ver=20150315' id='customScript-js'></script>
+<script type='text/javascript' src='wp-content/themes/zimTheme/js/libs/fancybox/jquery.fancybox.min.js?ver=20150315' id='fancyJS-js'></script>
+<script type='text/javascript' src='wp-content/themes/zimTheme/js/newJS.js?ver=20150315' id='newJS-js'></script>
+<script type='text/javascript' src='wp-content/themes/zimTheme/js/libs/jquery.maskedinput.min.js?ver=20150315' id='masked-input-js'></script>
+<script type='text/javascript' src='wp-content/themes/zimTheme/js/libs/sweetalert2.all.min.js?ver=20150315' id='alertJs-js'></script>
+<script type='text/javascript' src='wp-content/themes/zimTheme/js/new-common.js?ver=20150315' id='new-common-js'></script>
+<script type='text/javascript' src='wp-content/themes/zimTheme/js/inpuMask.js?ver=20150315' id='inputMask-js'></script>
+<script type='text/javascript' src='ajax/libs/OwlCarousel2/2.2.1/owl.carousel.min.js?ver=20150315' id='owlJS-js'></script>
+<script type='text/javascript' src='wp-content/themes/zimTheme/js/animationScript.js?ver=20150315' id='animationScript-js'></script>
+<script type='text/javascript' src='ajax/libs/gsap/1.20.2/TweenMax.min.js?ver=20150315' id='TweenMax-js'></script>
+<script type='text/javascript' src='wp-includes/js/wp-embed.min.js?ver=5.5.15' id='wp-embed-js'></script>
+
+<script>
+    function initMap() {
+        var view = {lat: 50.39547, lng: 30.48955};
+        var map = new google.maps.Map(document.getElementById('map'), {
+            zoom: 16,
+            center: view
+        });
+        var contentString = '';
+        var infowindow = new google.maps.InfoWindow({
+            content: "",
+            pixelOffset: new google.maps.Size(300,129),
+        });
+        var marker = new google.maps.Marker({
+            position: view,
+            icon: '/wp-content/themes/zimTheme/imgMY/marker.png',
+            map: map,
+        });
+        google.maps.event.addListener(infowindow, 'domready', function() {
+            var iwOuter = $('.gm-style-iw');
+            var iwBackground = iwOuter.prev();
+            iwBackground.children(':nth-child(2)').css({'display' : 'none'});
+            iwBackground.children(':nth-child(4)').css({'display' : 'none'});
+            iwBackground.children(':nth-child(3)').css({'display' : 'none'});
+            iwBackground.children(':nth-child(1)').css({'display' : 'none'});
+            iwBackground.children(':nth-child(3)').find('div').children().css({'box-shadow': 'rgba(72, 181, 233, 0.6) 0px 1px 6px', 'z-index' : '1'});
+            var iwCloseBtn = iwOuter.next();
+            iwCloseBtn.css({'display' : 'none'});
+            if($('.iw-content').height() < 140){
+                $('.iw-bottom-gradient').css({display: 'none'});
+            }
+            iwCloseBtn.mouseout(function(){
+                $(this).css({opacity: '1'});
+            });
+        });
+    }
+</script>
+
+
+
+</body>
+</html>
+<script>
+    jQuery(document).ready(function($) {
+        $(document).on('click','.closeTime',function () {
+            $('.blockTimeFixed').fadeOut();
+        });
+        setTimeout(function () {
+            $('.blockTimeFixed').fadeIn();
+        },1500)
+    });
+    // TIMERR
+    // var countDownDate = new Date("Dec 11, 2020 12:00:00").getTime();
+    //
+    // // Update the count down every 1 second
+    // var x = setInterval(function() {
+    //
+    //     // Get today's date and time
+    //     var now = new Date().getTime();
+    //
+    //     // Find the distance between now and the count down date
+    //     var distance = countDownDate - now;
+    //
+    //     // Time calculations for days, hours, minutes and seconds
+    //     var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    //     var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    //     var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    //     var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    //
+    //     // Display the result in the element with id="demo"
+    //     document.getElementById("clock").innerHTML = "<span class='itemTimeClock'>" + days +
+    //         "<span class='textItemTimeClock'>DAYS</span></span><span class='itemTimeClock'>" + hours +
+    //         "<span class='textItemTimeClock'>HOUR</span></span><span class='itemTimeClock'>" + minutes +
+    //         "<span class='textItemTimeClock'>MINUTE</span></span>";
+    //
+    //     // If the count down is finished, write some text
+    //     if (distance < 0) {
+    //         clearInterval(x);
+    //         document.getElementById("clock").innerHTML = "EXPIRED";
+    //     }
+    // }, 1000);
+</script>
+
+<script>
+    $(window).on('load', function () {
+        jQuery(document).ready(function ($) {
+            $('.openVideoLink').fancybox({
+                openEffect: 'none',
+                closeEffect: 'none',
+                helpers: {
+                    media: {}
+                }
+            });
+        });
+    });
+</script>
+
+    <script>
+        let mainHeight = $('main').height();
+        $('footer').css('margin-top', mainHeight + 'px');
+        $('main').css('position','fixed');
+        let windowHeight = $( window ).height();
+        $(window).scroll(function () {
+            if($(window).scrollTop() > windowHeight) {
+                $('main').css('position', 'initial');
+                $('footer').css('margin-top', '0');
+                $('main').css('padding-top', '100vh');
+            }else {
+                $('main').css('position', 'fixed');
+                $('footer').css('margin-top', mainHeight + 'px');
+                $('main').css('padding-top', '0');
+            }
+        });
+
+        $(document).on('click', '.textAB', function () {
+            $('html, body').animate({
+                scrollTop: windowHeight
+            }, 500);
+        });
+    </script>
+<script>
+    setTimeout(function () {
+        $('body').css('overflow-y','initial');
+        $('.preloader').fadeOut(800);
+        $('.owlFeedAnimated').owlCarousel({
+            loop: false,
+            autoplay: false,
+            mouseDrag: false,
+            items: 1,
+            singleItem: true,
+            stagePadding: 0,
+            smartSpeed: 0,
+            animateOut: 'fadeOut',
+            animateIn: 'fadeIn',
+            dots: false,
+            navText: [],
+            rewind: false,
+            lazyLoad: true
+        });
+    },3000);
+
+    $(document).ready(function () {
+        $(".itemAnimation").mousemove(function (e) {
+            parallaxIt(e, ".imageBgAnimation", -120, $(this));
+            parallaxIt(e, ".imgForShiteCircle", -120, $(this));
+        });
+        function parallaxIt(e, target, movement, thisParametr) {
+            var $this = thisParametr;
+            var relX = e.pageX - $this.offset().left;
+            var relY = e.pageY - $this.offset().top;
+            TweenMax.to(target, 1, {
+                x: (relX - $this.width() / 2) / $this.width() * movement,
+                y: (relY - $this.height() / 2) / $this.height() * movement
+            });
+        }
+    });
+</script>

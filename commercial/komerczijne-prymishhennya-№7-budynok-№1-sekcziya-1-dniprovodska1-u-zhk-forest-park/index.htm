@@ -1,0 +1,856 @@
+﻿<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    
+    <link rel="icon" href="../../wp-content/themes/zimTheme/img/favicon/favicon.png">
+    <link rel="apple-touch-icon" sizes="57x57" href="../../wp-content/themes/zimTheme/img/favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="../../wp-content/themes/zimTheme/img/favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="../../wp-content/themes/zimTheme/img/favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="../../wp-content/themes/zimTheme/img/favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="../../wp-content/themes/zimTheme/img/favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="../../wp-content/themes/zimTheme/img/favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="../../wp-content/themes/zimTheme/img/favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="../../wp-content/themes/zimTheme/img/favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../../wp-content/themes/zimTheme/img/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="../../wp-content/themes/zimTheme/img/favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../../wp-content/themes/zimTheme/img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="../../wp-content/themes/zimTheme/img/favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../../wp-content/themes/zimTheme/img/favicon/favicon-16x16.png">
+    <link rel="manifest" href="../../wp-content/themes/zimTheme/img/favicon/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="https://zim-group.com/wp-content/themes/zimTheme/img/favicon/ms-icon-144x144.png">
+
+    <meta name="theme-color" content="#ffffff">
+    <meta name="google-site-verification" content="9bbXw0u1DL9lFoZp7BhKxIRXT9yCL9-fayp0uSoaH4U">
+	
+	
+	<meta property="og:image" content="https://zim-group.com/wp-content/uploads/2021/10/zimog.jpg">
+    <meta property="og:image:secure_url" content="https://zim-group.com/wp-content/uploads/2021/10/zimog.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="628">
+	
+    <style>
+	
+	.logo__img, footer .logo{
+		width: 130px;
+	}
+	
+        .mapFrame {
+            height: 100%;
+            width: 100%;
+
+        }
+
+        .preloader__container {
+            position: absolute;
+            z-index: 1;
+            width: 100%;
+            min-height: 100%;
+            background-color: rgba(0, 0, 0, .7);
+            -ms-flex-pack: center;
+            -ms-flex-item-align: center;
+            -ms-flex-direction: column;
+            flex-direction: column
+        }
+
+        .preloader__box, .preloader__container {
+            display: -ms-flexbox;
+            display: flex;
+            justify-content: center;
+            align-self: center
+        }
+
+        .preloader__box {
+            width: 120px;
+            height: 120px;
+            -ms-flex-pack: center;
+            -ms-flex-item-align: center;
+            margin: 4rem 0
+        }
+
+        .preloader__box span:first-child {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            z-index: 5;
+            display: inline-block;
+            background: #2fab5b
+        }
+
+        .preloader__box span:first-child, .preloader__box span:not(:first-child) {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            box-sizing: border-box
+        }
+
+        .preloader__box span:not(:first-child) {
+            border: 2px solid #fff;
+            border-radius: 50%;
+            animation: a 1.5s ease-out infinite;
+            animation-delay: calc(.5s * var(--i))
+        }
+
+        @keyframes a {
+            0% {
+                width: 50px;
+                height: 50px;
+                border: 1px solid hsla(0, 0%, 100%, .7)
+            }
+            50% {
+                width: 76px;
+                height: 76px;
+                border: 1px solid hsla(0, 0%, 100%, .4)
+            }
+            to {
+                width: 106px;
+                height: 106px;
+                border: 1px solid hsla(0, 0%, 100%, .1)
+            }
+        }
+
+        .preloader__box span:nth-child(2) {
+            -webkit-animation-delay: .5s;
+            animation-delay: .5s;
+        }
+
+        .preloader__box span:nth-child(3) {
+            -webkit-animation-delay: 1s;
+            animation-delay: 1s;
+        }
+
+        .preloader__box span:nth-child(4) {
+            -webkit-animation-delay: 1.5s;
+            animation-delay: 1.5s;
+        }
+
+    </style>
+    
+	<!-- This site is optimized with the Yoast SEO plugin v15.2.1 - https://yoast.com/wordpress/plugins/seo/ -->
+	<title>Комерційне приміщення №7, будинок №1, секція 1, Дніпроводська,1 у ЖК Forest Park | zim-group.com</title>
+	<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+	<link rel="canonical" href="index.htm">
+	<meta property="og:locale" content="uk_UA">
+	<meta property="og:type" content="article">
+	<meta property="og:title" content="Комерційне приміщення №7, будинок №1, секція 1, Дніпроводська,1 у ЖК Forest Park">
+	<meta property="og:url" content="https://zim-group.com/commercial/komerczijne-prymishhennya-№7-budynok-№1-sekcziya-1-dniprovodska1-u-zhk-forest-park/">
+	<meta property="og:site_name" content="zim-group.com">
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:label1" content="Written by">
+	<meta name="twitter:data1" content="zimGroupSiteAdmin">
+	<script type="application/ld+json" class="yoast-schema-graph">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://zim-group.com/#website","url":"https://zim-group.com/","name":"zim-group.com","description":"\u041f\u0440\u043e\u0441\u0442\u043e \u0449\u0435 \u043e\u0434\u0438\u043d \u0441\u0430\u0439\u0442 \u043d\u0430 WordPress","potentialAction":[{"@type":"SearchAction","target":"https://zim-group.com/?s={search_term_string}","query-input":"required name=search_term_string"}],"inLanguage":"uk"},{"@type":"WebPage","@id":"https://zim-group.com/commercial/komerczijne-prymishhennya-%e2%84%967-budynok-%e2%84%961-sekcziya-1-dniprovodska1-u-zhk-forest-park/#webpage","url":"https://zim-group.com/commercial/komerczijne-prymishhennya-%e2%84%967-budynok-%e2%84%961-sekcziya-1-dniprovodska1-u-zhk-forest-park/","name":"[:ua]\u041a\u043e\u043c\u0435\u0440\u0446\u0456\u0439\u043d\u0435 \u043f\u0440\u0438\u043c\u0456\u0449\u0435\u043d\u043d\u044f \u21167, \u0431\u0443\u0434\u0438\u043d\u043e\u043a \u21161, \u0441\u0435\u043a\u0446\u0456\u044f 1, \u0414\u043d\u0456\u043f\u0440\u043e\u0432\u043e\u0434\u0441\u044c\u043a\u0430,1 \u0443 \u0416\u041a Forest Park[:] | zim-group.com","isPartOf":{"@id":"https://zim-group.com/#website"},"datePublished":"2023-03-23T10:12:56+00:00","dateModified":"2023-03-23T10:12:56+00:00","inLanguage":"uk","potentialAction":[{"@type":"ReadAction","target":["https://zim-group.com/commercial/komerczijne-prymishhennya-%e2%84%967-budynok-%e2%84%961-sekcziya-1-dniprovodska1-u-zhk-forest-park/"]}]}]}</script>
+	<!-- / Yoast SEO plugin. -->
+
+
+<link rel='dns-prefetch' href='//s.w.org'>
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/13.0.0\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/13.0.0\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/zim-group.com\/wp-includes\/js\/wp-emoji-release.min.js?ver=5.5.15"}};
+			!function(e,a,t){var n,r,o,i=a.createElement("canvas"),p=i.getContext&&i.getContext("2d");function s(e,t){var a=String.fromCharCode;p.clearRect(0,0,i.width,i.height),p.fillText(a.apply(this,e),0,0);e=i.toDataURL();return p.clearRect(0,0,i.width,i.height),p.fillText(a.apply(this,t),0,0),e===i.toDataURL()}function c(e){var t=a.createElement("script");t.src=e,t.defer=t.type="text/javascript",a.getElementsByTagName("head")[0].appendChild(t)}for(o=Array("flag","emoji"),t.supports={everything:!0,everythingExceptFlag:!0},r=0;r<o.length;r++)t.supports[o[r]]=function(e){if(!p||!p.fillText)return!1;switch(p.textBaseline="top",p.font="600 32px Arial",e){case"flag":return s([127987,65039,8205,9895,65039],[127987,65039,8203,9895,65039])?!1:!s([55356,56826,55356,56819],[55356,56826,8203,55356,56819])&&!s([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]);case"emoji":return!s([55357,56424,8205,55356,57212],[55357,56424,8203,55356,57212])}return!1}(o[r]),t.supports.everything=t.supports.everything&&t.supports[o[r]],"flag"!==o[r]&&(t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&t.supports[o[r]]);t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&!t.supports.flag,t.DOMReady=!1,t.readyCallback=function(){t.DOMReady=!0},t.supports.everything||(n=function(){t.readyCallback()},a.addEventListener?(a.addEventListener("DOMContentLoaded",n,!1),e.addEventListener("load",n,!1)):(e.attachEvent("onload",n),a.attachEvent("onreadystatechange",function(){"complete"===a.readyState&&t.readyCallback()})),(n=t.source||{}).concatemoji?c(n.concatemoji):n.wpemoji&&n.twemoji&&(c(n.twemoji),c(n.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	<link rel='stylesheet' id='wp-block-library-css' href='../../wp-includes/css/dist/block-library/style.min.css?ver=5.5.15' type='text/css' media='all'>
+<link rel='stylesheet' id='wpm-main-css' href='../../wp-content/plugins/wp-multilang/assets/styles/main.min.css?ver=2.4.1' type='text/css' media='all'>
+<link rel='stylesheet' id='main-css' href='../../wp-content/themes/zimTheme/css/main.css?ver=3.5.0' type='text/css' media='all'>
+<link rel='stylesheet' id='animate-css' href='../../wp-content/themes/zimTheme/css/animate.css?ver=3.5.0' type='text/css' media='all'>
+<link rel='stylesheet' id='fancyCss-css' href='../../wp-content/themes/zimTheme/js/libs/fancybox/jquery.fancybox.min.css?ver=3.5.0' type='text/css' media='all'>
+<link rel='stylesheet' id='newStyles-css' href='../../wp-content/themes/zimTheme/css/newSTYLES.css?ver=3.5.0' type='text/css' media='all'>
+<link rel='stylesheet' id='alertCss-css' href='../../wp-content/themes/zimTheme/css/sweetalert2.min.css?ver=3.5.0' type='text/css' media='all'>
+<link rel='stylesheet' id='invite-css' href='../../wp-content/themes/zimTheme/css/invite.css?ver=3.5.0' type='text/css' media='all'>
+<script type='text/javascript' src='../../wp-includes/js/jquery/jquery.js?ver=1.12.4-wp' id='jquery-core-js'></script>
+<link rel="https://api.w.org/" href="../../wp-json/index.htm"><link rel="alternate" hreflang="x-default" href="index.htm">
+<link rel="alternate" hreflang="uk" href="index.htm">
+    <script>(function (w, d, s, l, i) {
+            w[l] = w[l] || [];
+            w[l].push({
+                'gtm.start':
+                    new Date().getTime(), event: 'gtm.js'
+            });
+            var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : '';
+            j.async = true;
+            j.src =
+                'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+            f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-PRHQNJ7');</script>
+
+    <style>
+        .press-center__btn-wrap {
+            margin-top: 15px;
+        }
+    </style>
+
+</head>
+
+<body data-rsssl="1">
+<!-- Google Tag Manager (noscript) -->
+<noscript>
+    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PRHQNJ7" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+</noscript>
+<!-- End Google Tag Manager (noscript) -->
+<!-- startWrapper -->
+<!-- 			<style>
+    .winter-is-coming, .snow {
+        z-index: 112;
+        pointer-events: none;
+    }
+
+    .winter-is-coming {
+        overflow: hidden;
+        position: fixed;
+        top: 0;
+        height: 100%;
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .snow {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        -webkit-animation: falling linear infinite both;
+        animation: falling linear infinite both;
+        -webkit-transform: translate3D(0, -100%, 0);
+        -ms-transform: translate3D(0, -100%, 0);
+        transform: translate3D(0, -100%, 0);
+    }
+    .snow--near {
+        -webkit-animation-duration: 10s;
+        animation-duration: 10s;
+        background-image: url("https://paradise-avenue.com.ua/wp-content/uploads/2019/12/1.png");
+        background-size: contain;
+    }
+    .snow--near + .snow--alt {
+        -webkit-animation-delay: 5s;
+        animation-delay: 5s;
+    }
+    .snow--mid {
+        -webkit-animation-duration: 20s;
+        animation-duration: 20s;
+        background-image: url("https://paradise-avenue.com.ua/wp-content/uploads/2019/12/2.png");
+        background-size: contain;
+    }
+    .snow--mid + .snow--alt {
+        -webkit-animation-delay: 10s;
+        animation-delay: 10s;
+    }
+    .snow--far {
+        -webkit-animation-duration: 30s;
+        animation-duration: 30s;
+        background-image: url("https://paradise-avenue.com.ua/wp-content/uploads/2019/12/3.png");
+        background-size: contain;
+    }
+    .snow--far + .snow--alt {
+        -webkit-animation-delay: 15s;
+        animation-delay: 15s;
+    }
+
+    @-webkit-keyframes falling {
+        0% {
+            -webkit-transform: translate3D(-7.5%, -100%, 0);
+            transform: translate3D(-7.5%, -100%, 0);
+        }
+        100% {
+            -webkit-transform: translate3D(7.5%, 100%, 0);
+            transform: translate3D(7.5%, 100%, 0);
+        }
+    }
+
+    @keyframes falling {
+        0% {
+            -webkit-transform: translate3D(-7.5%, -100%, 0);
+            transform: translate3D(-7.5%, -100%, 0);
+        }
+        100% {
+            -webkit-transform: translate3D(7.5%, 100%, 0);
+            transform: translate3D(7.5%, 100%, 0);
+        }
+    }
+
+</style>
+<div class="winter-is-coming">
+
+    <div class="snow snow--near"></div>
+    <div class="snow snow--near snow--alt"></div>
+
+    <div class="snow snow--mid"></div>
+    <div class="snow snow--mid snow--alt"></div>
+
+    <div class="snow snow--far"></div>
+    <div class="snow snow--far snow--alt"></div>
+</div> -->
+<div class="wrapper">
+    <header>
+		
+
+        <div class="header__nav-bar">
+            <div class="header__logo-wrap logo">
+                <button class="logo__mobile-btn" data-toggle-menu="">
+                    <span class="icon icon-nav-bar-menu"></span>
+                    <span class="logo__mobile-btn-text">Меню</span>
+                </button>
+
+                <a class="logo__link logo__link--header" href="../../index.htm">
+                    <img class="logo__img" src="../../wp-content/themes/zimTheme/img/logo.svg" alt="">
+                </a>
+                <!--            <button class="logo__callback-block-btn">-->
+                <!--                <span class="icon icon-phone"></span>-->
+                <!--            </button                                >-->
+
+                
+
+
+            </div>
+
+            <nav class="nav-bar nav-bar--header">
+                                    <ul class="nav-bar__list">
+                                                    <li class="nav-bar__list-item">
+                                <a class="nav-bar__link" href="../../projects/index.htm">
+                                    Проекти                                </a>
+                            </li>
+                                                    <li class="nav-bar__list-item">
+                                <a class="nav-bar__link" href="../../about/index.htm">
+                                    Про компанію                                </a>
+                            </li>
+                                                    <li class="nav-bar__list-item">
+                                <a class="nav-bar__link" href="../index.htm">
+                                    Комерційна нерухомість                                </a>
+                            </li>
+                                                    <li class="nav-bar__list-item">
+                                <a class="nav-bar__link" href="../../services/index.htm">
+                                    Послуги                                </a>
+                            </li>
+                                                    <li class="nav-bar__list-item">
+                                <a class="nav-bar__link" href="../../zaproshuyemo/index.htm">
+                                    Управління нерухомістю                                </a>
+                            </li>
+                                                    <li class="nav-bar__list-item">
+                                <a class="nav-bar__link" href="../../press-center/index.htm">
+                                    Прес-центр                                </a>
+                            </li>
+                                                    <li class="nav-bar__list-item">
+                                <a class="nav-bar__link" href="../../contacts/index.htm">
+                                    Контакти                                </a>
+                            </li>
+                                                    <li class="nav-bar__list-item">
+                                <a class="nav-bar__link" href="../../career/index.htm">
+                                    Кар’єра                                </a>
+                            </li>
+                                            </ul>
+                
+                
+                <div class="change-lang-block" style="display: none;">
+                    <label>
+                        <select name="">
+                            <option value="" selected="">UA</option>
+                            <option value="">RU</option>
+                        </select>
+                    </label>
+                </div>
+            </nav>
+
+            <div class="menu-mobile">
+                                    <ul class="nav-bar__list">
+                                                    <li class="nav-bar__list-item">
+                                <a class="nav-bar__link" href="../../projects/index.htm">
+                                    Проекти                                </a>
+                            </li>
+                                                    <li class="nav-bar__list-item">
+                                <a class="nav-bar__link" href="../../about/index.htm">
+                                    Про компанію                                </a>
+                            </li>
+                                                    <li class="nav-bar__list-item">
+                                <a class="nav-bar__link" href="../index.htm">
+                                    Комерційна нерухомість                                </a>
+                            </li>
+                                                    <li class="nav-bar__list-item">
+                                <a class="nav-bar__link" href="../../services/index.htm">
+                                    Послуги                                </a>
+                            </li>
+                                                    <li class="nav-bar__list-item">
+                                <a class="nav-bar__link" href="../../zaproshuyemo/index.htm">
+                                    Управління нерухомістю                                </a>
+                            </li>
+                                                    <li class="nav-bar__list-item">
+                                <a class="nav-bar__link" href="../../press-center/index.htm">
+                                    Прес-центр                                </a>
+                            </li>
+                                                    <li class="nav-bar__list-item">
+                                <a class="nav-bar__link" href="../../contacts/index.htm">
+                                    Контакти                                </a>
+                            </li>
+                                                    <li class="nav-bar__list-item">
+                                <a class="nav-bar__link" href="../../career/index.htm">
+                                    Кар’єра                                </a>
+                            </li>
+                                            </ul>
+                                
+                <div class="change-lang-block" style="display: none;">
+                    <label>
+                        <select name="">
+                            <option value="" selected="">UA</option>
+                            <option value="">RU</option>
+                        </select>
+                    </label>
+                </div>
+
+                <div class="overlay"></div>
+            </div>
+        </div>
+    </header>
+
+
+<main class="content content--flat-page">
+	<style>
+		.flat{
+			padding: 2rem 0 0;
+		}
+        .sinComVud {
+            font-weight: 500;
+        }
+        .content--flat-page .commercial-block__item {
+            width: auto;
+        }
+	</style>
+    <section class="flat">
+        <div class="flat__inner">
+            <h1 class="flat__header">
+                Комерційне приміщення №7, будинок №1, секція 1, Дніпроводська,1 у ЖК Forest Park            </h1>
+
+            <div class="flat__content">
+                <div class="flat__preview-wrap">
+                    <!-- <img class="flat__preview-img" src="https://zim-group.com/wp-content/uploads/2023/03/plan-2-360x400.png" alt="Комерційне приміщення №7, будинок №1, секція 1, Дніпроводська,1 у ЖК Forest Park"> -->
+					<img class="flat__preview-img" src="../../wp-content/uploads/2023/03/plan-2.png" alt="Комерційне приміщення №7, будинок №1, секція 1, Дніпроводська,1 у ЖК Forest Park">
+                </div>
+
+                <ul class="flat__feature-list">
+                    <li class="flat__feature-item">
+                            <span class="flat__feature-label">
+                                Площа                            </span>
+                        <span class="flat__feature-value">
+                                55.3                                <span class="flat__feature-sup-value">
+                                    м <sup>2</sup>
+                                </span>
+                            </span>
+                    </li>
+
+                    <li class="flat__feature-item">
+                            <span class="flat__feature-label">
+                                Район                            </span>
+                        <span class="flat__feature-value">
+                                Оболонський                            </span>
+                    </li>
+
+                    <li class="flat__feature-item">
+                            <span class="flat__feature-label">
+                                Адреса                            </span>
+                        <span class="flat__feature-value">
+                                Дніпроводська,1                            </span>
+                    </li>
+
+                    <li class="flat__feature-item">
+                            <span class="flat__feature-label">
+                                Строк здачі в експлуатацію                            </span>
+                        <span class="flat__feature-value">
+                                будинок введений, проведено всі комунікації                            </span>
+                    </li>
+                </ul>
+
+                <div class="flat__info">
+                    <div class="flat__info-item">
+                               <span class="flat__info-price">
+                                1 700 usd                                <span class="flat__info-price-currency">
+                                     / м<sup>2</sup>
+                                </span>
+                            </span>
+
+                        <button data-flat-callback="" class="flat__info-callback-btn">
+                            Зв’язатись з менеджером                        </button>
+                        <p class="call-commersial">
+                                                                        <a href="tel:0442903268" class="commercial-forest-park">Або за тел.:
+                                                <span>0442903268</span></a>
+                                                                                                    </p>
+                    </div>
+
+                                    </div>
+              <style>
+                .flat__position-img-wrap {
+                    max-height: 150px !important;
+                    width: 250px;
+                    display: block;
+                }
+                .flat__position-img-wrap img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+              </style>
+                <ul class="flat__position-list">
+                                                              <li class="flat__position-item">
+                        <span class="flat__position-label">Ген план</span>
+                        <a class="flat__position-img-wrap" data-fancybox="gallery" href="../../wp-content/uploads/2023/03/yzobrazhenye_viber_2023-03-22_10-56-58-782-e1679565717717.jpg" data-caption="Ген план">
+                            <img src="../../wp-content/uploads/2023/03/yzobrazhenye_viber_2023-03-22_10-56-58-782-250x150.jpg" width="250" height="150" alt="Ген план">
+                        </a>
+                    </li>
+                                                            <li class="flat__position-item">
+                        <span class="flat__position-label">Поверх</span>
+                      <a class="flat__position-img-wrap" data-fancybox="gallery" href="../../wp-content/uploads/2023/03/plan-4.png" data-caption="Поверх">
+                        <img src="../../wp-content/uploads/2023/03/plan-4-250x150.png" width="250" height="150" alt="Поверх">
+                      </a>
+                    </li>
+                                    </ul>
+
+                <ul class="commercial-block__list">
+                                                                                          </ul>
+            </div>
+        </div>
+    </section>
+                                <section class="about about--on-career-page">
+                    <div class="about__inner">
+                        <h2 class="about__caption">
+                            Про проект                        </h2>
+                        <div class="about__content-wrap">
+                            <p class="about__content">ЖК Forest Park — сучасна альтернатива квартирі «на асфальті» для тих, хто звик досягати успіху в роботі, тому вдома прагне справжнього — комфорту та спокою в оточенні природи.</p>
+<p class="about__content">Все необхідне можна знайти на території комплексу: нежитлові приміщення для зручності жителів ЖК передбачається використовувати для організації роботи міні-супермаркети, кафе, медичного центру, аптеки, відділення банку, фітнес-клубу, міні бізнес-центру.</p>
+                        </div>
+                    </div>
+                </section>
+                
+    <section class="content__item map-container--big">
+        <div class="map-container__inner">
+            <div class="mapFrame">
+                <div id="map" style="width:100%; height:100%; frameborder:0; border:0;">
+
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+<div class="modal-flat-callback-wrap modal-single-commercial">
+    <div class="modal modal-flat-callback" id="modal-callback">
+        <button data-close-button="" class="modal__btn-close">
+            <span class="icon icon-close"></span>
+        </button>
+        <div class="modal__head">
+            <h3 class="modal__title">
+                Чудовий вибір!            </h3>
+
+            <span class="modal__content">
+                    Залиште свої контакти і ми розповімо вам всі деталі                </span>
+        </div>
+        <div class="modal__body">
+            <form class="modal__body-form" action="" id="form-single-commercial">
+<!--                <p class="modal__radio-wrap">-->
+<!--                    Номер-->
+<!--                    <label class="modal__radio-label" for="production">-->
+<!--                        <input type="radio"-->
+<!--                               onchange="swapConfig(this)"-->
+<!--                               name="urlOptions"-->
+<!--                               id="production"-->
+<!--                               checked="checked">-->
+<!--                        <span class="modal__radio-text">--><!--</span>-->
+<!--                    </label>-->
+<!--                    --><!--                    <label class="modal__radio-label" for="development">-->
+<!--                        <input type="radio"-->
+<!--                               onchange="swapConfig(this)"-->
+<!--                               name="urlOptions"-->
+<!--                               id="development">-->
+<!--                        <span class="modal__radio-text">email</span>-->
+<!--                    </label>-->
+<!--                </p>-->
+
+                <div class="contacts__form-label-wrap">
+                    <label id="productionSettings22" class="contacts__form-label">
+                        <input class="contacts__form-input" placeholder="Ім'я" type="text" name="name-commercial">
+                    </label>
+
+                    <label id="productionSettings" class="contacts__form-label">
+                        <input class="contacts__form-input telInput" placeholder="+38(___) ___-__-__" type="tel" name="tel-commercial" id="telMask" required="">
+                        <p class="errorPhone" style="display: none;">Будь ласка введіть номер телефону</p>
+                    </label>
+
+                    <label id="developmentSettings" class="contacts__form-label">
+                        <input class="contacts__form-input" type="email" placeholder="Email" name="email-commercial">
+                    </label>
+
+                    <div class="validation-block"></div>
+                </div>
+
+                <button class="modal__body-btn-close comButtonSingle" type="submit">
+                    Надіслати                </button>
+            </form>
+
+
+            <p class="privacy-policy">
+                Натискаючи кнопку “Надіслати” ви даєте згоду на обробку персональних даних згідно з нашою                <a class="privacy-policy__link" href="../../polityka-konfidenczijnosti/index.htm">політикою конфіденційності</a>
+            </p>
+        </div>
+    </div>
+</div>
+<footer class="footer" style="position: relative">
+    <a href="https://www.flatshow.org/" target="_blank" style="position: absolute;bottom: 0;right: 0;"><img src="../../wp-content/themes/zimTheme/img/flatshow.svg" alt="" style="width: 30px;"></a>
+    <div class="footer__inner">
+        <nav class="nav-bar nav-bar--footer">
+            <div class="logo-wrap">
+                <a href="../../index.htm">
+                    <img class="logo" alt="" src="../../wp-content/themes/zimTheme/img/footer/logo-footer.svg">
+                </a>
+            </div>
+
+                            <ul class="nav-bar__list">
+                                            <li class="nav-bar__list-item">
+                            <a class="nav-bar__link" href="../../projects/index.htm">
+                                Проекти                            </a>
+                        </li>
+                                            <li class="nav-bar__list-item">
+                            <a class="nav-bar__link" href="../../about/index.htm">
+                                Про компанію                            </a>
+                        </li>
+                                            <li class="nav-bar__list-item">
+                            <a class="nav-bar__link" href="../index.htm">
+                                Комерційна нерухомість                            </a>
+                        </li>
+                                            <li class="nav-bar__list-item">
+                            <a class="nav-bar__link" href="../../services/index.htm">
+                                Послуги                            </a>
+                        </li>
+                                            <li class="nav-bar__list-item">
+                            <a class="nav-bar__link" href="../../zaproshuyemo/index.htm">
+                                Управління нерухомістю                            </a>
+                        </li>
+                                            <li class="nav-bar__list-item">
+                            <a class="nav-bar__link" href="../../press-center/index.htm">
+                                Прес-центр                            </a>
+                        </li>
+                                            <li class="nav-bar__list-item">
+                            <a class="nav-bar__link" href="../../contacts/index.htm">
+                                Контакти                            </a>
+                        </li>
+                                            <li class="nav-bar__list-item">
+                            <a class="nav-bar__link" href="../../career/index.htm">
+                                Кар’єра                            </a>
+                        </li>
+                                    </ul>
+            
+
+            <ul class="contacts__list">
+                <li class="contacts__item">
+                    <span class="contacts__label">Адреса офісу</span>
+                    <span class="contacts__content">
+                            <span class="icon icon-marker"></span>
+                            м. Київ, вул. Сумська<br>будинок 3                        </span>
+                </li>
+<!--                <li class="contacts__item">-->
+<!--                    <span class="contacts__label">--><!--</span>-->
+<!--                    <span class="contacts__content">-->
+<!--                            <span class="icon icon-letter"></span>-->
+<!--                            --><!--                        </span>-->
+<!--                </li>-->
+                <li class="contacts__item">
+                    <span class="contacts__label">Відділ маркетингу</span>
+                    <span class="contacts__content">
+                            <span class="icon icon-letter"></span>
+                            marketing@zim-capital.com                        </span>
+                </li>
+            </ul>
+
+            <div class="contact-block">
+                
+                <a class="contact-block__btn" data-modal-target="#modal-callback">Замовити дзвінок</a>
+
+                <div class="social-block">
+                    <a class="facebook icon icon-facebook" href="https://www.facebook.com/zimgroupkiev/?ref=bookmarks"></a>
+                    <a class="instagram icon icon-instagram" href="https://www.instagram.com/zim_group/"></a>
+                </div>
+            </div>
+        </nav>
+    </div>
+</footer>
+
+<!--Temporary COMMENT / TODO delete after refactoring-->
+<!--    <button data-modal-target="#modal">Open Modal</button>-->
+<!--    <div class="modal" id="modal">-->
+<!--        <div class="modal-header">-->
+<!--            <div class="title">Example Modal</div>-->
+<!--            <button data-close-button class="close-button">&times;</button>-->
+<!--        </div>-->
+<!--        <div class="modal-body">-->
+<!--            Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse quod alias ut illo doloremque eum ipsum obcaecati distinctio debitis reiciendis quae quia soluta totam doloribus quos nesciunt necessitatibus, consectetur quisquam accusamus ex, dolorum, dicta vel? Nostrum voluptatem totam, molestiae rem at ad autem dolor ex aperiam. Amet assumenda eos architecto, dolor placeat deserunt voluptatibus tenetur sint officiis perferendis atque! Voluptatem maxime eius eum dolorem dolor exercitationem quis iusto totam! Repudiandae nobis nesciunt sequi iure! Eligendi, eius libero. Ex, repellat sapiente!-->
+<!--        </div>-->
+<!--    </div>-->
+<!--/END Temporary COMMENT / TODO delete after refactoring-->
+
+<div id="overlay"></div>
+</div>
+<!-- endWrapper -->
+
+
+<div id="thanksModal" class="modal-wrap" style="display: none">
+    <div class="modal modal-success" id="success">
+        <button data-close-button="" class="modal__btn-close">
+            <span class="icon icon-close"></span>
+        </button>
+        <div class="modal__head">
+            <span class="icon icon-success"></span>
+            <div class="modal__title">
+                Заявка успішно надіслана            </div>
+
+            <div class="modal__content">
+                Зовсім скоро з вами зв’яжеться наш менеджер            </div>
+        </div>
+        <div class="modal__body">
+            <div data-close-button="" class="modal__body-btn-close closeThanksModal">
+                Закрити            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal-wrap" id="modalCallBack">
+    <div class="modal modal-callback" id="modal-callback">
+        <button data-close-button="" class="modal__btn-close">
+            <span class="icon icon-close"></span>
+        </button>
+        <div class="modal__head">
+            <h3 class="modal__title">
+                Введіть номер телефону            </h3>
+
+            <span class="modal__content">
+                    І наш менеджер зателефонує вам протягом 5 хвилин                </span>
+        </div>
+
+        <div class="modal__body">
+            <form class="modal__body-form" action="" id="formCallBack">
+                <div class="contacts__form-label-wrap">
+                    <label class="contacts__form-label">
+                        <span class="contacts__form-label-text">Номер телефону</span>
+                        <input class="contacts__form-input telInput" required="" placeholder="+38(___) ___-__-__" type="text" name="formCallBackName" id="formCallBackName">
+                    </label>
+
+                    <div class="validation-block"></div>
+                </div>
+
+                <button data-modal-callback-send="" data-modal-target="#success" class="modal__body-btn-close" type="submit">
+                    Надіслати
+                </button>
+            </form>
+            <p class="privacy-policy">Натискаючи кнопку “Надіслати” ви даєте згоду на обробку персональних даних згідно з нашою                <a class="privacy-policy__link" href="../../polityka-konfidenczijnosti/index.htm">політикою конфіденційності</a>
+            </p>
+        </div>
+    </div>
+</div>
+
+
+<script type='text/javascript' src='../../wp-content/themes/zimTheme/js/wow.min.js?ver=20150315' id='wow-js'></script>
+<script type='text/javascript' src='../../wp-content/themes/zimTheme/js/scripts.min.js?ver=20150315' id='customScript-js'></script>
+<script type='text/javascript' src='../../wp-content/themes/zimTheme/js/libs/fancybox/jquery.fancybox.min.js?ver=20150315' id='fancyJS-js'></script>
+<script type='text/javascript' src='../../wp-content/themes/zimTheme/js/newJS.js?ver=20150315' id='newJS-js'></script>
+<script type='text/javascript' src='../../wp-content/themes/zimTheme/js/libs/jquery.maskedinput.min.js?ver=20150315' id='masked-input-js'></script>
+<script type='text/javascript' src='../../wp-content/themes/zimTheme/js/libs/sweetalert2.all.min.js?ver=20150315' id='alertJs-js'></script>
+<script type='text/javascript' src='../../wp-content/themes/zimTheme/js/new-common.js?ver=20150315' id='new-common-js'></script>
+<script type='text/javascript' src='../../wp-content/themes/zimTheme/js/inpuMask.js?ver=20150315' id='inputMask-js'></script>
+<script type='text/javascript' src='../../wp-includes/js/wp-embed.min.js?ver=5.5.15' id='wp-embed-js'></script>
+
+<script>
+    function initMap() {
+        var view = {lat: 50.39547, lng: 30.48955};
+        var map = new google.maps.Map(document.getElementById('map'), {
+            zoom: 16,
+            center: view
+        });
+        var contentString = '';
+        var infowindow = new google.maps.InfoWindow({
+            content: "",
+            pixelOffset: new google.maps.Size(300,129),
+        });
+        var marker = new google.maps.Marker({
+            position: view,
+            icon: '/wp-content/themes/zimTheme/imgMY/marker.png',
+            map: map,
+        });
+        google.maps.event.addListener(infowindow, 'domready', function() {
+            var iwOuter = $('.gm-style-iw');
+            var iwBackground = iwOuter.prev();
+            iwBackground.children(':nth-child(2)').css({'display' : 'none'});
+            iwBackground.children(':nth-child(4)').css({'display' : 'none'});
+            iwBackground.children(':nth-child(3)').css({'display' : 'none'});
+            iwBackground.children(':nth-child(1)').css({'display' : 'none'});
+            iwBackground.children(':nth-child(3)').find('div').children().css({'box-shadow': 'rgba(72, 181, 233, 0.6) 0px 1px 6px', 'z-index' : '1'});
+            var iwCloseBtn = iwOuter.next();
+            iwCloseBtn.css({'display' : 'none'});
+            if($('.iw-content').height() < 140){
+                $('.iw-bottom-gradient').css({display: 'none'});
+            }
+            iwCloseBtn.mouseout(function(){
+                $(this).css({opacity: '1'});
+            });
+        });
+    }
+</script>
+
+
+
+</body>
+</html>
+<script src="../../wp-content/themes/zimTheme/js/inpuMask-1.js"></script>
+<script>
+    let popup = document.querySelector('.modal-flat-callback-wrap'),
+        popupToggle = document.querySelector('[data-flat-callback]'),
+        popupClose = document.querySelector('[data-close-button]');
+
+    popupToggle.onclick = function () {
+        popup.style.display = 'block';
+        $('.modal-flat-callback').toggleClass('active');
+        $('body').toggleClass('popup-active');
+    };
+
+    popupClose.onclick = function () {
+        popup.style.display = 'none';
+        $('.modal-flat-callback').toggleClass('active');
+        $('body').toggleClass('popup-active');
+    };
+
+    window.onclick = function (e) {
+        if (e.target === popup) {
+            popup.style.display = 'none';
+            $('.modal-flat-callback').toggleClass('active');
+            $('body').toggleClass('popup-active');
+        }
+    };
+
+
+    function swapConfig(x) {
+        var radioName = document.getElementsByName(x.name);
+        for (i = 0; i < radioName.length; i++) {
+            document.getElementById(radioName[i].id.concat("Settings")).style.display = "none";
+        }
+        document.getElementById(x.id.concat("Settings")).style.display = "initial";
+    }
+
+
+    // $('[data-flat-callback]').click(function () {
+    //
+    //     $('.modal-flat-callback-wrap').toggleClass('active');
+    //     $('.modal-flat-callback').toggleClass('active')
+    //     $()
+    //
+    // });
+
+</script>

@@ -1,0 +1,1547 @@
+﻿<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    
+    <link rel="icon" href="../wp-content/themes/zimTheme/img/favicon/favicon.png">
+    <link rel="apple-touch-icon" sizes="57x57" href="../wp-content/themes/zimTheme/img/favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="../wp-content/themes/zimTheme/img/favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="../wp-content/themes/zimTheme/img/favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="../wp-content/themes/zimTheme/img/favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="../wp-content/themes/zimTheme/img/favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="../wp-content/themes/zimTheme/img/favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="../wp-content/themes/zimTheme/img/favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="../wp-content/themes/zimTheme/img/favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../wp-content/themes/zimTheme/img/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="../wp-content/themes/zimTheme/img/favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../wp-content/themes/zimTheme/img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="../wp-content/themes/zimTheme/img/favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../wp-content/themes/zimTheme/img/favicon/favicon-16x16.png">
+    <link rel="manifest" href="../wp-content/themes/zimTheme/img/favicon/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="https://zim-group.com/wp-content/themes/zimTheme/img/favicon/ms-icon-144x144.png">
+
+    <meta name="theme-color" content="#ffffff">
+    <meta name="google-site-verification" content="9bbXw0u1DL9lFoZp7BhKxIRXT9yCL9-fayp0uSoaH4U">
+	
+	
+	<meta property="og:image" content="https://zim-group.com/wp-content/uploads/2021/10/zimog.jpg">
+    <meta property="og:image:secure_url" content="https://zim-group.com/wp-content/uploads/2021/10/zimog.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="628">
+	
+    <style>
+	
+	.logo__img, footer .logo{
+		width: 130px;
+	}
+	
+        .mapFrame {
+            height: 100%;
+            width: 100%;
+
+        }
+
+        .preloader__container {
+            position: absolute;
+            z-index: 1;
+            width: 100%;
+            min-height: 100%;
+            background-color: rgba(0, 0, 0, .7);
+            -ms-flex-pack: center;
+            -ms-flex-item-align: center;
+            -ms-flex-direction: column;
+            flex-direction: column
+        }
+
+        .preloader__box, .preloader__container {
+            display: -ms-flexbox;
+            display: flex;
+            justify-content: center;
+            align-self: center
+        }
+
+        .preloader__box {
+            width: 120px;
+            height: 120px;
+            -ms-flex-pack: center;
+            -ms-flex-item-align: center;
+            margin: 4rem 0
+        }
+
+        .preloader__box span:first-child {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            z-index: 5;
+            display: inline-block;
+            background: #2fab5b
+        }
+
+        .preloader__box span:first-child, .preloader__box span:not(:first-child) {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            box-sizing: border-box
+        }
+
+        .preloader__box span:not(:first-child) {
+            border: 2px solid #fff;
+            border-radius: 50%;
+            animation: a 1.5s ease-out infinite;
+            animation-delay: calc(.5s * var(--i))
+        }
+
+        @keyframes a {
+            0% {
+                width: 50px;
+                height: 50px;
+                border: 1px solid hsla(0, 0%, 100%, .7)
+            }
+            50% {
+                width: 76px;
+                height: 76px;
+                border: 1px solid hsla(0, 0%, 100%, .4)
+            }
+            to {
+                width: 106px;
+                height: 106px;
+                border: 1px solid hsla(0, 0%, 100%, .1)
+            }
+        }
+
+        .preloader__box span:nth-child(2) {
+            -webkit-animation-delay: .5s;
+            animation-delay: .5s;
+        }
+
+        .preloader__box span:nth-child(3) {
+            -webkit-animation-delay: 1s;
+            animation-delay: 1s;
+        }
+
+        .preloader__box span:nth-child(4) {
+            -webkit-animation-delay: 1.5s;
+            animation-delay: 1.5s;
+        }
+
+    </style>
+    
+	<!-- This site is optimized with the Yoast SEO plugin v15.2.1 - https://yoast.com/wordpress/plugins/seo/ -->
+	<title>Zim Capital Group| Комерційна нерухомість | zim-group.com</title>
+	<meta name="description" content="Zim Capital Group - Комерційна нерухомість для будь-яких потреб😎Широкий вибір приміщень ✅ Вигідні умови придбання❗ zim-group.com">
+	<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+	<link rel="canonical" href="index.htm">
+	<meta property="og:locale" content="uk_UA">
+	<meta property="og:type" content="article">
+	<meta property="og:title" content="Zim Capital Group| Комерційна нерухомість | zim-group.com">
+	<meta property="og:description" content="Zim Capital Group - Комерційна нерухомість для будь-яких потреб😎Широкий вибір приміщень ✅ Вигідні умови придбання❗ zim-group.com">
+	<meta property="og:url" content="https://zim-group.com/commercial/">
+	<meta property="og:site_name" content="zim-group.com">
+	<meta property="article:modified_time" content="2021-11-12T11:12:58+00:00">
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:label1" content="Written by">
+	<meta name="twitter:data1" content="zimGroupSiteAdmin">
+	<script type="application/ld+json" class="yoast-schema-graph">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://zim-group.com/#website","url":"https://zim-group.com/","name":"zim-group.com","description":"\u041f\u0440\u043e\u0441\u0442\u043e \u0449\u0435 \u043e\u0434\u0438\u043d \u0441\u0430\u0439\u0442 \u043d\u0430 WordPress","potentialAction":[{"@type":"SearchAction","target":"https://zim-group.com/?s={search_term_string}","query-input":"required name=search_term_string"}],"inLanguage":"uk"},{"@type":"WebPage","@id":"https://zim-group.com/commercial/#webpage","url":"https://zim-group.com/commercial/","name":"Zim Capital Group| \u041a\u043e\u043c\u0435\u0440\u0446\u0456\u0439\u043d\u0430 \u043d\u0435\u0440\u0443\u0445\u043e\u043c\u0456\u0441\u0442\u044c | zim-group.com","isPartOf":{"@id":"https://zim-group.com/#website"},"datePublished":"2020-04-01T06:18:47+00:00","dateModified":"2021-11-12T11:12:58+00:00","description":"Zim Capital Group - \u041a\u043e\u043c\u0435\u0440\u0446\u0456\u0439\u043d\u0430 \u043d\u0435\u0440\u0443\u0445\u043e\u043c\u0456\u0441\u0442\u044c \u0434\u043b\u044f \u0431\u0443\u0434\u044c-\u044f\u043a\u0438\u0445 \u043f\u043e\u0442\u0440\u0435\u0431\ud83d\ude0e\u0428\u0438\u0440\u043e\u043a\u0438\u0439 \u0432\u0438\u0431\u0456\u0440 \u043f\u0440\u0438\u043c\u0456\u0449\u0435\u043d\u044c \u2705 \u0412\u0438\u0433\u0456\u0434\u043d\u0456 \u0443\u043c\u043e\u0432\u0438 \u043f\u0440\u0438\u0434\u0431\u0430\u043d\u043d\u044f\u2757 zim-group.com","inLanguage":"uk","potentialAction":[{"@type":"ReadAction","target":["https://zim-group.com/commercial/"]}]}]}</script>
+	<!-- / Yoast SEO plugin. -->
+
+
+<link rel='dns-prefetch' href='//s.w.org'>
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/13.0.0\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/13.0.0\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/zim-group.com\/wp-includes\/js\/wp-emoji-release.min.js?ver=5.5.15"}};
+			!function(e,a,t){var n,r,o,i=a.createElement("canvas"),p=i.getContext&&i.getContext("2d");function s(e,t){var a=String.fromCharCode;p.clearRect(0,0,i.width,i.height),p.fillText(a.apply(this,e),0,0);e=i.toDataURL();return p.clearRect(0,0,i.width,i.height),p.fillText(a.apply(this,t),0,0),e===i.toDataURL()}function c(e){var t=a.createElement("script");t.src=e,t.defer=t.type="text/javascript",a.getElementsByTagName("head")[0].appendChild(t)}for(o=Array("flag","emoji"),t.supports={everything:!0,everythingExceptFlag:!0},r=0;r<o.length;r++)t.supports[o[r]]=function(e){if(!p||!p.fillText)return!1;switch(p.textBaseline="top",p.font="600 32px Arial",e){case"flag":return s([127987,65039,8205,9895,65039],[127987,65039,8203,9895,65039])?!1:!s([55356,56826,55356,56819],[55356,56826,8203,55356,56819])&&!s([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]);case"emoji":return!s([55357,56424,8205,55356,57212],[55357,56424,8203,55356,57212])}return!1}(o[r]),t.supports.everything=t.supports.everything&&t.supports[o[r]],"flag"!==o[r]&&(t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&t.supports[o[r]]);t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&!t.supports.flag,t.DOMReady=!1,t.readyCallback=function(){t.DOMReady=!0},t.supports.everything||(n=function(){t.readyCallback()},a.addEventListener?(a.addEventListener("DOMContentLoaded",n,!1),e.addEventListener("load",n,!1)):(e.attachEvent("onload",n),a.attachEvent("onreadystatechange",function(){"complete"===a.readyState&&t.readyCallback()})),(n=t.source||{}).concatemoji?c(n.concatemoji):n.wpemoji&&n.twemoji&&(c(n.twemoji),c(n.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	<link rel='stylesheet' id='wp-block-library-css' href='../wp-includes/css/dist/block-library/style.min.css?ver=5.5.15' type='text/css' media='all'>
+<link rel='stylesheet' id='wpm-main-css' href='../wp-content/plugins/wp-multilang/assets/styles/main.min.css?ver=2.4.1' type='text/css' media='all'>
+<link rel='stylesheet' id='main-css' href='../wp-content/themes/zimTheme/css/main.css?ver=3.5.0' type='text/css' media='all'>
+<link rel='stylesheet' id='animate-css' href='../wp-content/themes/zimTheme/css/animate.css?ver=3.5.0' type='text/css' media='all'>
+<link rel='stylesheet' id='fancyCss-css' href='../wp-content/themes/zimTheme/js/libs/fancybox/jquery.fancybox.min.css?ver=3.5.0' type='text/css' media='all'>
+<link rel='stylesheet' id='newStyles-css' href='../wp-content/themes/zimTheme/css/newSTYLES.css?ver=3.5.0' type='text/css' media='all'>
+<link rel='stylesheet' id='alertCss-css' href='../wp-content/themes/zimTheme/css/sweetalert2.min.css?ver=3.5.0' type='text/css' media='all'>
+<link rel='stylesheet' id='invite-css' href='../wp-content/themes/zimTheme/css/invite.css?ver=3.5.0' type='text/css' media='all'>
+<script type='text/javascript' src='../wp-includes/js/jquery/jquery.js?ver=1.12.4-wp' id='jquery-core-js'></script>
+<link rel="https://api.w.org/" href="../wp-json/index.htm"><link rel="alternate" type="application/json" href="../wp-json/wp/v2/pages/354"><link rel="alternate" hreflang="x-default" href="index.htm">
+<link rel="alternate" hreflang="uk" href="index.htm">
+    <script>(function (w, d, s, l, i) {
+            w[l] = w[l] || [];
+            w[l].push({
+                'gtm.start':
+                    new Date().getTime(), event: 'gtm.js'
+            });
+            var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : '';
+            j.async = true;
+            j.src =
+                'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+            f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-PRHQNJ7');</script>
+
+    <style>
+        .press-center__btn-wrap {
+            margin-top: 15px;
+        }
+    </style>
+
+</head>
+
+<body data-rsssl="1">
+<!-- Google Tag Manager (noscript) -->
+<noscript>
+    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PRHQNJ7" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+</noscript>
+<!-- End Google Tag Manager (noscript) -->
+<!-- startWrapper -->
+<!-- 			<style>
+    .winter-is-coming, .snow {
+        z-index: 112;
+        pointer-events: none;
+    }
+
+    .winter-is-coming {
+        overflow: hidden;
+        position: fixed;
+        top: 0;
+        height: 100%;
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .snow {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        -webkit-animation: falling linear infinite both;
+        animation: falling linear infinite both;
+        -webkit-transform: translate3D(0, -100%, 0);
+        -ms-transform: translate3D(0, -100%, 0);
+        transform: translate3D(0, -100%, 0);
+    }
+    .snow--near {
+        -webkit-animation-duration: 10s;
+        animation-duration: 10s;
+        background-image: url("https://paradise-avenue.com.ua/wp-content/uploads/2019/12/1.png");
+        background-size: contain;
+    }
+    .snow--near + .snow--alt {
+        -webkit-animation-delay: 5s;
+        animation-delay: 5s;
+    }
+    .snow--mid {
+        -webkit-animation-duration: 20s;
+        animation-duration: 20s;
+        background-image: url("https://paradise-avenue.com.ua/wp-content/uploads/2019/12/2.png");
+        background-size: contain;
+    }
+    .snow--mid + .snow--alt {
+        -webkit-animation-delay: 10s;
+        animation-delay: 10s;
+    }
+    .snow--far {
+        -webkit-animation-duration: 30s;
+        animation-duration: 30s;
+        background-image: url("https://paradise-avenue.com.ua/wp-content/uploads/2019/12/3.png");
+        background-size: contain;
+    }
+    .snow--far + .snow--alt {
+        -webkit-animation-delay: 15s;
+        animation-delay: 15s;
+    }
+
+    @-webkit-keyframes falling {
+        0% {
+            -webkit-transform: translate3D(-7.5%, -100%, 0);
+            transform: translate3D(-7.5%, -100%, 0);
+        }
+        100% {
+            -webkit-transform: translate3D(7.5%, 100%, 0);
+            transform: translate3D(7.5%, 100%, 0);
+        }
+    }
+
+    @keyframes falling {
+        0% {
+            -webkit-transform: translate3D(-7.5%, -100%, 0);
+            transform: translate3D(-7.5%, -100%, 0);
+        }
+        100% {
+            -webkit-transform: translate3D(7.5%, 100%, 0);
+            transform: translate3D(7.5%, 100%, 0);
+        }
+    }
+
+</style>
+<div class="winter-is-coming">
+
+    <div class="snow snow--near"></div>
+    <div class="snow snow--near snow--alt"></div>
+
+    <div class="snow snow--mid"></div>
+    <div class="snow snow--mid snow--alt"></div>
+
+    <div class="snow snow--far"></div>
+    <div class="snow snow--far snow--alt"></div>
+</div> -->
+<div class="wrapper">
+    <header>
+		
+
+        <div class="header__nav-bar">
+            <div class="header__logo-wrap logo">
+                <button class="logo__mobile-btn" data-toggle-menu="">
+                    <span class="icon icon-nav-bar-menu"></span>
+                    <span class="logo__mobile-btn-text">Меню</span>
+                </button>
+
+                <a class="logo__link logo__link--header" href="../index.htm">
+                    <img class="logo__img" src="../wp-content/themes/zimTheme/img/logo.svg" alt="">
+                </a>
+                <!--            <button class="logo__callback-block-btn">-->
+                <!--                <span class="icon icon-phone"></span>-->
+                <!--            </button                                >-->
+
+                
+
+
+            </div>
+
+            <nav class="nav-bar nav-bar--header">
+                                    <ul class="nav-bar__list">
+                                                    <li class="nav-bar__list-item">
+                                <a class="nav-bar__link" href="../projects/index.htm">
+                                    Проекти                                </a>
+                            </li>
+                                                    <li class="nav-bar__list-item">
+                                <a class="nav-bar__link" href="../about/index.htm">
+                                    Про компанію                                </a>
+                            </li>
+                                                    <li class="nav-bar__list-item">
+                                <a class="nav-bar__link" href="index.htm">
+                                    Комерційна нерухомість                                </a>
+                            </li>
+                                                    <li class="nav-bar__list-item">
+                                <a class="nav-bar__link" href="../services/index.htm">
+                                    Послуги                                </a>
+                            </li>
+                                                    <li class="nav-bar__list-item">
+                                <a class="nav-bar__link" href="../zaproshuyemo/index.htm">
+                                    Управління нерухомістю                                </a>
+                            </li>
+                                                    <li class="nav-bar__list-item">
+                                <a class="nav-bar__link" href="../press-center/index.htm">
+                                    Прес-центр                                </a>
+                            </li>
+                                                    <li class="nav-bar__list-item">
+                                <a class="nav-bar__link" href="../contacts/index.htm">
+                                    Контакти                                </a>
+                            </li>
+                                                    <li class="nav-bar__list-item">
+                                <a class="nav-bar__link" href="../career/index.htm">
+                                    Кар’єра                                </a>
+                            </li>
+                                            </ul>
+                
+                
+                <div class="change-lang-block" style="display: none;">
+                    <label>
+                        <select name="">
+                            <option value="" selected="">UA</option>
+                            <option value="">RU</option>
+                        </select>
+                    </label>
+                </div>
+            </nav>
+
+            <div class="menu-mobile">
+                                    <ul class="nav-bar__list">
+                                                    <li class="nav-bar__list-item">
+                                <a class="nav-bar__link" href="../projects/index.htm">
+                                    Проекти                                </a>
+                            </li>
+                                                    <li class="nav-bar__list-item">
+                                <a class="nav-bar__link" href="../about/index.htm">
+                                    Про компанію                                </a>
+                            </li>
+                                                    <li class="nav-bar__list-item">
+                                <a class="nav-bar__link" href="index.htm">
+                                    Комерційна нерухомість                                </a>
+                            </li>
+                                                    <li class="nav-bar__list-item">
+                                <a class="nav-bar__link" href="../services/index.htm">
+                                    Послуги                                </a>
+                            </li>
+                                                    <li class="nav-bar__list-item">
+                                <a class="nav-bar__link" href="../zaproshuyemo/index.htm">
+                                    Управління нерухомістю                                </a>
+                            </li>
+                                                    <li class="nav-bar__list-item">
+                                <a class="nav-bar__link" href="../press-center/index.htm">
+                                    Прес-центр                                </a>
+                            </li>
+                                                    <li class="nav-bar__list-item">
+                                <a class="nav-bar__link" href="../contacts/index.htm">
+                                    Контакти                                </a>
+                            </li>
+                                                    <li class="nav-bar__list-item">
+                                <a class="nav-bar__link" href="../career/index.htm">
+                                    Кар’єра                                </a>
+                            </li>
+                                            </ul>
+                                
+                <div class="change-lang-block" style="display: none;">
+                    <label>
+                        <select name="">
+                            <option value="" selected="">UA</option>
+                            <option value="">RU</option>
+                        </select>
+                    </label>
+                </div>
+
+                <div class="overlay"></div>
+            </div>
+        </div>
+    </header>
+
+
+
+<main class="content content--commercial-page">
+    <div class="header">
+        <div class="header__inner header__inner--commercial">
+            <img class="header__slogan-img" src="../wp-content/uploads/2020/04/commercial-page-bg-header-890x550.jpg" alt="Комерційна нерухомість">
+            <div class="header__slogan header__slogan--commercial">
+                <h1 class="header__slogan-title">
+                    Комерційна нерухомість                </h1>
+
+                <span class="header__slogan-subtitle">
+                        Комерційна нерухомість для будь-яких потреб. Широкий вибір приміщень різної площі, наявність комунікацій та вигідні умови придбання.                    </span>
+            </div>
+        </div>
+    </div>
+
+    <div class="filters-block filters-block--commercial-page">
+        <div class="filters-block__btn-wrp filters-block__btn-wrp--commercial-page">
+            <button class="filters-block__btn" data-filters-btn="">
+                Фільтри
+            </button>
+        </div>
+
+        
+        <ul class="filters-block__list filters-block__list--commercial-page">
+            <li class="filters-block__item">
+                <h3 class="filters-block__item-caption">
+                    Проект</h3>
+                <details id="project_location" class="select_container">
+                    <summary>--</summary>
+                    <div class="select">
+
+                        <label class="select__option"><input type="radio" name="project-location" checked="" value="">Усi проекти                        </label>
+                                                    <label class="select__option"><input type="radio" name="project-location" value="Skyland2">
+                                Skyland2</label>
+                                                    <label class="select__option"><input type="radio" name="project-location" value="Forest Park">
+                                Forest Park</label>
+                                                    <label class="select__option"><input type="radio" name="project-location" value="Hvoya">
+                                Hvoya</label>
+                                                    <label class="select__option"><input type="radio" name="project-location" value="Paradise Avenue">
+                                Paradise Avenue</label>
+                                                    <label class="select__option"><input type="radio" name="project-location" value="Parkland">
+                                Parkland</label>
+                                                    <label class="select__option"><input type="radio" name="project-location" value="Клубний">
+                                Клубний</label>
+                        
+                    </div>
+                </details>
+            </li>
+
+
+            <li class="filters-block__item">
+                <h3 class="filters-block__item-caption">Призначення</h3>
+                <details id="project_use" class="select_container">
+                    <summary>--</summary>
+                    <div class="select">
+                        <label class="select__option">
+                            <input type="radio" name="project_use" checked="" value=""><span>Будь-який</span>
+                        </label>
+                                                                          <label class="select__option">
+                            <input type="radio" name="project_use" value="biznes-czentry"><span>Бізнес центри</span>
+                          </label>
+                                                  <label class="select__option">
+                            <input type="radio" name="project_use" value="dozvillya"><span>Дозвілля</span>
+                          </label>
+                                                  <label class="select__option">
+                            <input type="radio" name="project_use" value="kafe-i-restorany"><span>Кафе і Ресторани</span>
+                          </label>
+                                                  <label class="select__option">
+                            <input type="radio" name="project_use" value="medyczyna"><span>Медицина</span>
+                          </label>
+                                                  <label class="select__option">
+                            <input type="radio" name="project_use" value="navchannya"><span>Навчання</span>
+                          </label>
+                                                  <label class="select__option">
+                            <input type="radio" name="project_use" value="poslugy"><span>Послуги</span>
+                          </label>
+                                                  <label class="select__option">
+                            <input type="radio" name="project_use" value="prostir-dlya-tvorchosti"><span>Простір для творчості</span>
+                          </label>
+                                                  <label class="select__option">
+                            <input type="radio" name="project_use" value="robochyj-prostir"><span>Робочий простір</span>
+                          </label>
+                                                  <label class="select__option">
+                            <input type="radio" name="project_use" value="torgivlya"><span>Торгівля</span>
+                          </label>
+                                            </div>
+                </details>
+            </li>
+            <li class="filters-block__item">
+                <div class="range-slider-wrap">
+                    <h3 class="filters-block__item-caption">Площа, м<sup>2</sup></h3>
+                    <div class="range-slider">
+                        <label class="range-slider__range">
+                            <input value="34" min="34" max="1030" step="1" type="range">
+                            <input value="1030" min="34" max="1030" step="1" type="range">
+                        </label>
+                        <label class="range-slider__number">
+                            <input type="number" id="minSqInput" value="34" min="34" max="1030">
+                        </label>
+                        <label class="range-slider__number">
+                            <input type="number" id="maxSqInput" value="1030" min="34" max="1030">
+                        </label>
+                    </div>
+                </div>
+            </li>
+            <li class="filters-block__item">
+                <h3 class="filters-block__item-caption">Статус об’єкту</h3>
+                <details id="project_status" class="select_container">
+                    <summary>--</summary>
+                    <div class="select">
+                        <label class="select__option"><input type="radio" name="project_status" checked="" value="">Будь-який</label>
+                                                    <label class="select__option"><input type="radio" name="project_status" value="У продажу">У продажу</label>
+                                            </div>
+                </details>
+            </li>
+            <li class="filters-block__item">
+                <button class="filters-block__filter-btn">
+                    Знайти                </button>
+            </li>
+        </ul>
+    </div>
+
+    <style>
+        .filters-block__image {
+            width: 100%;
+            max-width: 75rem;
+            margin: 0 auto;
+            padding: 0;
+            position: relative;
+            transition: padding .4s ease-in;
+        }
+
+        .img__select {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin: 0 -15px;
+            padding-top: 40px;
+            padding-bottom: 40px;
+        }
+
+        .img__option {
+            padding: 0 15px;
+            width: 16.666%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            border-radius: 50%;
+        }
+
+        .img__option {
+            cursor: pointer;
+            font-family: Montserrat, Helvetica, sans-serif;
+            color: #313339;
+            font-weight: 700;
+            font-size: 15px;
+        }
+
+        .img__option p {
+            margin-top: 15px;
+            text-align: center;
+        }
+
+        .img__option img {
+            border-radius: 50%;
+            border: 1px solid #000;
+            overflow: hidden;
+            width: 100%;
+        }
+
+        .img__option input {
+            display: none;
+        }
+
+        .active__img {
+            filter: brightness(0.5);
+        }
+
+        @media (max-width: 85rem) {
+            .filters-block__image {
+                padding: 0 2.5rem;
+                transition: padding .4s ease-in;
+            }
+        }
+
+        @media (max-width: 767px) {
+            .img__select {
+                margin: 0 -5px;
+            }
+
+            .img__option {
+                padding: 0 5px;
+            }
+
+        }
+
+        @media (max-width: 576px) {
+            .img__option {
+                width: 33.333%;
+                margin-bottom: 15px;
+            }
+        }
+
+        /*filters-block__list--commercial-page.active .filters-block__item:last-child{margin:2rem auto 0}*/
+
+        @media (max-width: 400px) {
+            .img__option {
+                width: 50%;
+            }
+        }
+    </style>
+	
+	 <div class="filters-block__image">
+    <div class="container"></div>
+  
+    <div id="project_location-img" class="select_container">
+        <div class="select img__select">
+  
+         <!-- 
+			<label class="select__option img__option">
+                <img src="https://zim-group.com/wp-content/uploads/2020/04/image-15-400x400.png"
+                     alt="Усi проекти">
+                <input type="radio" name="project-location" checked
+                       value="">
+                <p>Усi проекти</p>
+            </label>
+			-->  
+                            <label class="select__option img__option">				
+                                            <img src="../wp-content/uploads/2020/03/dscf7811-1-1105x520-1.jpg" alt="Skyland2">
+                             <input type="radio" name="project-location" value="Skyland2">
+                    <p>Skyland2</p>
+                </label>
+                            <label class="select__option img__option">				
+                                            <img src="../wp-content/uploads/2020/03/7-min-1-180x180.jpg" alt="Forest Park">
+                                        <input type="radio" name="project-location" value="Forest Park">
+                    <p>Forest Park</p>
+                </label>
+                            <label class="select__option img__option">				
+                                            <img src="../wp-content/uploads/2022/06/hvoya_4_1-min-%E2%80%94-kopyya.jpg" alt="Hvoya">
+                             <input type="radio" name="project-location" value="Hvoya">
+                    <p>Hvoya</p>
+                </label>
+                            <label class="select__option img__option">				
+                                            <img src="../wp-content/uploads/2020/03/bgmainpage-180x180.jpg" alt="Paradise Avenue">
+                                        <input type="radio" name="project-location" value="Paradise Avenue">
+                    <p>Paradise Avenue</p>
+                </label>
+                            <label class="select__option img__option">				
+                                            <img src="../wp-content/uploads/2020/03/spa_-5-1-180x180.jpg" alt="Parkland">
+                                            <input type="radio" name="project-location" value="Parkland">
+                    <p>Parkland</p>
+                </label>
+                            <label class="select__option img__option">				
+                                            <img src="../wp-content/uploads/2020/03/1_black-obrizana-180x180.jpg" alt="Клубний">
+                              <input type="radio" name="project-location" value="Клубний">
+                    <p>Клубний</p>
+                </label>
+                    </div>
+    </div>
+  
+    <div id="resultSubCategory">
+  
+    </div>
+  </div>
+	
+    <div class="resultSortProjects">
+                <section class="content__item card-container card-container--commercial-page">
+            <div class="card-container__inner">
+                <h2 class="card-container__caption card-container__caption--not-residential">
+                    Нежитлові приміщення
+                </h2>
+
+                <ul class="card-container__list resultCommercial">
+
+                                            <li class="card-container__item card-container__item--not-residential">
+                            <a class="card__link" href="#">Skyland2</a>
+
+                            <a href="2201-2/index.htm" class="card-container__link">
+                                <div class="card card--not-residential">
+                                    <div class="card__img-wrap">
+                                        <img src="../wp-content/uploads/2024/02/zobrazhennya_viber_2024-02-20_16-52-36-090.jpg" alt="Комерційне приміщення з ремонтом у Skyland II по вул. Волошкова 2">
+                                    </div>
+
+                                    <ul class="card__feature-list">
+                                        <li class="card__feature-item">
+                                        <span class="card__feature-label">
+                                            Площа                                        </span>
+                                            <span class="card__feature-value">
+                                            78                                            <span class="card__feature-sup-value">
+                                                м <sup>2</sup>
+                                            </span>
+                                        </span>
+                                        </li>
+
+                                        <li class="card__feature-item">
+                                        <span class="card__feature-label">
+                                            Район                                        </span>
+                                            <span class="card__feature-value">
+                                            р-н Жуляни                                        </span>
+                                        </li>
+
+                                        <li class="card__feature-item">
+                                        <span class="card__feature-label">
+                                            Кількість мешканців                                        </span>
+                                            <span class="card__feature-value">
+                                            600                                        </span>
+                                        </li>
+
+                                        <li class="card__feature-item">
+                                        <span class="card__feature-value">
+                                            1540 usd                                            <span class="card__feature-label">
+                                                 / м<sup>2</sup>
+                                            </span>
+                                        </span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </a>
+                        </li>
+                                            <li class="card-container__item card-container__item--not-residential">
+                            <a class="card__link" href="#">Forest Park</a>
+
+                            <a href="komerczijne-prymishhennya-%E2%84%967-budynok-%E2%84%961-sekcziya-1-dniprovodska1-u-zhk-forest-park/index.htm" class="card-container__link">
+                                <div class="card card--not-residential">
+                                    <div class="card__img-wrap">
+                                        <img src="../wp-content/uploads/2023/03/plan-2.png" alt="Комерційне приміщення №7, будинок №1, секція 1, Дніпроводська,1 у ЖК Forest Park">
+                                    </div>
+
+                                    <ul class="card__feature-list">
+                                        <li class="card__feature-item">
+                                        <span class="card__feature-label">
+                                            Площа                                        </span>
+                                            <span class="card__feature-value">
+                                            55.3                                            <span class="card__feature-sup-value">
+                                                м <sup>2</sup>
+                                            </span>
+                                        </span>
+                                        </li>
+
+                                        <li class="card__feature-item">
+                                        <span class="card__feature-label">
+                                            Район                                        </span>
+                                            <span class="card__feature-value">
+                                            Оболонський                                        </span>
+                                        </li>
+
+                                        <li class="card__feature-item">
+                                        <span class="card__feature-label">
+                                            Кількість мешканців                                        </span>
+                                            <span class="card__feature-value">
+                                            920                                        </span>
+                                        </li>
+
+                                        <li class="card__feature-item">
+                                        <span class="card__feature-value">
+                                            1 700 usd                                            <span class="card__feature-label">
+                                                 / м<sup>2</sup>
+                                            </span>
+                                        </span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </a>
+                        </li>
+                                            <li class="card-container__item card-container__item--not-residential">
+                            <a class="card__link" href="#">Forest Park</a>
+
+                            <a href="komerczijne-prymishhennya-%E2%84%966-budynok-%E2%84%961-sekcziya-1-dniprovodska1-u-zhk-forest-park/index.htm" class="card-container__link">
+                                <div class="card card--not-residential">
+                                    <div class="card__img-wrap">
+                                        <img src="../wp-content/uploads/2023/03/plan-1-e1679565381493.png" alt="Комерційне приміщення №6, будинок №1, секція 1, Дніпроводська,1 у ЖК Forest Park">
+                                    </div>
+
+                                    <ul class="card__feature-list">
+                                        <li class="card__feature-item">
+                                        <span class="card__feature-label">
+                                            Площа                                        </span>
+                                            <span class="card__feature-value">
+                                            54.1                                            <span class="card__feature-sup-value">
+                                                м <sup>2</sup>
+                                            </span>
+                                        </span>
+                                        </li>
+
+                                        <li class="card__feature-item">
+                                        <span class="card__feature-label">
+                                            Район                                        </span>
+                                            <span class="card__feature-value">
+                                            Оболонський                                        </span>
+                                        </li>
+
+                                        <li class="card__feature-item">
+                                        <span class="card__feature-label">
+                                            Кількість мешканців                                        </span>
+                                            <span class="card__feature-value">
+                                            920                                        </span>
+                                        </li>
+
+                                        <li class="card__feature-item">
+                                        <span class="card__feature-value">
+                                            1 500 usd                                            <span class="card__feature-label">
+                                                 / м<sup>2</sup>
+                                            </span>
+                                        </span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </a>
+                        </li>
+                    
+                </ul>
+            </div>
+        </section>
+    </div>
+    <section class="pagination">
+        <button class="pagination__btn">
+            <span class="icon icon-loader"></span>
+            Ще планування        </button>
+
+        <p class="pagination__text">
+            <span>Показано</span>
+            <span>3</span>
+            <span>планувань з</span>
+            <span>65</span>
+        </p>
+    </section>
+    <style>
+      .directions__wrapper {
+          width: 100%;
+          max-width: 75rem;
+          margin: 0 auto;
+          padding: 0 3rem 9rem;
+      }
+      .directions__inner {
+          display: flex;
+          flex-wrap: wrap;
+          margin: -2px;
+      }
+      .directions__item {
+          width: 50%;
+          padding: 2px;
+      }
+      .directions__item-inner {
+          position: relative;
+          width: 100%;
+          height: 100%;
+      }
+      .directions__item-inner img {
+          display: block;
+          width: 100%;
+      }
+      .directions__item-inner:hover .directions__item-front {
+          opacity: 0;
+      }
+      .directions__item-inner:hover .directions__item-back {
+          opacity: 1;
+      }
+      .directions__item-front {
+          position: absolute;
+          z-index: 2;
+          left: 0;
+          top: 0;
+          right: 0;
+          bottom: 0;
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-end;
+          align-items: flex-start;
+          padding: 20px 25px;
+          transition: all .25s ease;
+      }
+      .directions__item-back {
+          position: absolute;
+          z-index: 3;
+          left: 0;
+          top: 0;
+          right: 0;
+          bottom: 0;
+          padding: 30px 25px 20px;
+          opacity: 0;
+          transition: all .25s ease;
+          background: rgba(255, 255, 255, .9);
+      }
+      .directions__item-front-title {
+          color: #fff;
+          text-transform: uppercase;
+          font-weight: 700;
+          font-size: 20px;
+      }
+      .directions__item-front-decorate {
+          display: flex;
+          align-items: center;
+          justify-content: flex-start;
+      }
+      .directions__item-front-decorate span {
+          display: block;
+          background: #fff;
+      }
+      .directions__item-front-decorate span:nth-child(1) {
+          width: 28px;
+          height: 8px;
+      }
+      .directions__item-front-decorate span:nth-child(2) {
+          height: 9px;
+          width: 9px;
+          border-radius: 50%;
+          margin-left: 7px;
+      }
+      .directions__item-back-decorate {
+          display: flex;
+          align-items: center;
+          justify-content: flex-start;
+      }
+      .directions__item-back-decorate  span {
+          display: block;
+      }
+      .directions__item-back-decorate span:nth-child(1) {
+          width: 28px;
+          height: 8px;
+          background: #4a4d56;
+      }
+      .directions__item-back-decorate span:nth-child(2) {
+          height: 9px;
+          width: 9px;
+          border-radius: 50%;
+          margin-left: 7px;
+          background: #12b259;
+      }
+      .directions__item-back-title {
+          color: #4a4d56;
+          text-transform: uppercase;
+          font-weight: 700;
+          font-size: 20px;
+          margin-bottom: 20px;
+      }
+      .directions__item-back-list {
+        max-width: 240px;
+      }
+      .directions__item-back-item {
+          font-weight: 400;
+          position: relative;
+          padding-left: 15px;
+          font-size: 15px;
+      }
+      .directions__item-back-item + .directions__item-back-item {
+          margin-top: 5px;
+      }
+      .directions__item-back-item::before {
+          content: "";
+          position: absolute;
+          left: 0;
+          top: 9px;
+          width: 5px;
+          height: 5px;
+          border-radius: 50%;
+          background: #4a4d56;
+      }
+      @media (max-width: 1024px) {
+          .directions__item-front {
+              display: none;
+          }
+          .directions__item-back {
+              position: static;
+              opacity: 1;
+              height: 100%;
+          }
+          .directions__item-back-list {
+              max-width: 100%;
+          }
+      }
+      @media (max-width: 592px) {
+        .directions__item {
+            width: 100%;
+        }
+        .directions__item-back-title {
+            font-size: 18px;
+        }
+      }
+    </style>
+    <section class="directions">
+      <div class="directions__wrapper">
+        <div class="directions__inner">
+                      <div class="directions__item">
+              <div class="directions__item-inner">
+                                <img src="../wp-content/uploads/2021/11/directions-1-555x310.jpg" alt="">
+                <div class="directions__item-front">
+                  <div class="directions__item-front-decorate">
+                    <span></span>
+                    <span></span>
+                  </div>
+                  <div class="directions__item-front-title">Медицина</div>
+                </div>
+                <div class="directions__item-back">
+                  <div class="directions__item-back-decorate">
+                    <span></span>
+                    <span></span>
+                  </div>
+                  <div class="directions__item-back-title">Медицина</div>
+                  <ul class="directions__item-back-list">
+                                          <li class="directions__item-back-item">Стоматологія</li>
+                                          <li class="directions__item-back-item">Косметологія</li>
+                                          <li class="directions__item-back-item">Центр реабилитації</li>
+                                          <li class="directions__item-back-item">Лабораторія (аналізи)</li>
+                                          <li class="directions__item-back-item">Ветеринарна клініка</li>
+                                      </ul>
+                </div>
+              </div>
+            </div>
+                      <div class="directions__item">
+              <div class="directions__item-inner">
+                                <img src="../wp-content/uploads/2021/11/directions-2-555x310.jpg" alt="">
+                <div class="directions__item-front">
+                  <div class="directions__item-front-decorate">
+                    <span></span>
+                    <span></span>
+                  </div>
+                  <div class="directions__item-front-title">Торгівля</div>
+                </div>
+                <div class="directions__item-back">
+                  <div class="directions__item-back-decorate">
+                    <span></span>
+                    <span></span>
+                  </div>
+                  <div class="directions__item-back-title">Торгівля</div>
+                  <ul class="directions__item-back-list">
+                                          <li class="directions__item-back-item">Продуктовий магазин</li>
+                                          <li class="directions__item-back-item">Мінімаркет</li>
+                                          <li class="directions__item-back-item">Аптека</li>
+                                          <li class="directions__item-back-item">Точки продажу води</li>
+                                          <li class="directions__item-back-item">Точки оренди будівельних і побутових інструментів</li>
+                                          <li class="directions__item-back-item">Шоурум інтернет-магазину</li>
+                                      </ul>
+                </div>
+              </div>
+            </div>
+                      <div class="directions__item">
+              <div class="directions__item-inner">
+                                <img src="../wp-content/uploads/2021/11/directions-3-555x310.jpg" alt="">
+                <div class="directions__item-front">
+                  <div class="directions__item-front-decorate">
+                    <span></span>
+                    <span></span>
+                  </div>
+                  <div class="directions__item-front-title">Робочий простір</div>
+                </div>
+                <div class="directions__item-back">
+                  <div class="directions__item-back-decorate">
+                    <span></span>
+                    <span></span>
+                  </div>
+                  <div class="directions__item-back-title">Робочий простір</div>
+                  <ul class="directions__item-back-list">
+                                          <li class="directions__item-back-item">Офіс</li>
+                                          <li class="directions__item-back-item">Коворкінг</li>
+                                          <li class="directions__item-back-item">Крафтове виробництво</li>
+                                          <li class="directions__item-back-item">Дизайнерська майстерня</li>
+                                      </ul>
+                </div>
+              </div>
+            </div>
+                      <div class="directions__item">
+              <div class="directions__item-inner">
+                                <img src="../wp-content/uploads/2021/11/directions-4-555x310.jpg" alt="">
+                <div class="directions__item-front">
+                  <div class="directions__item-front-decorate">
+                    <span></span>
+                    <span></span>
+                  </div>
+                  <div class="directions__item-front-title">Послуги</div>
+                </div>
+                <div class="directions__item-back">
+                  <div class="directions__item-back-decorate">
+                    <span></span>
+                    <span></span>
+                  </div>
+                  <div class="directions__item-back-title">Послуги</div>
+                  <ul class="directions__item-back-list">
+                                          <li class="directions__item-back-item">Пункти ремонту</li>
+                                          <li class="directions__item-back-item">Ательє</li>
+                                          <li class="directions__item-back-item">Салон краси</li>
+                                          <li class="directions__item-back-item">Пошив одягу</li>
+                                          <li class="directions__item-back-item">Хімчистка</li>
+                                          <li class="directions__item-back-item">Готель для тварин</li>
+                                          <li class="directions__item-back-item">Готель для гостей мешканців</li>
+                                      </ul>
+                </div>
+              </div>
+            </div>
+                      <div class="directions__item">
+              <div class="directions__item-inner">
+                                <img src="../wp-content/uploads/2021/11/directions-5-555x310.jpg" alt="">
+                <div class="directions__item-front">
+                  <div class="directions__item-front-decorate">
+                    <span></span>
+                    <span></span>
+                  </div>
+                  <div class="directions__item-front-title">Кафе і Ресторани</div>
+                </div>
+                <div class="directions__item-back">
+                  <div class="directions__item-back-decorate">
+                    <span></span>
+                    <span></span>
+                  </div>
+                  <div class="directions__item-back-title">Кафе і Ресторани</div>
+                  <ul class="directions__item-back-list">
+                                          <li class="directions__item-back-item">Кальян-бар</li>
+                                          <li class="directions__item-back-item">Кав’ярня</li>
+                                          <li class="directions__item-back-item">Кухня службы доставки</li>
+                                          <li class="directions__item-back-item">Кондитерська</li>
+                                      </ul>
+                </div>
+              </div>
+            </div>
+                      <div class="directions__item">
+              <div class="directions__item-inner">
+                                <img src="../wp-content/uploads/2021/11/directions-6-555x310.jpg" alt="">
+                <div class="directions__item-front">
+                  <div class="directions__item-front-decorate">
+                    <span></span>
+                    <span></span>
+                  </div>
+                  <div class="directions__item-front-title">Дозвілля</div>
+                </div>
+                <div class="directions__item-back">
+                  <div class="directions__item-back-decorate">
+                    <span></span>
+                    <span></span>
+                  </div>
+                  <div class="directions__item-back-title">Дозвілля</div>
+                  <ul class="directions__item-back-list">
+                                          <li class="directions__item-back-item">Кондитерська</li>
+                                          <li class="directions__item-back-item">Квест кімнати</li>
+                                          <li class="directions__item-back-item">Зал для йоги</li>
+                                          <li class="directions__item-back-item">Зал для активних видів спорту</li>
+                                          <li class="directions__item-back-item">Центр кіберспорту</li>
+                                      </ul>
+                </div>
+              </div>
+            </div>
+                      <div class="directions__item">
+              <div class="directions__item-inner">
+                                <img src="../wp-content/uploads/2021/11/directions-7-555x310.jpg" alt="">
+                <div class="directions__item-front">
+                  <div class="directions__item-front-decorate">
+                    <span></span>
+                    <span></span>
+                  </div>
+                  <div class="directions__item-front-title">Навчання</div>
+                </div>
+                <div class="directions__item-back">
+                  <div class="directions__item-back-decorate">
+                    <span></span>
+                    <span></span>
+                  </div>
+                  <div class="directions__item-back-title">Навчання</div>
+                  <ul class="directions__item-back-list">
+                                          <li class="directions__item-back-item">Ігорова кімната для дітей</li>
+                                          <li class="directions__item-back-item">Центр розвитку дітей</li>
+                                          <li class="directions__item-back-item">Школа іноземних мов</li>
+                                          <li class="directions__item-back-item">Автошкола</li>
+                                      </ul>
+                </div>
+              </div>
+            </div>
+                      <div class="directions__item">
+              <div class="directions__item-inner">
+                                <img src="../wp-content/uploads/2021/11/directions-8-555x310.jpg" alt="">
+                <div class="directions__item-front">
+                  <div class="directions__item-front-decorate">
+                    <span></span>
+                    <span></span>
+                  </div>
+                  <div class="directions__item-front-title">Простір для творчості</div>
+                </div>
+                <div class="directions__item-back">
+                  <div class="directions__item-back-decorate">
+                    <span></span>
+                    <span></span>
+                  </div>
+                  <div class="directions__item-back-title">Простір для творчості</div>
+                  <ul class="directions__item-back-list">
+                                          <li class="directions__item-back-item">Студия звукозапису</li>
+                                          <li class="directions__item-back-item">Фотостудія</li>
+                                          <li class="directions__item-back-item">Творча майстерня</li>
+                                          <li class="directions__item-back-item">Центр проведення майстер-класів</li>
+                                      </ul>
+                </div>
+              </div>
+            </div>
+                  </div>
+      </div>
+    </section>
+</main>
+
+<footer class="footer" style="position: relative">
+    <a href="https://www.flatshow.org/" target="_blank" style="position: absolute;bottom: 0;right: 0;"><img src="../wp-content/themes/zimTheme/img/flatshow.svg" alt="" style="width: 30px;"></a>
+    <div class="footer__inner">
+        <nav class="nav-bar nav-bar--footer">
+            <div class="logo-wrap">
+                <a href="../index.htm">
+                    <img class="logo" alt="" src="../wp-content/themes/zimTheme/img/footer/logo-footer.svg">
+                </a>
+            </div>
+
+                            <ul class="nav-bar__list">
+                                            <li class="nav-bar__list-item">
+                            <a class="nav-bar__link" href="../projects/index.htm">
+                                Проекти                            </a>
+                        </li>
+                                            <li class="nav-bar__list-item">
+                            <a class="nav-bar__link" href="../about/index.htm">
+                                Про компанію                            </a>
+                        </li>
+                                            <li class="nav-bar__list-item">
+                            <a class="nav-bar__link" href="index.htm">
+                                Комерційна нерухомість                            </a>
+                        </li>
+                                            <li class="nav-bar__list-item">
+                            <a class="nav-bar__link" href="../services/index.htm">
+                                Послуги                            </a>
+                        </li>
+                                            <li class="nav-bar__list-item">
+                            <a class="nav-bar__link" href="../zaproshuyemo/index.htm">
+                                Управління нерухомістю                            </a>
+                        </li>
+                                            <li class="nav-bar__list-item">
+                            <a class="nav-bar__link" href="../press-center/index.htm">
+                                Прес-центр                            </a>
+                        </li>
+                                            <li class="nav-bar__list-item">
+                            <a class="nav-bar__link" href="../contacts/index.htm">
+                                Контакти                            </a>
+                        </li>
+                                            <li class="nav-bar__list-item">
+                            <a class="nav-bar__link" href="../career/index.htm">
+                                Кар’єра                            </a>
+                        </li>
+                                    </ul>
+            
+
+            <ul class="contacts__list">
+                <li class="contacts__item">
+                    <span class="contacts__label">Адреса офісу</span>
+                    <span class="contacts__content">
+                            <span class="icon icon-marker"></span>
+                            м. Київ, вул. Сумська<br>будинок 3                        </span>
+                </li>
+<!--                <li class="contacts__item">-->
+<!--                    <span class="contacts__label">--><!--</span>-->
+<!--                    <span class="contacts__content">-->
+<!--                            <span class="icon icon-letter"></span>-->
+<!--                            --><!--                        </span>-->
+<!--                </li>-->
+                <li class="contacts__item">
+                    <span class="contacts__label">Відділ маркетингу</span>
+                    <span class="contacts__content">
+                            <span class="icon icon-letter"></span>
+                            marketing@zim-capital.com                        </span>
+                </li>
+            </ul>
+
+            <div class="contact-block">
+                
+                <a class="contact-block__btn" data-modal-target="#modal-callback">Замовити дзвінок</a>
+
+                <div class="social-block">
+                    <a class="facebook icon icon-facebook" href="https://www.facebook.com/zimgroupkiev/?ref=bookmarks"></a>
+                    <a class="instagram icon icon-instagram" href="https://www.instagram.com/zim_group/"></a>
+                </div>
+            </div>
+        </nav>
+    </div>
+</footer>
+
+<!--Temporary COMMENT / TODO delete after refactoring-->
+<!--    <button data-modal-target="#modal">Open Modal</button>-->
+<!--    <div class="modal" id="modal">-->
+<!--        <div class="modal-header">-->
+<!--            <div class="title">Example Modal</div>-->
+<!--            <button data-close-button class="close-button">&times;</button>-->
+<!--        </div>-->
+<!--        <div class="modal-body">-->
+<!--            Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse quod alias ut illo doloremque eum ipsum obcaecati distinctio debitis reiciendis quae quia soluta totam doloribus quos nesciunt necessitatibus, consectetur quisquam accusamus ex, dolorum, dicta vel? Nostrum voluptatem totam, molestiae rem at ad autem dolor ex aperiam. Amet assumenda eos architecto, dolor placeat deserunt voluptatibus tenetur sint officiis perferendis atque! Voluptatem maxime eius eum dolorem dolor exercitationem quis iusto totam! Repudiandae nobis nesciunt sequi iure! Eligendi, eius libero. Ex, repellat sapiente!-->
+<!--        </div>-->
+<!--    </div>-->
+<!--/END Temporary COMMENT / TODO delete after refactoring-->
+
+<div id="overlay"></div>
+</div>
+<!-- endWrapper -->
+
+
+<div id="thanksModal" class="modal-wrap" style="display: none">
+    <div class="modal modal-success" id="success">
+        <button data-close-button="" class="modal__btn-close">
+            <span class="icon icon-close"></span>
+        </button>
+        <div class="modal__head">
+            <span class="icon icon-success"></span>
+            <div class="modal__title">
+                Заявка успішно надіслана            </div>
+
+            <div class="modal__content">
+                Зовсім скоро з вами зв’яжеться наш менеджер            </div>
+        </div>
+        <div class="modal__body">
+            <div data-close-button="" class="modal__body-btn-close closeThanksModal">
+                Закрити            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal-wrap" id="modalCallBack">
+    <div class="modal modal-callback" id="modal-callback">
+        <button data-close-button="" class="modal__btn-close">
+            <span class="icon icon-close"></span>
+        </button>
+        <div class="modal__head">
+            <h3 class="modal__title">
+                Введіть номер телефону            </h3>
+
+            <span class="modal__content">
+                    І наш менеджер зателефонує вам протягом 5 хвилин                </span>
+        </div>
+
+        <div class="modal__body">
+            <form class="modal__body-form" action="" id="formCallBack">
+                <div class="contacts__form-label-wrap">
+                    <label class="contacts__form-label">
+                        <span class="contacts__form-label-text">Номер телефону</span>
+                        <input class="contacts__form-input telInput" required="" placeholder="+38(___) ___-__-__" type="text" name="formCallBackName" id="formCallBackName">
+                    </label>
+
+                    <div class="validation-block"></div>
+                </div>
+
+                <button data-modal-callback-send="" data-modal-target="#success" class="modal__body-btn-close" type="submit">
+                    Надіслати
+                </button>
+            </form>
+            <p class="privacy-policy">Натискаючи кнопку “Надіслати” ви даєте згоду на обробку персональних даних згідно з нашою                <a class="privacy-policy__link" href="../polityka-konfidenczijnosti/index.htm">політикою конфіденційності</a>
+            </p>
+        </div>
+    </div>
+</div>
+
+
+<script type='text/javascript' src='../wp-content/themes/zimTheme/js/wow.min.js?ver=20150315' id='wow-js'></script>
+<script type='text/javascript' src='../wp-content/themes/zimTheme/js/scripts.min.js?ver=20150315' id='customScript-js'></script>
+<script type='text/javascript' src='../wp-content/themes/zimTheme/js/libs/fancybox/jquery.fancybox.min.js?ver=20150315' id='fancyJS-js'></script>
+<script type='text/javascript' src='../wp-content/themes/zimTheme/js/newJS.js?ver=20150315' id='newJS-js'></script>
+<script type='text/javascript' src='../wp-content/themes/zimTheme/js/libs/jquery.maskedinput.min.js?ver=20150315' id='masked-input-js'></script>
+<script type='text/javascript' src='../wp-content/themes/zimTheme/js/libs/sweetalert2.all.min.js?ver=20150315' id='alertJs-js'></script>
+<script type='text/javascript' src='../wp-content/themes/zimTheme/js/new-common.js?ver=20150315' id='new-common-js'></script>
+<script type='text/javascript' src='../wp-content/themes/zimTheme/js/inpuMask.js?ver=20150315' id='inputMask-js'></script>
+<script type='text/javascript' src='../wp-includes/js/wp-embed.min.js?ver=5.5.15' id='wp-embed-js'></script>
+
+<script>
+    function initMap() {
+        var view = {lat: 50.39547, lng: 30.48955};
+        var map = new google.maps.Map(document.getElementById('map'), {
+            zoom: 16,
+            center: view
+        });
+        var contentString = '';
+        var infowindow = new google.maps.InfoWindow({
+            content: "",
+            pixelOffset: new google.maps.Size(300,129),
+        });
+        var marker = new google.maps.Marker({
+            position: view,
+            icon: '/wp-content/themes/zimTheme/imgMY/marker.png',
+            map: map,
+        });
+        google.maps.event.addListener(infowindow, 'domready', function() {
+            var iwOuter = $('.gm-style-iw');
+            var iwBackground = iwOuter.prev();
+            iwBackground.children(':nth-child(2)').css({'display' : 'none'});
+            iwBackground.children(':nth-child(4)').css({'display' : 'none'});
+            iwBackground.children(':nth-child(3)').css({'display' : 'none'});
+            iwBackground.children(':nth-child(1)').css({'display' : 'none'});
+            iwBackground.children(':nth-child(3)').find('div').children().css({'box-shadow': 'rgba(72, 181, 233, 0.6) 0px 1px 6px', 'z-index' : '1'});
+            var iwCloseBtn = iwOuter.next();
+            iwCloseBtn.css({'display' : 'none'});
+            if($('.iw-content').height() < 140){
+                $('.iw-bottom-gradient').css({display: 'none'});
+            }
+            iwCloseBtn.mouseout(function(){
+                $(this).css({opacity: '1'});
+            });
+        });
+    }
+</script>
+
+
+
+</body>
+</html>
+
+<script>
+    jQuery(document).ready(function ($) {
+        $(document).on("click", ".img__option", function () {
+            $('.img__option img').removeClass('active__img');
+            $(this).children('img').addClass('active__img');
+        });
+
+
+        let needPlace = '';
+        let needStatus = '';
+        let appointment = '';
+        let minSquare = 34;
+        let maxSquare = 1030;
+        let needPlaceImg = '';
+
+        function sortPr(needPlace, needStatus, minSquare, maxSquare, appointment, title) {
+            $('body').addClass('loadBody');
+            $.ajax({
+                type: "POST",
+                url: "/wp-content/themes/zimTheme/templatesLoadMore/sortCommercial.php",
+                data: {
+                    needPlace: needPlace,
+                    needStatus: needStatus,
+                    minSquare: minSquare,
+                    maxSquare: maxSquare,
+                    appointment: appointment,
+                    title: title
+                },
+                success: function (msg) {
+                    $('.resultSortProjects').html(msg);
+                }
+            });
+
+            $.ajax({
+                type: "POST",
+                url: "/wp-content/themes/zimTheme/templatesLoadMore/loadSubCategory.php",
+                data: {
+                    appointment: appointment,
+                },
+                success: function (msg) {
+                    $('#resultSubCategory').html(msg);
+                    $('body').removeClass('loadBody');
+                    $('.pagination').hide();
+                    let hiddenElement = document.querySelector(".resultSortProjects");
+                    hiddenElement.scrollIntoView({block: "start", behavior: "smooth"});
+                }
+            });
+        }
+
+        $(document).on('click', '#resultSubCategory button', function () {
+            let slug = $(this).data('slugsub');
+            let title = document.querySelector('.select__option.active span').innerHTML;
+
+            $('body').addClass('loadBody');
+            $.ajax({
+                type: "POST",
+                url: "/wp-content/themes/zimTheme/templatesLoadMore/loadSubCategoryChoose.php",
+                data: {
+                    needPlace: needPlace,
+                    needStatus: needStatus,
+                    minSquare: minSquare,
+                    maxSquare: maxSquare,
+                    appointment: appointment,
+                    title: title,
+                    slug: slug
+                },
+                success: function (msg) {
+                    $('.resultSortProjects').html(msg);
+                    $('body').removeClass('loadBody');
+                    $('.pagination').hide();
+
+                    let hiddenElement = document.querySelector(".resultSortProjects");
+                    hiddenElement.scrollIntoView({block: "start", behavior: "smooth"});
+                }
+            });
+        });
+
+        $(document).on('click', '#project_location label.select__option', function () {
+            needPlace = $(this).children('input').val();
+        });
+        $(document).on('click', '#project_status label.select__option', function () {
+            needStatus = $(this).children('input').val();
+        });
+        $(document).on('click', '#project_use label.select__option', function () {
+            appointment = $(this).children('input').val();
+        });
+
+        $(document).on('click', '.filters-block__filter-btn, .pagination__btn', function () {
+            console.log('needPlace- ' + needPlace)
+            minSquare = $('#minSqInput').val();
+            maxSquare = $('#maxSqInput').val();
+            let title = document.querySelector('.select__option.active span').innerHTML;
+            console.log('needPlace- ' + needPlace);
+            console.log('needStatus- ' + needStatus);
+            console.log('minSquare- ' + minSquare);
+            console.log('maxSquare- ' + maxSquare);
+            console.log('appointment- ' + appointment);
+            console.log('title- ' + title);
+            sortPr(needPlace, needStatus, minSquare, maxSquare, appointment, title);
+        });
+
+        $(document).on('click', '#project_location-img label.img__option', function () {
+            needPlaceImg = $(this).children('input').val();
+
+            $('body').addClass('loadBody');
+            $.ajax({
+                type: "POST",
+                url: "/wp-content/themes/zimTheme/templatesLoadMore/sortMoreCommercialImg.php",
+                data: {
+                    needPlaceImg: needPlaceImg,
+                },
+                success: function (msg) {
+                    console.log(msg);
+                    $('.resultSortProjects').html(msg);
+                    $('body').removeClass('loadBody');
+                    $('.pagination').hide();
+                }
+            });
+        });
+
+    });
+    const projectLocation = new detailSelect('#project_location');
+    const projectUse = new detailSelect('#project_use');
+    const projectStatus = new detailSelect('#project_status');
+</script>
